@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="icons/icon32.png" alt="" width="18" height="18" />
+      <span>Tab Tidy</span>
+    </div>
+    <div class="scope">
+      <label><input type="radio" name="scope" value="window" checked /> This window</label>
+      <label><input type="radio" name="scope" value="all" /> All windows</label>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab-btn is-active" data-panel="groups" role="tab">Groups</button>
+    <button class="tab-btn" data-panel="duplicates" role="tab">
+      Duplicates <span class="pill" id="dupPill" hidden>0</span>
+    </button>
+  </nav>
+
+  <section class="panel is-active" id="panel-groups">
+    <p class="summary" id="groupsSummary">Scanning tabs…</p>
+    <div class="list" id="groupsList"></div>
+  </section>
+
+  <section class="panel" id="panel-duplicates">
+    <p class="summary" id="dupSummary">Scanning tabs…</p>
+    <div class="list" id="dupList"></div>
+  </section>
+
+  <footer>
+    <div class="footer-msg" id="footerMsg"></div>
+    <div class="footer-actions">
+      <button class="btn ghost" id="undoBtn" hidden>Reopen closed</button>
+      <button class="btn primary" id="applyBtn" disabled>Group selected</button>
+      <button class="btn danger" id="closeDupBtn" hidden disabled>Close duplicates</button>
+    </div>
+  </footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
