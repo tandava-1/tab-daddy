@@ -19,22 +19,22 @@ collection — the extension has no networking code at all.
 
 ## Grouping
 
-Tabs fall through a four-pass pipeline. Each pass gets the tabs the previous one
-couldn't place, and a bucket needs at least 2 tabs to survive — you never end up
-with a group of one.
+Tabs are grouped by **what their pages are about**, not by their addresses.
 
-| Pass | Signal | Example |
-| --- | --- | --- |
-| 1. Topic rules | Hostname (and sometimes path) against 17 built-in topics | `mail.google.com` → **Email** |
-| 2. Site | Registrable domain, subdomains collapsed | 4 tabs on `*.notion.so` → **Notion** |
-| 3. Keyword | Significant words shared across tab *titles* | NerdWallet + Bankrate + Chase → **Mortgage** |
-| 4. Catch-all | Everything still loose | → **Everything else** |
+With your permission, Tab Daddy reads a short summary of each open page: its
+title, its own description, its main headings and the start of its main text.
+Each tab becomes a weighted list of significant words (title words count most,
+body text least), and tabs are merged, most similar first, until nothing left
+is similar enough. A group needs at least 2 tabs, so you never end up with a
+group of one; it's named after the words most of its tabs share.
 
-Pass 3 is what catches a single topic spread across unrelated domains — the case
-no amount of URL matching can see. It strips the trailing `– Site Name` segment
-from each title first (otherwise every tab on a site shares that site's name),
-drops stopwords and short words, then greedily takes the word covering the most
-tabs, emits it as a group, removes those tabs, and repeats.
+Some pages can't be read: tabs Chrome has put to sleep, `chrome://` pages and
+the Web Store. Those fall back to their title and site name, and the popup tags
+them **title only**. Until you allow page reading, every tab is grouped that way.
+
+Two tabs only count as related if they share two significant words, or one word
+longer than five letters, so a coincidence like a broker and a shop both
+mentioning "India" doesn't make a group.
 
 The popup previews every proposed group before anything happens: rename inline,
 uncheck what you don't want, expand to see members. **"Everything else" is
@@ -66,32 +66,32 @@ A scope toggle switches both panels between the current window and all windows.
 
 | File | Role |
 | --- | --- |
-| `manifest.json` | MV3 manifest; permissions are `tabs` and `tabGroups` |
+| `manifest.json` | MV3 manifest |
 | `background.js` | Service worker; keeps the duplicate badge count current |
 | `popup.html/.css/.js` | The UI and all user actions |
-| `lib/categorize.js` | Topic rules, site-key extraction, group colors |
-| `lib/keywords.js` | Title tokenizer, stopwords, keyword clustering |
-| `lib/analyze.js` | URL canonicalization, the grouping pipeline, duplicate finding |
+| `lib/read.js` | Page-access permission and reading page summaries |
+| `lib/cluster.js` | Grouping tabs by content, and naming the groups |
+| `lib/keywords.js` | Word splitting and the ignored-word list |
+| `lib/tabs.js` | Which tabs take part or can be read, site names, group colours |
+| `lib/analyze.js` | The grouping entry point, URL canonicalization, duplicate finding |
 
 ## Tweaking
 
-**Add a site to a topic** — `RULES` in `lib/categorize.js` is ordered, first match
-wins, and `hosts` entries match a hostname or any subdomain of it:
-
-```js
-{ name: 'Code', color: 'blue', hosts: ['github.com', 'your-internal-git.example'] }
-```
-
-**Other knobs** — `MIN_GROUP_SIZE` in `lib/analyze.js` sets the smallest group
-proposed. `STOPWORDS`, `MIN_TOKEN_LENGTH`, and `MAX_KEYWORD_GROUPS` in
-`lib/keywords.js` tune the keyword pass; if it produces an odd group name, the
-fix is usually a new stopword.
+`MERGE_THRESHOLD` in `lib/cluster.js` decides how alike two tabs must be to
+group: lower joins more, higher splits more. `FIELD_WEIGHTS` sets how much the
+title, headings and body count. If a group forms around a meaningless word, the
+fix is usually a new entry in `STOPWORDS` in `lib/keywords.js`.
+`MIN_GROUP_SIZE` in `lib/analyze.js` sets the smallest group proposed.
 
 Reload from `chrome://extensions` after editing.
 
 ## Permissions
 
-- `tabs` — read tab titles and URLs to categorize them and compare for duplicates
-- `tabGroups` — create and name the resulting native tab groups
+- `tabs`: read tab titles and addresses, to group them and compare for duplicates
+- `tabGroups`: create and name the resulting native tab groups
+- `scripting`: run the small page-summary reader in your open tabs
+- Access to all sites (**optional**, asked for on first use): needed for the
+  page-summary reader to run on the pages you have open
 
-Neither is used for anything else, and nothing leaves your machine.
+Page text is held in the popup's memory only while it's open. It is never
+stored, logged or sent anywhere.

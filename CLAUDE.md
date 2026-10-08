@@ -16,23 +16,25 @@ storage. Live on the Chrome Web Store.
   lands (was `/tab-tidy/`).
 - Source repo: https://github.com/tandava-1/tab-daddy (also `homepage_url`).
 
-## Grouping pipeline — four passes, fall-through
+## Grouping — by page content
 
-Implemented in `lib/analyze.js:planGroups`. Whatever fails one pass gets another
-chance at the next. A bucket needs `MIN_GROUP_SIZE` (2) tabs to survive, so a
-group of one is never created.
+`lib/analyze.js:planGroups(tabs, pages)` hands groupable tabs to
+`lib/cluster.js:clusterTabs`. `pages` comes from `lib/read.js:readPages`, which
+injects `extractPage` (title, meta description, h1/h2, first 1,500 chars of
+`article|main|body`) via `chrome.scripting`, 8 at a time, 1.5 s timeout each.
 
-1. **Topic rule** — 17 ordered rules in `lib/categorize.js:RULES`, first match wins.
-2. **Site** — `siteKey()` collapses subdomains and handles two-part TLDs (`co.uk`).
-3. **Title keyword** — `lib/keywords.js:clusterByKeyword`. The only signal URL
-   structure cannot see: three mortgage tabs on three unrelated domains share a
-   word but no domain and no rule.
-4. **Catch-all** — "Everything else", grey. Appended *after* the confidence sort
-   so a junk drawer never heads the list, and default-**deselected** in the popup.
+- Each tab -> weighted word bag (`FIELD_WEIGHTS`: title 3, description/headings 2,
+  body 1), top 40 words, IDF-discounted, unit-length.
+- Average-linkage merging until the best pair is below `MERGE_THRESHOLD` (0.14).
+  The sweep on real pages put the safe band at roughly 0.08–0.19: below it,
+  Wikipedia furniture joins unrelated articles; above it, real topics split.
+- Unreadable tabs (`isReadable` false: discarded, unloaded, non-http, Web Store)
+  use title + site name. Popup tags them "title only" once access is granted.
+- Name = strongest word(s) present in >= half the group's tabs.
+- "Everything else" catch-all last and default-deselected, as before.
 
-Groups are ordered by confidence: `category` > `site` > `keyword` > `other`.
-A topic rule is a deliberate judgement, a shared domain is a fact, a shared title
-word is an inference — least certain never leads.
+Site access is `optional_host_permissions: <all_urls>`, requested from the popup's
+Allow button. Without it everything groups on title + site name.
 
 ## Two bug fixes that must not regress
 
@@ -40,11 +42,11 @@ word is an inference — least certain never leads.
   grouping but `findDuplicates` had no equivalent filter, so blank New Tab pages
   inflated the badge and left a permanent nag. Fixed by `isDedupable()` in
   `lib/analyze.js` — http(s) only.
-- **Spurious short-token groups.** The keyword pass once joined a broker and a
-  shopping site on the shared word "india". Fixed three ways in `lib/keywords.js`:
-  short tokens (<= `SHORT_TOKEN_MAX`) now need a second shared word to corroborate
-  (`sharedTokenCount >= CORROBORATING_TOKENS`); `STOPWORDS` gained ~45 commerce and
-  geography entries; and confidence ordering demotes keyword groups.
+- **Spurious short-token groups.** The old keyword pass once joined a broker and a
+  shopping site on the shared word "india". Carried into `lib/cluster.js:similarity`:
+  a pair scores zero unless it shares `CORROBORATING_TOKENS` (2) words or one word
+  longer than `SHORT_TOKEN_MAX` (5). `STOPWORDS` keeps the commerce and geography
+  entries.
 
 ## Constraints worth knowing before editing
 
@@ -55,8 +57,9 @@ word is an inference — least certain never leads.
   **empty in `popup.html`** — every card and row is built in `popup.js`.
 - Applying twice must fold into the existing group via `chrome.tabGroups.query({ windowId, title })`,
   not create a second one.
-- Permissions are `tabs` and `tabGroups` only. `storage` was removed as unused —
-  do not add a permission back without a reason the store listing can justify.
+- Permissions are `tabs`, `tabGroups`, `scripting`, plus optional `<all_urls>`.
+  `storage` was removed as unused — do not add a permission without a reason the
+  store listing can justify. Page text must never leave the popup's memory.
 
 ## Store assets
 
@@ -77,6 +80,9 @@ step that catches everyone out.
 ## Testing
 
 No test runner in-repo. The logic suite lives in a scratchpad harness: copies of
-`lib/*.js` plus a `package.json` with `{"type":"module"}` (Node treats bare `.js`
-there as CJS otherwise), and `test.mjs` with 24 assertions across 11 fixtures.
-Re-create it rather than looking for it — scratchpads are session-local.
+`lib/*.js` imported directly (Node 22+ detects ES modules), `fixtures.mjs`, and
+`real.json`: eight real pages captured with `extractPage` (NerdWallet, Bankrate's
+bot check, a Serious Eats 404, BBC Good Food carbonara, Wikipedia Mortgage /
+Carbonara / Kubernetes, GitHub React). Expected: mortgage pair, carbonara pair,
+rest loose. 18 tests. Re-create it rather than looking for it — scratchpads are
+session-local.

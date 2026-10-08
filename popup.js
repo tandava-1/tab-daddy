@@ -1,4 +1,6 @@
 import { planGroups, findDuplicates } from './lib/analyze.js';
+import { readPages, hasPageAccess, requestPageAccess } from './lib/read.js';
+import { isGroupable } from './lib/tabs.js';
 
 const GROUP_DOT_COLORS = {
   grey: '#8a8f98', blue: '#4285f4', red: '#e5484d', yellow: '#f4c025',
@@ -17,7 +19,9 @@ const el = {
   applyBtn: document.getElementById('applyBtn'),
   closeDupBtn: document.getElementById('closeDupBtn'),
   undoBtn: document.getElementById('undoBtn'),
-  footerMsg: document.getElementById('footerMsg')
+  footerMsg: document.getElementById('footerMsg'),
+  accessNote: document.getElementById('accessNote'),
+  accessBtn: document.getElementById('accessBtn')
 };
 
 const state = {
@@ -27,7 +31,11 @@ const state = {
   selectedGroups: new Set(),
   dupSets: [],
   selectedDupTabs: new Set(),
-  lastClosed: []       // urls closed in this session, for "Reopen closed"
+  lastClosed: [],      // urls closed in this session, for "Reopen closed"
+  access: false,       // may we read page content?
+  readIds: new Set(),  // tabs whose page was actually read this refresh
+  pageCache: new Map(),// "tabId|url" -> page summary, kept while the popup is open
+  run: 0               // bumps on every refresh so a stale one can bow out
 };
 
 /* ---------- data ---------- */
@@ -38,17 +46,55 @@ async function loadTabs() {
     : chrome.tabs.query({});
 }
 
+/**
+ * Reads the pages we haven't read yet in this popup session. Applying groups
+ * triggers a refresh, and re-reading every page for that would be wasted work,
+ * so summaries are cached by tab and address until the popup closes.
+ */
+async function readWithCache(tabs, onProgress) {
+  const keyOf = (tab) => `${tab.id}|${tab.url}`;
+  const fresh = await readPages(tabs.filter((t) => !state.pageCache.has(keyOf(t))), { onProgress });
+  for (const tab of tabs) {
+    if (fresh.has(tab.id)) state.pageCache.set(keyOf(tab), fresh.get(tab.id));
+  }
+  const pages = new Map();
+  for (const tab of tabs) {
+    const page = state.pageCache.get(keyOf(tab));
+    if (page) pages.set(tab.id, page);
+  }
+  return pages;
+}
+
 async function refresh() {
+  const run = ++state.run;
   const tabs = await loadTabs();
-  state.groups = planGroups(tabs);
+
+  // Duplicates need no page content, so show them straight away.
   state.dupSets = findDuplicates(tabs);
-  // Topic, site and keyword groups are confident enough to pre-select; the
-  // catch-all is a judgement call the user opts into.
+  state.selectedDupTabs = new Set(state.dupSets.flatMap((s) => s.duplicates.map((t) => t.id)));
+  renderDuplicates();
+
+  state.access = await hasPageAccess();
+  el.accessNote.hidden = state.access;
+  let pages = new Map();
+  if (state.access) {
+    el.groupsList.replaceChildren();
+    el.groupsSummary.textContent = 'Reading pages…';
+    pages = await readWithCache(tabs.filter(isGroupable), (done, total) => {
+      if (run === state.run) el.groupsSummary.textContent = `Reading pages… ${done} of ${total}`;
+    });
+  }
+  // The scope changed or the user applied groups while we were reading.
+  if (run !== state.run) return;
+
+  state.readIds = new Set(pages.keys());
+  state.groups = planGroups(tabs, pages);
+  // Content groups are confident enough to pre-select; the catch-all is a
+  // judgement call the user opts into.
   state.selectedGroups = new Set(
     state.groups.filter((g) => g.source !== 'other').map((g) => g.key)
   );
-  state.selectedDupTabs = new Set(state.dupSets.flatMap((s) => s.duplicates.map((t) => t.id)));
-  render();
+  renderGroups();
 }
 
 /* ---------- rendering ---------- */
@@ -72,7 +118,8 @@ function tabRow(tab, { tag } = {}) {
   if (tag) {
     const badge = document.createElement('span');
     badge.className = 'tag' + (tag === 'keep' ? ' keep' : '');
-    badge.textContent = tag === 'keep' ? 'keep' : 'duplicate';
+    badge.textContent = { keep: 'keep', dup: 'duplicate', titleOnly: 'title only' }[tag];
+    if (tag === 'titleOnly') badge.title = "This page couldn't be read (asleep, or a protected page), so its title and address were used.";
     row.append(badge);
   }
   return row;
@@ -134,7 +181,7 @@ function renderGroups() {
 
   if (!state.groups.length) {
     el.groupsSummary.textContent = '';
-    el.groupsList.append(emptyState('Nothing to group', 'No two open tabs share a topic or a site right now.'));
+    el.groupsList.append(emptyState('Nothing to group', 'No two open tabs are about the same thing right now.'));
     updateFooter();
     return;
   }
@@ -145,7 +192,10 @@ function renderGroups() {
   for (const group of state.groups) {
     const body = document.createElement('div');
     body.className = 'card-body';
-    group.tabs.forEach((tab) => body.append(tabRow(tab)));
+    // Only worth flagging once page reading is on; before that, every tab is title-only.
+    group.tabs.forEach((tab) => body.append(tabRow(tab, {
+      tag: state.access && !state.readIds.has(tab.id) ? 'titleOnly' : null
+    })));
 
     el.groupsList.append(card({
       checked: state.selectedGroups.has(group.key),
@@ -325,6 +375,14 @@ el.scopeInputs.forEach((input) => {
     state.scope = input.value;
     refresh();
   });
+});
+
+el.accessBtn.addEventListener('click', async () => {
+  // Chrome may close the popup while its permission prompt is up; if so the
+  // grant still sticks, and the next open reads pages.
+  const granted = await requestPageAccess().catch(() => false);
+  if (granted) refresh();
+  else say('Still grouping by titles only.');
 });
 
 el.applyBtn.addEventListener('click', applyGroups);
