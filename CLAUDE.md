@@ -86,3 +86,11 @@ bot check, a Serious Eats 404, BBC Good Food carbonara, Wikipedia Mortgage /
 Carbonara / Kubernetes, GitHub React). Expected: mortgage pair, carbonara pair,
 rest loose. 18 tests. Re-create it rather than looking for it — scratchpads are
 session-local.
+
+Real-browser checks run the extension in **Chrome for Testing** (branded Chrome
+dropped `--load-extension`): `npx @puppeteer/browsers install chrome@stable` plus
+`puppeteer-core@24`, launched with `enableExtensions: true` and
+`browser.installExtension(dir)`. `chrome.action.openPopup()` from the service
+worker opens the real popup. Puppeteer can't click Chrome's native permission
+prompt, so the granted path is tested on a copy whose manifest moves `<all_urls>`
+from `optional_host_permissions` to `host_permissions`.
