@@ -268,11 +268,6 @@ function emptyState(heading, detail) {
   return div;
 }
 
-function render() {
-  renderGroups();
-  renderDuplicates();
-}
-
 function updateFooter() {
   const onGroups = state.panel === 'groups';
   el.applyBtn.hidden = !onGroups;
