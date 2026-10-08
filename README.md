@@ -1,4 +1,4 @@
-# Tab Tidy
+# Tab Daddy
 
 A Chrome extension (Manifest V3) that cleans up browser clutter two ways:
 **meaningful tab groups** and **duplicate detection**.
@@ -15,7 +15,7 @@ collection — the extension has no networking code at all.
 1. Open `chrome://extensions`
 2. Turn on **Developer mode** (top right)
 3. Click **Load unpacked** and pick this folder
-4. Pin "Tab Tidy" to the toolbar
+4. Pin "Tab Daddy" to the toolbar
 
 ## Grouping
 

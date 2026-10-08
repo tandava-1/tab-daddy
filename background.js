@@ -9,8 +9,8 @@ async function refreshBadge() {
   await chrome.action.setBadgeText({ text: count > 0 ? String(count) : '' });
   await chrome.action.setTitle({
     title: count > 0
-      ? `Tab Tidy — ${count} duplicate tab${count === 1 ? '' : 's'} open`
-      : 'Tab Tidy'
+      ? `Tab Daddy — ${count} duplicate tab${count === 1 ? '' : 's'} open`
+      : 'Tab Daddy'
   });
 }
 

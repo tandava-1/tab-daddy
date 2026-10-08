@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "Tab Tidy",
+  "name": "Tab Daddy",
   "version": "1.0.0",
   "description": "Clean up browser clutter: auto-group open tabs into meaningful groups and find duplicate tabs.",
-  "homepage_url": "https://github.com/tandava-1/tab-tidy",
+  "homepage_url": "https://github.com/tandava-1/tab-daddy",
   "permissions": ["tabs", "tabGroups"],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Tab Tidy",
+    "default_title": "Tab Daddy",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",

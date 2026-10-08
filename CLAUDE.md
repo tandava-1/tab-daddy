@@ -1,16 +1,20 @@
-# Tab Tidy — project context
+# Tab Daddy — project context
+
+Formerly **Tab Tidy** (v1.0.0). Renamed in v2.0.0; the store item ID is unchanged.
 
 Manifest V3 Chrome extension. Two features: group open tabs into meaningful
 groups, and find duplicate tabs. Runs entirely locally, no network calls, no
-storage. Published (or pending review) on the Chrome Web Store.
+storage. Live on the Chrome Web Store.
 
 ## Status
 
-- v1.0.0 built and packaged as `~/tab-tidy-1.0.0.zip` (15 files, `manifest.json`
-  at archive root).
-- Submitted to the Chrome Web Store. Awaiting review as of 2026-08-29.
-- Privacy policy live at https://tandava-1.github.io/tab-tidy/ (HTTP 200).
-- Source repo: https://github.com/tandava-1/tab-tidy (also `homepage_url`).
+- v1.0.0 (as Tab Tidy) is live on the Chrome Web Store. Its upload zip is gone;
+  rebuild from source if needed.
+- v2.0.0 in progress: rename to Tab Daddy, page-content grouping, joining
+  existing groups.
+- Privacy policy: https://tandava-1.github.io/tab-daddy/ once the repo rename
+  lands (was `/tab-tidy/`).
+- Source repo: https://github.com/tandava-1/tab-daddy (also `homepage_url`).
 
 ## Grouping pipeline — four passes, fall-through
 
@@ -56,7 +60,7 @@ word is an inference — least certain never leads.
 
 ## Store assets
 
-Outside this repo, at `~/tab-tidy-store/`:
+Outside this repo, at `~/Claude/tab-daddy-store/`:
 
 - `listing.md` — all dashboard copy. Short description is 127/132 chars; detailed
   description is 1481/1600, ASCII-only. Both permission justifications live here.
