@@ -54,8 +54,11 @@ users'. Payload per group = `sharedWords` (cluster.js:sharedWordsOf: words on
 — a test asserts no titles/URLs leak. Replies pass `validName` (<= 24 chars,
 <= 4 words, no addresses). Cache in `chrome.storage.local` keyed by the word
 list, 7-day TTL, 300 entries. Consent stored as `aiNaming: 'yes'|'no'`; asked
-once via a card, toggle line under the list. `NAMING_ENDPOINT` is a placeholder
-until the Worker (Groq behind Cloudflare) is deployed. Fallback names never use
+once via a card, toggle line under the list. `NAMING_ENDPOINT` points at the Worker in
+`server/` (see its README): Groq `openai/gpt-oss-20b`, `reasoning_effort: low`,
+strict JSON schema, 2.5 s timeout, shared KV name cache keyed by sorted words,
+10 req/min per install, request logging off. `server/` must stay out of the
+store zip. Extension caps a request at 12 groups to match the server. Fallback names never use
 a site name.
 
 Site access is `optional_host_permissions: <all_urls>`, requested from the popup's
