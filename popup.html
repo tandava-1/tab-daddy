@@ -28,8 +28,16 @@
       <span>Grouping by tab titles only. Let Tab Daddy read your open pages to group them by what they're about.</span>
       <button class="btn primary small" id="accessBtn">Allow</button>
     </div>
+    <div class="access-note" id="aiNote" hidden>
+      <span>Name groups with AI? Sends a few words the tabs in each group share. Never page text, titles or addresses.</span>
+      <span class="note-actions">
+        <button class="btn ghost small" id="aiNoBtn">No thanks</button>
+        <button class="btn primary small" id="aiYesBtn">Yes</button>
+      </span>
+    </div>
     <p class="summary" id="groupsSummary">Scanning tabs…</p>
     <div class="list" id="groupsList"></div>
+    <p class="ai-line" id="aiLine" hidden></p>
   </section>
 
   <section class="panel" id="panel-duplicates">

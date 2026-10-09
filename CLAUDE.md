@@ -3,8 +3,8 @@
 Formerly **Tab Tidy** (v1.0.0). Renamed in v2.0.0; the store item ID is unchanged.
 
 Manifest V3 Chrome extension. Two features: group open tabs into meaningful
-groups, and find duplicate tabs. Runs entirely locally, no network calls, no
-storage. Live on the Chrome Web Store.
+groups, and find duplicate tabs. Grouping runs locally; the only network call
+is optional, opt-in AI naming. Live on the Chrome Web Store.
 
 ## Status
 
@@ -44,6 +44,20 @@ set from fixtures, rejected obvious fits). `planGroups` returns
 Applying never renames or recolours a user's group — including when a new
 group's name folds into an existing one.
 
+**Naming** (`lib/naming.js`). Decided with the founder: grouping is local; AI
+only names, and names are fetched *before* groups are shown (popup shows
+"Naming groups…", 3 s timeout, then word names). Chrome's built-in AI was
+dropped — neither of the founder's machines (8 GB M2) qualifies, nor would most
+users'. Payload per group = `sharedWords` (cluster.js:sharedWordsOf: words on
+>= 2 tabs, top 8, no site names, sensitive pages skipped) then `cleanWords`
+(letters only). Request body is exactly `{ installId, groups: [{ id, words }] }`
+— a test asserts no titles/URLs leak. Replies pass `validName` (<= 24 chars,
+<= 4 words, no addresses). Cache in `chrome.storage.local` keyed by the word
+list, 7-day TTL, 300 entries. Consent stored as `aiNaming: 'yes'|'no'`; asked
+once via a card, toggle line under the list. `NAMING_ENDPOINT` is a placeholder
+until the Worker (Groq behind Cloudflare) is deployed. Fallback names never use
+a site name.
+
 Site access is `optional_host_permissions: <all_urls>`, requested from the popup's
 Allow button. Without it everything groups on title + site name.
 
@@ -68,9 +82,10 @@ Allow button. Without it everything groups on title + site name.
   **empty in `popup.html`** — every card and row is built in `popup.js`.
 - Applying twice must fold into the existing group via `chrome.tabGroups.query({ windowId, title })`,
   not create a second one.
-- Permissions are `tabs`, `tabGroups`, `scripting`, plus optional `<all_urls>`.
-  `storage` was removed as unused — do not add a permission without a reason the
-  store listing can justify. Page text must never leave the popup's memory.
+- Permissions are `tabs`, `tabGroups`, `scripting`, `storage` (AI consent + name
+  cache), plus optional `<all_urls>`. Do not add a permission without a reason the
+  store listing can justify. Page text must never leave the popup's memory; only
+  `sharedWords` may, and only with consent.
 
 ## Store assets
 
@@ -95,7 +110,9 @@ No test runner in-repo. The logic suite lives in a scratchpad harness: copies of
 `real.json`: eight real pages captured with `extractPage` (NerdWallet, Bankrate's
 bot check, a Serious Eats 404, BBC Good Food carbonara, Wikipedia Mortgage /
 Carbonara / Kubernetes, GitHub React). Expected: mortgage pair, carbonara pair,
-rest loose. 28 tests, including existing-group cases on the real pages. Re-create it rather than looking for it — scratchpads are
+rest loose. 40 tests, including existing-group cases on the real pages and the
+naming privacy rules. The browser driver can run a stand-in naming server on
+127.0.0.1:8787 and print exactly what the extension sent. Re-create it rather than looking for it — scratchpads are
 session-local.
 
 Real-browser checks run the extension in **Chrome for Testing** (branded Chrome
