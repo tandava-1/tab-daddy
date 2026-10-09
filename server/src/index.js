@@ -70,7 +70,9 @@ export function cleanName(raw) {
   const name = raw.replace(/["'`*_]/g, '').replace(/[.!?:;,]+$/, '').replace(/\s+/g, ' ').trim();
   if (!name || name.length > MAX_NAME_CHARS || name.split(' ').length > MAX_NAME_WORDS) return null;
   if (/[@/\\\d]|\.[a-z]{2,}\b|https?/i.test(name)) return null;
-  return name.charAt(0).toUpperCase() + name.slice(1);
+  // Sentence case, but leave words that carry their own capitals ("iPhone", "eBay").
+  const first = name.split(' ')[0];
+  return /[A-Z]/.test(first.slice(1)) ? name : name.charAt(0).toUpperCase() + name.slice(1);
 }
 
 // Order-free, so two users whose groups share the same words share one entry.

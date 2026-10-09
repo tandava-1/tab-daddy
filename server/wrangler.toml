@@ -2,6 +2,10 @@ name = "tab-daddy-names"
 main = "src/index.js"
 compatibility_date = "2026-09-01"
 
+# One public address only; no per-version preview copies.
+workers_dev = true
+preview_urls = false
+
 # Nothing about requests is logged: the words users send are not stored here.
 [observability]
 enabled = false
@@ -23,7 +27,7 @@ simple = { limit = 10, period = 60 }
 # and paste the id it prints below.
 [[kv_namespaces]]
 binding = "NAMES"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "10bee68159b346ec85c24c616dd78893"
 
 # The Groq key is a secret, never in this file:
 #   npx wrangler secret put GROQ_API_KEY

@@ -139,6 +139,8 @@ test('cleanName', () => {
   assert.equal(cleanName('"pasta recipes."'), 'Pasta recipes');
   assert.equal(cleanName('Top 10 loans'), null);
   assert.equal(cleanName('youtube.com videos'), null);
+  assert.equal(cleanName('iPhone reviews'), 'iPhone reviews');
+  assert.equal(cleanName('eBay deals'), 'eBay deals');
 });
 
 test('unknown paths 404', async () => {
