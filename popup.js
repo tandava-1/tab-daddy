@@ -27,7 +27,8 @@ const el = {
 const state = {
   panel: 'groups',
   scope: 'window',
-  groups: [],          // planned groups
+  additions: [],       // ungrouped tabs headed for the user's existing groups
+  groups: [],          // planned new groups
   selectedGroups: new Set(),
   dupSets: [],
   selectedDupTabs: new Set(),
@@ -39,6 +40,12 @@ const state = {
 };
 
 /* ---------- data ---------- */
+
+function loadExistingGroups() {
+  return state.scope === 'window'
+    ? chrome.tabGroups.query({ windowId: chrome.windows.WINDOW_ID_CURRENT })
+    : chrome.tabGroups.query({});
+}
 
 async function loadTabs() {
   return state.scope === 'window'
@@ -87,13 +94,17 @@ async function refresh() {
   // The scope changed or the user applied groups while we were reading.
   if (run !== state.run) return;
 
+  const existing = await loadExistingGroups();
+  if (run !== state.run) return;
+
   state.readIds = new Set(pages.keys());
-  state.groups = planGroups(tabs, pages);
-  // Content groups are confident enough to pre-select; the catch-all is a
-  // judgement call the user opts into.
-  state.selectedGroups = new Set(
-    state.groups.filter((g) => g.source !== 'other').map((g) => g.key)
-  );
+  ({ additions: state.additions, groups: state.groups } = planGroups(tabs, pages, existing));
+  // Additions and content groups are confident enough to pre-select; the
+  // catch-all is a judgement call the user opts into.
+  state.selectedGroups = new Set([
+    ...state.additions.map((a) => a.key),
+    ...state.groups.filter((g) => g.source !== 'other').map((g) => g.key)
+  ]);
   renderGroups();
 }
 
@@ -175,42 +186,72 @@ function card({ checked, color, title, count, editableTitle, onToggle, onRename,
   return wrap;
 }
 
+const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
+
+function sectionHeading(text) {
+  const h = document.createElement('h3');
+  h.className = 'section';
+  h.textContent = text;
+  return h;
+}
+
+function groupCard(group, { isAddition }) {
+  const body = document.createElement('div');
+  body.className = 'card-body';
+  // Only worth flagging once page reading is on; before that, every tab is title-only.
+  group.tabs.forEach((tab) => body.append(tabRow(tab, {
+    tag: state.access && !state.readIds.has(tab.id) ? 'titleOnly' : null
+  })));
+
+  return card({
+    checked: state.selectedGroups.has(group.key),
+    color: group.color,
+    title: group.name,
+    // An addition shows only the tabs it brings, so say so.
+    count: isAddition ? `+${plural(group.tabs.length, 'tab')}` : plural(group.tabs.length, 'tab'),
+    // The user's own groups are never renamed.
+    editableTitle: !isAddition,
+    onToggle: (on) => {
+      on ? state.selectedGroups.add(group.key) : state.selectedGroups.delete(group.key);
+      updateFooter();
+    },
+    onRename: (value) => { group.name = value; },
+    body
+  });
+}
+
 function renderGroups() {
   el.groupsList.replaceChildren();
-  const total = state.groups.reduce((n, g) => n + g.tabs.length, 0);
+  const { additions, groups } = state;
 
-  if (!state.groups.length) {
+  if (!additions.length && !groups.length) {
     el.groupsSummary.textContent = '';
     el.groupsList.append(emptyState('Nothing to group', 'No two open tabs are about the same thing right now.'));
     updateFooter();
     return;
   }
 
-  el.groupsSummary.textContent =
-    `${state.groups.length} group${state.groups.length === 1 ? '' : 's'} from ${total} tabs. Rename any group before applying.`;
-
-  for (const group of state.groups) {
-    const body = document.createElement('div');
-    body.className = 'card-body';
-    // Only worth flagging once page reading is on; before that, every tab is title-only.
-    group.tabs.forEach((tab) => body.append(tabRow(tab, {
-      tag: state.access && !state.readIds.has(tab.id) ? 'titleOnly' : null
-    })));
-
-    el.groupsList.append(card({
-      checked: state.selectedGroups.has(group.key),
-      color: group.color,
-      title: group.name,
-      count: `${group.tabs.length} tab${group.tabs.length === 1 ? '' : 's'}`,
-      editableTitle: true,
-      onToggle: (on) => {
-        on ? state.selectedGroups.add(group.key) : state.selectedGroups.delete(group.key);
-        updateFooter();
-      },
-      onRename: (value) => { group.name = value; },
-      body
-    }));
+  const parts = [];
+  if (additions.length) {
+    const n = additions.reduce((sum, a) => sum + a.tabs.length, 0);
+    parts.push(`${plural(n, 'tab')} fit${n === 1 ? 's' : ''} your existing groups`);
   }
+  const fresh = groups.filter((g) => g.source !== 'other');
+  if (fresh.length) {
+    const n = fresh.reduce((sum, g) => sum + g.tabs.length, 0);
+    parts.push(`${plural(fresh.length, 'new group')} from ${plural(n, 'tab')}`);
+  }
+  const leftover = groups.find((g) => g.source === 'other');
+  if (leftover) parts.push(`${plural(leftover.tabs.length, 'tab')} matched nothing`);
+  el.groupsSummary.textContent = parts.join('; ') + '.';
+
+  // Headings only earn their place when there are two kinds of thing to tell apart.
+  if (additions.length) {
+    el.groupsList.append(sectionHeading('Add to your groups'));
+    additions.forEach((a) => el.groupsList.append(groupCard(a, { isAddition: true })));
+    if (groups.length) el.groupsList.append(sectionHeading(fresh.length ? 'New groups' : "Didn't fit anywhere"));
+  }
+  groups.forEach((g) => el.groupsList.append(groupCard(g, { isAddition: false })));
   updateFooter();
 }
 
@@ -300,8 +341,19 @@ async function focusTab(tab) {
 }
 
 async function applyGroups() {
-  const selected = state.groups.filter((g) => state.selectedGroups.has(g.key));
   let grouped = 0;
+
+  // Into the user's own groups: add tabs, never touch the name or colour.
+  for (const addition of state.additions.filter((a) => state.selectedGroups.has(a.key))) {
+    try {
+      await chrome.tabs.group({ tabIds: addition.tabs.map((t) => t.id), groupId: addition.groupId });
+      grouped += addition.tabs.length;
+    } catch (err) {
+      console.error('Failed to add to group', addition.name, err);
+    }
+  }
+
+  const selected = state.groups.filter((g) => state.selectedGroups.has(g.key));
 
   for (const group of selected) {
     // chrome.tabs.group only accepts tabs from a single window, so split first.
@@ -314,11 +366,14 @@ async function applyGroups() {
     for (const [windowId, tabIds] of byWindow) {
       try {
         // Fold into an existing group of the same name rather than making a second one.
+        // If that group is one the user already had, its colour stays theirs.
         const [existing] = await chrome.tabGroups.query({ windowId, title: group.name });
-        const groupId = existing
-          ? await chrome.tabs.group({ tabIds, groupId: existing.id })
-          : await chrome.tabs.group({ tabIds, createProperties: { windowId } });
-        await chrome.tabGroups.update(groupId, { title: group.name, color: group.color });
+        if (existing) {
+          await chrome.tabs.group({ tabIds, groupId: existing.id });
+        } else {
+          const groupId = await chrome.tabs.group({ tabIds, createProperties: { windowId } });
+          await chrome.tabGroups.update(groupId, { title: group.name, color: group.color });
+        }
         grouped += tabIds.length;
       } catch (err) {
         console.error('Failed to group', group.name, err);

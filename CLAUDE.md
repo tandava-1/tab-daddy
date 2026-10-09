@@ -33,6 +33,17 @@ injects `extractPage` (title, meta description, h1/h2, first 1,500 chars of
 - Name = strongest word(s) present in >= half the group's tabs.
 - "Everything else" catch-all last and default-deselected, as before.
 
+**Existing groups** (`cluster.js:joinExisting`, runs first). Only ungrouped tabs
+(`groupId === -1`) are candidates; grouped tabs only describe their group. A
+group's docs = its tabs' term bags + its title as one extra short doc. A tab joins
+the group holding its single closest doc if that score >= `JOIN_THRESHOLD` (=
+`MERGE_THRESHOLD`), same window only. Closest-member, not average: user groups are
+broad, and real related pages score 0.14–0.3 (an earlier 0.35 single-match bar,
+set from fixtures, rejected obvious fits). `planGroups` returns
+`{ additions, groups }`; the popup renders "Add to your groups" above new groups.
+Applying never renames or recolours a user's group — including when a new
+group's name folds into an existing one.
+
 Site access is `optional_host_permissions: <all_urls>`, requested from the popup's
 Allow button. Without it everything groups on title + site name.
 
@@ -84,7 +95,7 @@ No test runner in-repo. The logic suite lives in a scratchpad harness: copies of
 `real.json`: eight real pages captured with `extractPage` (NerdWallet, Bankrate's
 bot check, a Serious Eats 404, BBC Good Food carbonara, Wikipedia Mortgage /
 Carbonara / Kubernetes, GitHub React). Expected: mortgage pair, carbonara pair,
-rest loose. 18 tests. Re-create it rather than looking for it — scratchpads are
+rest loose. 28 tests, including existing-group cases on the real pages. Re-create it rather than looking for it — scratchpads are
 session-local.
 
 Real-browser checks run the extension in **Chrome for Testing** (branded Chrome

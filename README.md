@@ -40,8 +40,17 @@ The popup previews every proposed group before anything happens: rename inline,
 uncheck what you don't want, expand to see members. **"Everything else" is
 unchecked by default** — it's a judgement call you opt into.
 
-Applying uses Chrome's native tab groups and folds into an existing group of the
-same name rather than creating a second one. Pinned tabs and `chrome://` pages
+### Your existing groups
+
+Tabs already in a group are never moved. Before making new groups, Tab Daddy
+offers each ungrouped tab to the groups you already have in the same window,
+under **Add to your groups**. A tab joins a group if it's as close to any one of
+that group's tabs, or to the group's name, as two tabs need to be to form a new
+group. Whatever doesn't fit goes on to new groups as usual.
+
+Your groups are never renamed or recoloured. Applying only adds the tabs you
+left ticked. If you rename a new group to the name of one of yours, its tabs
+fold into your group and it keeps its colour. Pinned tabs and `chrome://` pages
 are left alone.
 
 ## Duplicates
