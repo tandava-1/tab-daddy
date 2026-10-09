@@ -36,7 +36,10 @@ injects `extractPage` (title, meta description, h1/h2, first 1,500 chars of
   0.11 when two react.dev pages scored 0.119 and stayed apart.
 - Unreadable tabs (`isReadable` false: discarded, unloaded, non-http, Web Store)
   use title + site name. Popup tags them "title only" once access is granted.
-- Name = strongest word(s) present in >= half the group's tabs.
+- Name = strongest word present in >= half the group's tabs, plus a second word
+  only if the two sit side by side in some title/heading (else "Distance
+  marathon" nonsense). Spelled as the page writes it (`asWritten`: "useEffect",
+  plural "rates"), sentence case. Site names never used.
 - "Everything else" catch-all last and default-deselected, as before.
 
 **Existing groups** (`cluster.js:joinExisting`, runs first). Only ungrouped tabs
