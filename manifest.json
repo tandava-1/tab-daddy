@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Tab Daddy",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Clean up browser clutter: auto-group open tabs into meaningful groups and find duplicate tabs.",
   "homepage_url": "https://github.com/tandava-1/tab-daddy",
   "permissions": ["tabs", "tabGroups", "scripting", "storage"],

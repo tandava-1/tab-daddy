@@ -30,9 +30,10 @@ injects `extractPage` (title, meta description, h1/h2, first 1,500 chars of
 
 - Each tab -> weighted word bag (`FIELD_WEIGHTS`: title 3, description/headings 2,
   body 1), top 40 words, IDF-discounted, unit-length.
-- Average-linkage merging until the best pair is below `MERGE_THRESHOLD` (0.14).
-  The sweep on real pages put the safe band at roughly 0.08–0.19: below it,
-  Wikipedia furniture joins unrelated articles; above it, real topics split.
+- Average-linkage merging until the best pair is below `MERGE_THRESHOLD` (0.11).
+  Words are plural-folded (`keywords.js:singular`). Sweep on real pages: safe
+  band 0.06–0.17 after folding (was 0.08–0.19 before, with 0.14 chosen); moved to
+  0.11 when two react.dev pages scored 0.119 and stayed apart.
 - Unreadable tabs (`isReadable` false: discarded, unloaded, non-http, Web Store)
   use title + site name. Popup tags them "title only" once access is granted.
 - Name = strongest word(s) present in >= half the group's tabs.
