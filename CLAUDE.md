@@ -18,8 +18,10 @@ is optional, opt-in AI naming. Live on the Chrome Web Store.
 - Naming server live at https://tab-daddy-names.shivankshridhar1.workers.dev
   (Cloudflare account shivankshridhar1@gmail.com; KV `NAMES`
   10bee68159b346ec85c24c616dd78893; Groq key set as Worker secret).
-  `ALLOWED_ORIGINS` is still empty — set it to the store item's
-  chrome-extension:// origin before release.
+  `ALLOWED_ORIGINS` = store item `gomobpfmegmaojmogfnmdiollcolndkm` plus the
+  unpacked copy at `/Users/shivankshridhar/Claude/tab-daddy`
+  (`pdmbkbhgcnhppbbbpmckfnkbcipimapj`, derived from the path). Moving the folder
+  changes that ID; unpacked copies elsewhere get word names only.
 
 ## Grouping — by page content
 

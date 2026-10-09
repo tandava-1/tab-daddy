@@ -12,9 +12,10 @@ enabled = false
 
 [vars]
 GROQ_MODEL = "openai/gpt-oss-20b"
-# Comma-separated chrome-extension://<id> origins. Empty allows any extension
-# origin (handy while testing an unpacked copy); set it to the store ID for release.
-ALLOWED_ORIGINS = ""
+# Comma-separated chrome-extension://<id> origins. Empty would allow any extension.
+# First: the Chrome Web Store item. Second: an unpacked copy loaded from
+# /Users/shivankshridhar/Claude/tab-daddy (Chrome derives that ID from the path).
+ALLOWED_ORIGINS = "chrome-extension://gomobpfmegmaojmogfnmdiollcolndkm,chrome-extension://pdmbkbhgcnhppbbbpmckfnkbcipimapj"
 
 # Per-install limit, so one user can't use up the shared daily allowance.
 [[ratelimits]]
