@@ -116,22 +116,6 @@ header {
 }
 .access-note[hidden] { display: none; }
 .btn.small { padding: 4px 10px; font-size: 12px; flex: none; }
-.note-actions { display: flex; gap: 6px; flex: none; }
-.ai-line {
-  margin: 4px 14px 12px;
-  font-size: 11px;
-  color: var(--text-dim);
-}
-.ai-line[hidden] { display: none; }
-.ai-line button {
-  appearance: none;
-  border: none;
-  background: none;
-  padding: 0;
-  font: inherit;
-  color: var(--accent);
-  cursor: pointer;
-}
 .section {
   margin: 14px 6px 6px;
   font-size: 11px;

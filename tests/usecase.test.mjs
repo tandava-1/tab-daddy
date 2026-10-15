@@ -87,10 +87,9 @@ test('Wikipedia tabs form one Reference group, whatever their topics', () => {
   assert.ok(g.tabs.length >= 5);
 });
 
-test('use-case groups are listed before topic groups and never sent for AI naming', () => {
+test('use-case groups are listed before topic groups', () => {
   const tabs = [F.tab('https://www.myntra.com/a', 'Shoes'), F.tab('https://www.flipkart.com/b', 'Phone')];
   const { tabs: t2, pages } = F.build(F.mortgage);
   const groups = plan([...tabs, ...t2], pages).groups;
   assert.equal(groups[0].source, 'usecase');
-  assert.ok(!('sharedWords' in groups[0]));
 });

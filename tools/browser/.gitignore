@@ -1,0 +1,4 @@
+.chrome/
+.venv/
+node_modules/
+shots/

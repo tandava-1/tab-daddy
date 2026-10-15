@@ -1,7 +1,6 @@
 import { planGroups, findDuplicates } from './lib/analyze.js';
 import { readPages, hasPageAccess, requestPageAccess } from './lib/read.js';
 import { isGroupable } from './lib/tabs.js';
-import { nameGroups, namingRequests, getConsent, setConsent } from './lib/naming.js';
 
 const GROUP_DOT_COLORS = {
   grey: '#8a8f98', blue: '#4285f4', red: '#e5484d', yellow: '#f4c025',
@@ -22,11 +21,7 @@ const el = {
   undoBtn: document.getElementById('undoBtn'),
   footerMsg: document.getElementById('footerMsg'),
   accessNote: document.getElementById('accessNote'),
-  accessBtn: document.getElementById('accessBtn'),
-  aiNote: document.getElementById('aiNote'),
-  aiYesBtn: document.getElementById('aiYesBtn'),
-  aiNoBtn: document.getElementById('aiNoBtn'),
-  aiLine: document.getElementById('aiLine')
+  accessBtn: document.getElementById('accessBtn')
 };
 
 const state = {
@@ -39,7 +34,6 @@ const state = {
   selectedDupTabs: new Set(),
   lastClosed: [],      // urls closed in this session, for "Reopen closed"
   access: false,       // may we read page content?
-  aiNaming: null,      // 'yes' | 'no' | null (not asked yet)
   readIds: new Set(),  // tabs whose page was actually read this refresh
   pageCache: new Map(),// "tabId|url" -> page summary, kept while the popup is open
   run: 0               // bumps on every refresh so a stale one can bow out
@@ -105,19 +99,6 @@ async function refresh() {
 
   state.readIds = new Set(pages.keys());
   ({ additions: state.additions, groups: state.groups } = planGroups(tabs, pages, existing));
-
-  // Names come before groups are shown: nothing gets renamed in front of the
-  // user. nameGroups gives up after a few seconds and word names stand.
-  state.aiNaming = await getConsent();
-  if (state.aiNaming === 'yes' && namingRequests(state.groups).length) {
-    el.groupsList.replaceChildren();
-    el.groupsSummary.textContent = 'Naming groups…';
-    const names = await nameGroups(state.groups);
-    if (run !== state.run) return;
-    for (const group of state.groups) {
-      if (names.has(group.key)) group.name = names.get(group.key);
-    }
-  }
   // Additions and content groups are confident enough to pre-select; the
   // catch-all is a judgement call the user opts into.
   state.selectedGroups = new Set([
@@ -239,31 +220,8 @@ function groupCard(group, { isAddition }) {
   });
 }
 
-function renderAiControls() {
-  const nameable = namingRequests(state.groups).length > 0;
-  // Ask only when there is something to name, and not on top of the access ask.
-  el.aiNote.hidden = !(state.aiNaming === null && nameable && el.accessNote.hidden);
-  el.aiLine.hidden = state.aiNaming === null;
-  if (state.aiNaming !== null) {
-    const on = state.aiNaming === 'yes';
-    const toggle = document.createElement('button');
-    toggle.textContent = on ? 'Turn off' : 'Turn on';
-    toggle.addEventListener('click', () => answerAi(on ? 'no' : 'yes'));
-    el.aiLine.replaceChildren(document.createTextNode(`AI naming is ${on ? 'on' : 'off'}. `), toggle);
-  }
-}
-
-async function answerAi(value) {
-  await setConsent(value);
-  state.aiNaming = value;
-  // Saying yes is worth a refresh so the names arrive now; saying no changes nothing visible.
-  if (value === 'yes') refresh();
-  else renderAiControls();
-}
-
 function renderGroups() {
   el.groupsList.replaceChildren();
-  renderAiControls();
   const { additions, groups } = state;
 
   if (!additions.length && !groups.length) {
@@ -476,9 +434,6 @@ el.accessBtn.addEventListener('click', async () => {
   if (granted) refresh();
   else say('Still grouping by titles only.');
 });
-
-el.aiYesBtn.addEventListener('click', () => answerAi('yes'));
-el.aiNoBtn.addEventListener('click', () => answerAi('no'));
 
 el.applyBtn.addEventListener('click', applyGroups);
 el.closeDupBtn.addEventListener('click', closeDuplicates);

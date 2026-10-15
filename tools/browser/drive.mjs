@@ -1,7 +1,7 @@
 // Loads the real extension in Chrome for Testing, opens real tabs, optionally
 // sets up user groups, opens the real popup and reports what it shows.
 //
-//   node drive.mjs [--granted] [--ai=yes|no] [--apply] [--shot=out.png]
+//   node drive.mjs [--granted] [--apply] [--shot=out.png] [--panel=duplicates] [--open=N]
 //                  [--groups='[{"title":"Shopping","color":"red","match":["*://*.flipkart.com/*"]}]']
 //                  [--urls=a,b,c] [--ext=<dir>]
 //
@@ -17,7 +17,7 @@ const flag = (name) => process.argv.includes(`--${name}`);
 
 const DEFAULT_URLS = [
   'https://www.amazon.in/dp/B0CHX1W1XY', 'https://www.amazon.in/dp/B0DGHYDZR9', 'https://www.flipkart.com/',
-  'https://github.com/facebook/react', 'https://stackoverflow.com/questions/111102/how-do-javascript-closures-work',
+  'https://github.com/facebook/react', 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures',
   'https://react.dev/learn', 'https://react.dev/reference/react/useEffect',
   'https://www.bbc.com/news', 'https://www.theguardian.com/international',
   'https://en.wikipedia.org/wiki/Mortgage', 'https://en.wikipedia.org/wiki/Lisbon',
@@ -63,7 +63,6 @@ if (arg('groups')) {
   }, JSON.parse(arg('groups')));
   console.log('user groups before:', made.join(', '));
 }
-if (arg('ai')) await sw.evaluate((v) => chrome.storage.local.set({ aiNaming: v }), arg('ai'));
 
 // The popup as a page in the same window, at 2x for screenshots.
 const popup = await browser.newPage();
@@ -76,7 +75,6 @@ await popup.waitForFunction(() => document.querySelectorAll('#groupsList .card, 
 
 const report = await popup.evaluate(() => ({
   banner: !document.getElementById('accessNote').hidden,
-  aiNote: !document.getElementById('aiNote').hidden,
   summary: document.getElementById('groupsSummary').textContent,
   sections: [...document.querySelectorAll('#groupsList h3.section')].map((h) => h.textContent),
   groups: [...document.querySelectorAll('#groupsList .card')].map((c) => ({
@@ -89,7 +87,16 @@ const report = await popup.evaluate(() => ({
 console.log(JSON.stringify(report, null, 1));
 
 if (arg('shot')) {
-  await popup.evaluate(() => [...document.querySelectorAll('#groupsList .card')].slice(0, 2).forEach((c) => c.classList.add('is-open')));
+  // Let favicons finish loading so rows aren't missing their site icons.
+  await popup.waitForFunction(() => [...document.images].every((img) => img.complete), { timeout: 8000 }).catch(() => {});
+  if (arg('panel') === 'duplicates') {
+    await popup.click('[data-panel="duplicates"]');
+    await popup.evaluate(() => document.querySelector('#dupList .card')?.classList.add('is-open'));
+  } else {
+    const open = Number(arg('open') ?? 2);
+    await popup.evaluate((n) => [...document.querySelectorAll('#groupsList .card')].slice(0, n).forEach((c) => c.classList.add('is-open')), open);
+  }
+  await new Promise((r) => setTimeout(r, 500));
   await popup.screenshot({ path: arg('shot') });
 }
 if (flag('apply')) {

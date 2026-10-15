@@ -24,10 +24,9 @@
   <h1>Tab Daddy — Privacy Policy</h1>
   <p class="updated">Last updated: 15 October 2026</p>
 
-  <p><strong>Tab Daddy groups your tabs on your own computer.</strong> It does not
-  sell data, show ads, or use analytics. The only thing that can ever leave your
-  computer is a short list of words used to name groups, and only if you turn on
-  AI naming.</p>
+  <p><strong>Tab Daddy works entirely on your computer.</strong> It makes no network
+  requests, has no server, and never collects, stores, sends or sells anything
+  about your tabs.</p>
 
   <h2>What the extension reads, on your computer</h2>
   <ul>
@@ -36,61 +35,25 @@
     a Google Sheet goes in <em>Sheets</em>, Amazon in <em>Shopping</em>) using a list
     built into the extension, and to group tabs it can't read.</li>
     <li><strong>A short summary of each open page</strong> (its title, description,
-    main headings and the first 1,500 characters of its main text), but only after
-    you click <em>Allow</em> to give Tab Daddy access to the pages you have open.
-    This is how tabs are grouped by what they're about.</li>
+    main headings and the first 1,500 characters of its main text, skipping menus,
+    headers, sidebars and hidden text), but only after you click <em>Allow</em> to
+    give Tab Daddy access to the pages you have open. This is how tabs are grouped
+    by what they're about.</li>
   </ul>
-  <p>Page summaries are held in memory while the popup is open and discarded when it
-  closes. They are never written to disk and never sent anywhere.</p>
 
-  <h2>What is stored on your computer</h2>
-  <p>Using Chrome's <code>storage</code> API, Tab Daddy keeps: whether you turned AI
-  naming on or off; a random install ID (see below); and recent group names it
-  received, keyed by the words they were made from, for up to 7 days, so reopening
-  the popup on the same tabs sends nothing. You can clear all of this by removing
-  the extension.</p>
-
-  <h2>AI naming (optional, off until you say yes)</h2>
-  <p>The first time there are groups to name, Tab Daddy asks whether to name them
-  with AI. If you say yes, then for each new group it sends:</p>
-  <ul>
-    <li>up to eight ordinary words that appear on <strong>at least two</strong> of the
-    group's tabs, for example <code>mortgage, rates, loan, fixed</code>. A word written
-    with a capital letter on any of those tabs, such as a person's or a place's name,
-    is never sent;</li>
-    <li>a random install ID, so the server can stop any one install from using
-    more than its share.</li>
-  </ul>
-  <p>Only groups of related pages are named this way; groups named for what a site
-  is used for (Shopping, Coding, News…) are named on your computer and send
-  nothing. Page menus, headers, sidebars and hidden text are never read. Words
-  containing numbers or symbols are removed, site names are removed, and pages
-  with a password, payment-card or one-time-code field contribute nothing.
-  <strong>Page text, page titles and web addresses are never sent.</strong></p>
-  <p>The words go to Tab Daddy's naming server, which runs on
-  <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>. The server
-  passes the words, without the install ID, to
-  <a href="https://groq.com/privacy-policy/">Groq</a>, which runs an open AI model
-  that suggests a short name. The server keeps each word list and its suggested
-  name for up to 7 days so that the same words can be named again without asking
-  the model; this cache is shared by all users and contains no install IDs. The
-  server does not keep logs of requests. Cloudflare necessarily sees your IP
-  address in order to deliver each request; Tab Daddy does not record it.</p>
-  <p>You can turn AI naming off at any time from the line under the groups list.
-  With it off, nothing is sent and groups are named on your computer.</p>
+  <h2>What happens to that information</h2>
+  <p>It is held in memory while the popup is open and discarded when the popup
+  closes. Nothing is written to disk, no history is kept, no analytics are
+  gathered, and nothing is sent anywhere.</p>
 
   <h2>Third parties</h2>
-  <p>Cloudflare (hosting the naming server) and Groq (suggesting names) receive the
-  data described above, only when AI naming is on, and only to produce group names.
-  No other third parties. No advertising networks, no analytics, no remote code.
-  Data is never sold or used for anything other than naming your tab groups.</p>
+  <p>None. No analytics, no advertising, no external scripts, no remote code.</p>
 
   <h2>Permissions</h2>
   <ul>
     <li><code>tabs</code>: read tab titles and addresses to group tabs and find duplicates.</li>
     <li><code>tabGroups</code>: create Chrome tab groups and add tabs to groups you already have.</li>
     <li><code>scripting</code>: run the small page-summary reader in your open tabs.</li>
-    <li><code>storage</code>: remember your AI-naming choice and recent group names.</li>
     <li>Access to the sites you have open (optional, asked for when you click
     <em>Allow</em>): lets the page-summary reader run.</li>
   </ul>

@@ -3,10 +3,9 @@
 A Chrome extension (Manifest V3) that cleans up browser clutter two ways:
 **meaningful tab groups** and **duplicate detection**.
 
-Grouping runs entirely on your computer. The one optional exception is **AI
-naming**: if you say yes, the extension sends a few words per group to our
-naming server so groups get natural names. No account, no tracking, and nothing
-is sent unless you opt in.
+Everything runs on your computer. No account, no server, no tracking: the
+extension makes no network requests, and nothing about your tabs leaves the
+browser.
 
 ## Install
 
@@ -53,23 +52,10 @@ unchecked by default**.
 
 ### Group names
 
-Use-case groups are named for their use case. Topic groups are decided on
-your computer first; only then are they named. By default a topic group is
-named after the words most of its tabs share, as the pages write them, and
-never after a site.
-
-The first time there's something to name, the popup asks whether to **name
-groups with AI**. If you say yes, it sends, for each new topic group, up to
-eight ordinary words that appear on at least two of its tabs. Words written with
-a capital on any of those tabs (names of people and places) are never sent. An OTP, an account number or a
-name in an email subject almost never appears on two different pages, so it
-doesn't survive that rule; anything with digits or symbols is dropped as well.
-Page text, titles and addresses are never sent, and pages with a password,
-card or one-time-code field contribute nothing. Names come back from an open
-model (via Groq) behind our own small server, and are cached on your computer
-for 7 days, so reopening the popup on the same tabs sends nothing. If naming
-is slow (over 3 seconds) or fails, the word-based names are used. You can turn
-it off from the line under the groups list.
+Use-case groups are named for their use case ("Shopping", "Coding", "Sheets").
+Topic groups are named after the words most of their tabs share, as the pages
+write them ("Mortgage rates", "useEffect"), and never after a site. Rename any
+group in the popup before applying.
 
 ### Your existing groups
 
@@ -115,7 +101,6 @@ A scope toggle switches both panels between the current window and all windows.
 | `lib/cluster.js` | Grouping tabs by content, and naming the groups |
 | `lib/keywords.js` | Word splitting and the ignored-word list |
 | `lib/tabs.js` | Which tabs take part or can be read, site names, group colours |
-| `lib/naming.js` | Optional AI naming: consent, what's sent, cache, validation |
 | `lib/analyze.js` | The grouping entry point, URL canonicalization, duplicate finding |
 
 ## Tests
@@ -123,8 +108,7 @@ A scope toggle switches both panels between the current window and all windows.
 `npm test` runs the logic suite in `tests/` (Node 24, no dependencies). Real
 pages captured with the extension's own reader live in `tests/real-pages.json`.
 `tools/browser/` drives the real extension in Chrome for Testing: `npm install`,
-`npm run chrome`, then `node drive.mjs --granted`. The naming server has its own
-suite: `cd server && npm test`.
+`npm run chrome`, then `node drive.mjs --granted`.
 
 ## Tweaking
 
@@ -141,10 +125,8 @@ Reload from `chrome://extensions` after editing.
 - `tabs`: read tab titles and addresses, to group them and compare for duplicates
 - `tabGroups`: create and name the resulting native tab groups
 - `scripting`: run the small page-summary reader in your open tabs
-- `storage`: remember your AI-naming choice and cache names on your computer
 - Access to all sites (**optional**, asked for on first use): needed for the
   page-summary reader to run on the pages you have open
 
 Page text is held in the popup's memory only while it's open. It is never
-stored, logged or sent anywhere. With AI naming on, only the shared words
-described above leave your computer.
+stored, logged or sent anywhere.
