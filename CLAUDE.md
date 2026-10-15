@@ -10,10 +10,10 @@ is optional, opt-in AI naming. Live on the Chrome Web Store.
 
 - v1.0.0 (as Tab Tidy) is live on the Chrome Web Store. Its upload zip is gone;
   rebuild from source if needed.
-- v2.0.0 in progress: rename to Tab Daddy, page-content grouping, joining
-  existing groups.
-- Privacy policy: https://tandava-1.github.io/tab-daddy/ once the repo rename
-  lands (was `/tab-tidy/`).
+- v2.0.0 in progress: rename to Tab Daddy, use-case + topic grouping, joining
+  existing groups, opt-in AI naming. Not yet submitted to the store.
+- Privacy policy live at https://tandava-1.github.io/tab-daddy/ (repo renamed
+  2026-10-11; the old `/tab-tidy/` address 404s, which breaks 1.0.0's listing link).
 - Source repo: https://github.com/tandava-1/tab-daddy (also `homepage_url`).
 - Naming server live at https://tab-daddy-names.shivankshridhar1.workers.dev
   (Cloudflare account shivankshridhar1@gmail.com; KV `NAMES`
@@ -23,26 +23,50 @@ is optional, opt-in AI naming. Live on the Chrome Web Store.
   (`pdmbkbhgcnhppbbbpmckfnkbcipimapj`, derived from the path). Moving the folder
   changes that ID; unpacked copies elsewhere get word names only.
 
-## Grouping — by page content
+## Grouping — use case first, topic for the rest
 
-`lib/analyze.js:planGroups(tabs, pages)` hands groupable tabs to
-`lib/cluster.js:clusterTabs`. `pages` comes from `lib/read.js:readPages`, which
-injects `extractPage` (title, meta description, h1/h2, first 1,500 chars of
-`article|main|body`) via `chrome.scripting`, 8 at a time, 1.5 s timeout each.
+Decided with the founder 2026-10-15. `lib/analyze.js:planGroups(tabs, pages, existing)`:
 
-- Each tab -> weighted word bag (`FIELD_WEIGHTS`: title 3, description/headings 2,
-  body 1), top 40 words, IDF-discounted, unit-length.
-- Average-linkage merging until the best pair is below `MERGE_THRESHOLD` (0.11).
-  Words are plural-folded (`keywords.js:singular`). Sweep on real pages: safe
-  band 0.06–0.17 after folding (was 0.08–0.19 before, with 0.14 chosen); moved to
-  0.11 when two react.dev pages scored 0.119 and stayed apart.
-- Unreadable tabs (`isReadable` false: discarded, unloaded, non-http, Web Store)
-  use title + site name. Popup tags them "title only" once access is granted.
-- Name = strongest word present in >= half the group's tabs, plus a second word
-  only if the two sit side by side in some title/heading (else "Distance
-  marathon" nonsense). Spelled as the page writes it (`asWritten`: "useEffect",
-  plural "rates"), sentence case. Site names never used.
-- "Everything else" catch-all last and default-deselected, as before.
+1. **Use case** per tab (`lib/usecase.js:useCaseOf`): `siteCategory(url)` from
+   `lib/sites.js`, else `clueCategory(page.clues)`. 27 use cases, ~1,300 rules.
+   Matching walks host -> parent domains; at each level plain and `*.` rules
+   compete, longest path (then query) wins, so `*.sharepoint.com/:x:/` (Sheets)
+   beats a bare `sharepoint.com` (Work). Clues: schema.org types / og:type /
+   price + add-to-cart; Product data alone is NOT Shopping (NerdWallet tags
+   reviewed cards as Products).
+2. Use-case tabs join a user group only if it's named for the use case or >50%
+   its tabs share it. Tabs without a use case may join by content
+   (`joinExisting`).
+3. >= 2 tabs of a use case -> group named for it (`source: 'usecase'`, never AI-named).
+   A lone one goes to "Everything else", never into topic grouping.
+4. Remaining tabs -> topic clustering (`lib/cluster.js:clusterTabs`).
+
+`lib/sites.js` is GENERATED: `python3 tools/sites/merge.py tools/sites/research`
+then `python3 tools/sites/build.py tools/sites/research/merged.json lib/sites.js`.
+Research = three agent passes (global, India, web-app URL patterns; Semrush,
+Ahrefs, Wikipedia/Similarweb, Aug–Oct 2026) + `manual.json` gap fills. Category
+merges/renames (Email & calendar, Chat & calls, Coding, Work…) live in build.py.
+
+**Topic engine.** `pages` comes from `lib/read.js:readPages` -> `extractPage`
+(chrome.scripting, 8 at a time, 1.5 s each): title, meta description, h1/h2 and
+~1,500 chars of main text collected with a TreeWalker that skips furniture
+(nav/footer/aside/form/button/site-level header/ARIA landmarks) and anything
+`checkVisibility()` says is hidden (Wikipedia's 300-language picker otherwise
+became the topic). Plus `clues` and `sensitive`.
+
+- Each tab -> weighted word bag (title 3, description/headings 2, body 1), top
+  40 words, IDF-discounted, unit-length, plurals folded.
+- **Ordinary words** (`terms.ordinary`): words written in lowercase somewhere on
+  that tab. Two tabs link only if they share an ordinary word (plus the old
+  two-words-or-one-long-word rule), so a person's name can't link tabs. Cost:
+  place names can't either — two Lisbon sites sharing only "Lisbon" stay apart.
+  Title-only tabs in Title Case count every word as ordinary.
+- Average-linkage merging until below `MERGE_THRESHOLD` (0.11; safe band on real
+  pages 0.06–0.17).
+- Word names: strongest word in >= half the group, + a second only if adjacent in
+  a title/heading; spelled as the page writes it, shouting ("LISBON") de-capped,
+  acronyms (<= 4 letters) kept; sentence case; never a site name.
+- "Everything else" catch-all last and default-deselected.
 
 **Existing groups** (`cluster.js:joinExisting`, runs first). Only ungrouped tabs
 (`groupId === -1`) are candidates; grouped tabs only describe their group. A
@@ -59,9 +83,11 @@ group's name folds into an existing one.
 only names, and names are fetched *before* groups are shown (popup shows
 "Naming groups…", 3 s timeout, then word names). Chrome's built-in AI was
 dropped — neither of the founder's machines (8 GB M2) qualifies, nor would most
-users'. Payload per group = `sharedWords` (cluster.js:sharedWordsOf: words on
->= 2 tabs, top 8, no site names, sensitive pages skipped) then `cleanWords`
-(letters only). Request body is exactly `{ installId, groups: [{ id, words }] }`
+users'. Only `source: 'content'` groups are named. Payload per group = `sharedWords`
+(cluster.js:sharedWordsOf: words on >= 2 tabs, ordinary on every tab that has
+them, top 8, no site names, sensitive pages skipped) then `cleanWords` (letters
+only); fewer than 2 words -> not sent. In practice that's often too few once
+names are excluded (two Lisbon guides shared only "city"). Request body is exactly `{ installId, groups: [{ id, words }] }`
 — a test asserts no titles/URLs leak. Replies pass `validName` (<= 24 chars,
 <= 4 words, no addresses). Cache in `chrome.storage.local` keyed by the word
 list, 7-day TTL, 300 entries. Consent stored as `aiNaming: 'yes'|'no'`; asked
@@ -105,11 +131,14 @@ Allow button. Without it everything groups on title + site name.
 
 Outside this repo, at `~/Claude/tab-daddy-store/`:
 
-- `listing.md` — all dashboard copy. Short description is 127/132 chars; detailed
-  description is 1481/1600, ASCII-only. Both permission justifications live here.
-- `index.html` / `privacy-policy.html` — identical, self-contained, zero external refs.
-- `screenshots-letterbox/` — the three 1280x800 shots used in the listing
-  (verified `hasAlpha: no`). `screenshots/` holds the cropped variants, unused.
+- `listing.md` — all dashboard copy, permission justifications, data disclosure
+  (tick "Website content" only), release steps.
+- `index.html` / `privacy-policy.html` — identical to this repo's `index.html`,
+  which GitHub Pages serves as the privacy policy.
+- `screenshots-v2/` — 1280x800 shots from 2026-10-09, before use-case grouping:
+  retake. `screenshots-letterbox/` are 1.0.0's (Tab Tidy, a Netflix page): don't use.
+- `tab-daddy-2.0.0.zip` — rebuild before upload; zip only manifest, background,
+  popup.*, lib/, icons/ (never server/, tests/, tools/, index.html).
 
 ## Releasing an update
 
@@ -119,20 +148,22 @@ step that catches everyone out.
 
 ## Testing
 
-No test runner in-repo. The logic suite lives in a scratchpad harness: copies of
-`lib/*.js` imported directly (Node 22+ detects ES modules), `fixtures.mjs`, and
-`real.json`: eight real pages captured with `extractPage` (NerdWallet, Bankrate's
-bot check, a Serious Eats 404, BBC Good Food carbonara, Wikipedia Mortgage /
-Carbonara / Kubernetes, GitHub React). Expected: mortgage pair, carbonara pair,
-rest loose. 40 tests, including existing-group cases on the real pages and the
-naming privacy rules. The browser driver can run a stand-in naming server on
-127.0.0.1:8787 and print exactly what the extension sent. Re-create it rather than looking for it — scratchpads are
-session-local.
+`npm test` (repo root) runs `tests/*.test.mjs` with node:test, no dependencies:
+topic, use case, existing groups, naming/privacy, duplicates. Topic fixtures use
+made-up `.example` addresses (avoid real words as hostnames: a site called
+`rates.example` makes "rates" a site name). `tests/real-pages.json` = 13 real
+pages captured with the extension's own reader; `realPages({ neutral: true })`
+gives them made-up addresses so only content counts. Server: `cd server && npm test`.
 
-Real-browser checks run the extension in **Chrome for Testing** (branded Chrome
-dropped `--load-extension`): `npx @puppeteer/browsers install chrome@stable` plus
-`puppeteer-core@24`, launched with `enableExtensions: true` and
-`browser.installExtension(dir)`. `chrome.action.openPopup()` from the service
-worker opens the real popup. Puppeteer can't click Chrome's native permission
-prompt, so the granted path is tested on a copy whose manifest moves `<all_urls>`
-from `optional_host_permissions` to `host_permissions`.
+The scratchpad was wiped once (2026-10-15) and took the old harness with it:
+keep tests and tools in the repo.
+
+Real browser: `tools/browser/` (`npm install`, `npm run chrome` installs Chrome
+for Testing into `.chrome/`, git-ignored). `extract-probe.mjs <urls>` runs the
+real reader on live pages (`--save=` to capture). `drive.mjs` loads the
+extension, opens real tabs, can create user groups (`--groups=`), set AI consent
+(`--ai=yes`), screenshot (`--shot=`) and apply (`--apply`). `--granted` runs a
+temp copy with site access required, because Puppeteer can't click Chrome's
+permission prompt — but a temp copy has a different extension ID, so the naming
+server refuses it. To test live AI naming with page access, temporarily move
+`<all_urls>` to `host_permissions` in the repo's own manifest and restore it.

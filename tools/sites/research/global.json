@@ -1,0 +1,3129 @@
+{
+ "sources": [
+  {
+   "name": "Wikipedia - List of most-visited websites (Similarweb ranks, top 50)",
+   "url": "https://en.wikipedia.org/wiki/List_of_most-visited_websites",
+   "date": "Similarweb data Aug 2026; fetched 2026-10-11"
+  },
+  {
+   "name": "WsCube Tech - Top 100 most visited websites (cites Similarweb)",
+   "url": "https://www.wscubetech.com/blog/most-visited-websites/",
+   "date": "Similarweb data Jun 2026; fetched 2026-10-11"
+  },
+  {
+   "name": "Semrush top websites - global (top 20)",
+   "url": "https://www.semrush.com/website/top/",
+   "date": "Aug 2026"
+  },
+  {
+   "name": "Semrush top websites - US / UK / Germany (top 20 each)",
+   "url": "https://www.semrush.com/website/top/united-states/all/",
+   "date": "Aug 2026"
+  },
+  {
+   "name": "Semrush most-visited by category, US (software, finance, newspapers, retail, TV & movies, music, IT, distance learning, travel, sports, games, healthcare, real estate, recruitment, restaurants, online services) + global software",
+   "url": "https://www.semrush.com/trending-websites/us/finance",
+   "date": "Aug 2026"
+  },
+  {
+   "name": "Ahrefs Top Websites - global / US / UK / Germany (top 100 each, organic search traffic)",
+   "url": "https://ahrefstop.com/websites",
+   "date": "Oct 2026"
+  },
+  {
+   "name": "Business Today - most popular AI tools (aitools.xyz, from Semrush/Ahrefs)",
+   "url": "https://www.businesstoday.in/technology/artificial-intelligence/story/most-popular-ai-tools-in-2026-chatgpt-takes-the-top-spot-550382-2026-08-21",
+   "date": "Jun 2026 data; published 2026-08-21"
+  }
+ ],
+ "notes": "Similarweb.com itself refused automated fetches (TLS reset), so Similarweb ranks come via Wikipedia (Aug 2026) and WsCube Tech (Jun 2026). Ahrefs ranks reflect organic search traffic and under-count direct-navigation tools (Gmail, Notion, Slack). Entries marked 'curated' were added because they are common tabs but did not appear in the fetched lists; their rank_hint is empty. In mixed rules, match '*' means 'everything else on this domain'; rules are ordered most-specific first. Excluded: Adult (pornhub, xvideos, xhamster, stripchat), gambling/lottery (bet.br, xsmn.mobi, sambad.com, bovada.lv), piracy (aniworld.to), proxies/ad-blockers/browsers (proxysite.com, getadblock.com, adblockplus.org, guard.io, opera.com), recruiting/HR back-ends and short links (paradox.ai, appcast.io, order.online, lnk.to, etc.), people-search (spokeo, fastpeoplesearch), single universities, India/Turkey-only gov or local portals, unidentifiable domains (grupogilleon.com, jackakhilautos.com, stockporthomes.org).",
+ "sites": [
+  {
+   "domain": "amazon.co.uk",
+   "category": "Shopping",
+   "rank_hint": "global #53 (Ahrefs Oct 2026); UK #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "amazon.de",
+   "category": "Shopping",
+   "rank_hint": "global #61 (Ahrefs Oct 2026); Germany #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "walmart.com",
+   "category": "Shopping",
+   "rank_hint": "global #60 (Similarweb Jun 2026, via WsCube Tech); global #71 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "temu.com",
+   "category": "Shopping",
+   "rank_hint": "global #26 (Similarweb Aug 2026, via Wikipedia); global #28 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "ebay.com",
+   "category": "Shopping",
+   "rank_hint": "global #46 (Similarweb Aug 2026, via Wikipedia); global #47 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "ebay.co.uk",
+   "category": "Shopping",
+   "rank_hint": "UK #11 (Semrush Aug 2026); UK #13 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "ebay.de",
+   "category": "Shopping",
+   "rank_hint": "Germany #32 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "etsy.com",
+   "category": "Shopping",
+   "rank_hint": "global #81 (Ahrefs Oct 2026); US #35 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "target.com",
+   "category": "Shopping",
+   "rank_hint": "global #93 (Similarweb Jun 2026, via WsCube Tech); global #85 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "homedepot.com",
+   "category": "Shopping",
+   "rank_hint": "global #94 (Similarweb Jun 2026, via WsCube Tech); global #99 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "lowes.com",
+   "category": "Shopping",
+   "rank_hint": "US #42 (Ahrefs Oct 2026); US retail #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bestbuy.com",
+   "category": "Shopping",
+   "rank_hint": "US #51 (Ahrefs Oct 2026); US retail #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "costco.com",
+   "category": "Shopping",
+   "rank_hint": "global #95 (Similarweb Jun 2026, via WsCube Tech); US #53 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "wayfair.com",
+   "category": "Shopping",
+   "rank_hint": "US retail #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "shein.com",
+   "category": "Shopping",
+   "rank_hint": "global #62 (Similarweb Jun 2026, via WsCube Tech); US retail #10 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "aliexpress.com",
+   "category": "Shopping",
+   "rank_hint": "global #61 (Similarweb Jun 2026, via WsCube Tech); US retail #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "allegro.pl",
+   "category": "Shopping",
+   "rank_hint": "global #74 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "ikea.com",
+   "category": "Shopping",
+   "rank_hint": "global #48 (Ahrefs Oct 2026); UK #43 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "nike.com",
+   "category": "Shopping",
+   "rank_hint": "US #86 (Ahrefs Oct 2026); UK #98 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "samsung.com",
+   "category": "Shopping",
+   "rank_hint": "global #37 (Similarweb Aug 2026, via Wikipedia); global #41 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "next.co.uk",
+   "category": "Shopping",
+   "rank_hint": "UK #18 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "marksandspencer.com",
+   "category": "Shopping",
+   "rank_hint": "UK #25 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "argos.co.uk",
+   "category": "Shopping",
+   "rank_hint": "UK #33 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "asda.com",
+   "category": "Shopping",
+   "rank_hint": "UK #37 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "sainsburys.co.uk",
+   "category": "Shopping",
+   "rank_hint": "UK #44 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "tesco.com",
+   "category": "Shopping",
+   "rank_hint": "UK #49 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "johnlewis.com",
+   "category": "Shopping",
+   "rank_hint": "UK #50 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "currys.co.uk",
+   "category": "Shopping",
+   "rank_hint": "UK #52 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "vinted.co.uk",
+   "category": "Shopping",
+   "rank_hint": "UK #73 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "asos.com",
+   "category": "Shopping",
+   "rank_hint": "UK #95 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "otto.de",
+   "category": "Shopping",
+   "rank_hint": "Germany #17 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "zalando.de",
+   "category": "Shopping",
+   "rank_hint": "Germany #19 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "idealo.de",
+   "category": "Shopping",
+   "rank_hint": "Germany #14 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "mediamarkt.de",
+   "category": "Shopping",
+   "rank_hint": "Germany #27 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "kleinanzeigen.de",
+   "category": "Shopping",
+   "rank_hint": "Germany #11 (Semrush Aug 2026); Germany #11 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "check24.de",
+   "category": "Shopping",
+   "rank_hint": "Germany #69 (Ahrefs Oct 2026)",
+   "note": "comparison site covering insurance, energy, flights, products"
+  },
+  {
+   "domain": "craigslist.org",
+   "category": "Shopping",
+   "rank_hint": "global #92 (Similarweb Jun 2026, via WsCube Tech); US real estate #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cargurus.com",
+   "category": "Shopping",
+   "rank_hint": "US #55 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "autotrader.com",
+   "category": "Shopping",
+   "rank_hint": "US #97 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "autotrader.co.uk",
+   "category": "Shopping",
+   "rank_hint": "UK #24 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "mobile.de",
+   "category": "Shopping",
+   "rank_hint": "Germany #33 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "autoscout24.de",
+   "category": "Shopping",
+   "rank_hint": "Germany #95 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "cvs.com",
+   "category": "Shopping",
+   "rank_hint": "US #50 (Ahrefs Oct 2026); US retail #9 (Semrush Aug 2026)",
+   "note": "pharmacy retail; prescriptions could argue Health"
+  },
+  {
+   "domain": "walgreens.com",
+   "category": "Shopping",
+   "rank_hint": "US #94 (Ahrefs Oct 2026); US retail #12 (Semrush Aug 2026)",
+   "note": "pharmacy retail; could argue Health"
+  },
+  {
+   "domain": "instagram.com",
+   "category": "Social",
+   "rank_hint": "global #4 (Similarweb Aug 2026, via Wikipedia); global #4 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "x.com",
+   "category": "Social",
+   "rank_hint": "global #6 (Similarweb Aug 2026, via Wikipedia); global #6 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "twitter.com",
+   "category": "Social",
+   "rank_hint": "US newspapers #10 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "reddit.com",
+   "category": "Social",
+   "rank_hint": "global #7 (Similarweb Aug 2026, via Wikipedia); global #7 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "tiktok.com",
+   "category": "Social",
+   "rank_hint": "global #9 (Similarweb Aug 2026, via Wikipedia); global #10 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "pinterest.com",
+   "category": "Social",
+   "rank_hint": "global #20 (Similarweb Aug 2026, via Wikipedia); global #21 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "snapchat.com",
+   "category": "Social",
+   "rank_hint": "US software & dev #11 (Semrush Aug 2026); global software & dev #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "vk.com",
+   "category": "Social",
+   "rank_hint": "global #33 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "vk.ru",
+   "category": "Social",
+   "rank_hint": "global #33 (Similarweb Aug 2026, via Wikipedia)"
+  },
+  {
+   "domain": "threads.com",
+   "category": "Social",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "bsky.app",
+   "category": "Social",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "tumblr.com",
+   "category": "Social",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "nextdoor.com",
+   "category": "Social",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "chatgpt.com",
+   "category": "AI",
+   "rank_hint": "global #5 (Similarweb Aug 2026, via Wikipedia); global #5 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "claude.ai",
+   "category": "AI",
+   "rank_hint": "global #35 (Similarweb Aug 2026, via Wikipedia); global #34 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "perplexity.ai",
+   "category": "AI",
+   "rank_hint": "global #81 (Similarweb Jun 2026, via WsCube Tech); AI tools #10 by web visits (aitools.xyz Jun 2026, via Business Today)"
+  },
+  {
+   "domain": "deepseek.com",
+   "category": "AI",
+   "rank_hint": "global #82 (Similarweb Jun 2026, via WsCube Tech); AI tools #6 by web visits (aitools.xyz Jun 2026, via Business Today)"
+  },
+  {
+   "domain": "grok.com",
+   "category": "AI",
+   "rank_hint": "AI tools #7 by web visits (aitools.xyz Jun 2026, via Business Today)"
+  },
+  {
+   "domain": "janitorai.com",
+   "category": "AI",
+   "rank_hint": "AI tools #8 by web visits (aitools.xyz Jun 2026, via Business Today)"
+  },
+  {
+   "domain": "character.ai",
+   "category": "AI",
+   "rank_hint": "AI tools #9 by web visits (aitools.xyz Jun 2026, via Business Today)"
+  },
+  {
+   "domain": "poe.com",
+   "category": "AI",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "mistral.ai",
+   "category": "AI",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "huggingface.co",
+   "category": "AI",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings; model hub and AI demos; could argue Development"
+  },
+  {
+   "domain": "midjourney.com",
+   "category": "AI",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "outlook.com",
+   "category": "Email",
+   "rank_hint": "US IT #12 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "proton.me",
+   "category": "Email",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "gmx.net",
+   "category": "Email",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "web.de",
+   "category": "Email",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "whatsapp.com",
+   "category": "Chat",
+   "rank_hint": "global #10 (Similarweb Aug 2026, via Wikipedia); global #8 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "t.me",
+   "category": "Chat",
+   "rank_hint": "global #45 (Similarweb Aug 2026, via Wikipedia); global #43 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "wa.me",
+   "category": "Chat",
+   "rank_hint": "global #70 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "telegram.org",
+   "category": "Chat",
+   "rank_hint": "global software & dev #5 (Semrush Aug 2026)",
+   "note": "web.telegram.org is the web client"
+  },
+  {
+   "domain": "discord.com",
+   "category": "Chat",
+   "rank_hint": "global #48 (Similarweb Aug 2026, via Wikipedia); global #46 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "slack.com",
+   "category": "Chat",
+   "rank_hint": "US IT #13 (Semrush Aug 2026); global software & dev #16 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "messenger.com",
+   "category": "Chat",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "zoom.us",
+   "category": "Meetings",
+   "rank_hint": "global #68 (Similarweb Jun 2026, via WsCube Tech); US software & dev #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "webex.com",
+   "category": "Meetings",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "calendly.com",
+   "category": "Calendar",
+   "rank_hint": "US IT #19 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "netflix.com",
+   "category": "Video",
+   "rank_hint": "global #19 (Similarweb Aug 2026, via Wikipedia); global #22 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "primevideo.com",
+   "category": "Video",
+   "rank_hint": "global #33 (Ahrefs Oct 2026); US #45 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "twitch.tv",
+   "category": "Video",
+   "rank_hint": "global #28 (Similarweb Aug 2026, via Wikipedia); global #32 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "bilibili.com",
+   "category": "Video",
+   "rank_hint": "global #24 (Similarweb Aug 2026, via Wikipedia); global #27 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "hotstar.com",
+   "category": "Video",
+   "rank_hint": "global #83 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "hulu.com",
+   "category": "Video",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "disneyplus.com",
+   "category": "Video",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "max.com",
+   "category": "Video",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "peacocktv.com",
+   "category": "Video",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "paramountplus.com",
+   "category": "Video",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "vimeo.com",
+   "category": "Video",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "dailymotion.com",
+   "category": "Video",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "crunchyroll.com",
+   "category": "Video",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "joyn.de",
+   "category": "Video",
+   "rank_hint": "Germany #40 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "ardmediathek.de",
+   "category": "Video",
+   "rank_hint": "Germany #48 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "zdf.de",
+   "category": "Video",
+   "rank_hint": "Germany #44 (Ahrefs Oct 2026)",
+   "note": "German broadcaster; traffic dominated by its Mediathek streaming"
+  },
+  {
+   "domain": "sky.de",
+   "category": "Video",
+   "rank_hint": "Germany #52 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "fubo.tv",
+   "category": "Video",
+   "rank_hint": "US sports #18 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "spotify.com",
+   "category": "Music",
+   "rank_hint": "global #57 (Similarweb Jun 2026, via WsCube Tech); global #17 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "soundcloud.com",
+   "category": "Music",
+   "rank_hint": "US music #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "iheart.com",
+   "category": "Music",
+   "rank_hint": "US music #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bandcamp.com",
+   "category": "Music",
+   "rank_hint": "US music #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "pandora.com",
+   "category": "Music",
+   "rank_hint": "US music #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "last.fm",
+   "category": "Music",
+   "rank_hint": "US music #10 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ultimate-guitar.com",
+   "category": "Music",
+   "rank_hint": "US music #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "discogs.com",
+   "category": "Music",
+   "rank_hint": "US music #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "deezer.com",
+   "category": "Music",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "dzen.ru",
+   "category": "News",
+   "rank_hint": "global #29 (Similarweb Aug 2026, via Wikipedia); global #29 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "globo.com",
+   "category": "News",
+   "rank_hint": "global #43 (Similarweb Aug 2026, via Wikipedia); global #39 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "cnn.com",
+   "category": "News",
+   "rank_hint": "global #51 (Similarweb Jun 2026, via WsCube Tech); US #49 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "foxnews.com",
+   "category": "News",
+   "rank_hint": "global #55 (Similarweb Jun 2026, via WsCube Tech); US #37 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "nytimes.com",
+   "category": "News",
+   "rank_hint": "global #52 (Similarweb Jun 2026, via WsCube Tech); global #40 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "theguardian.com",
+   "category": "News",
+   "rank_hint": "global #85 (Similarweb Jun 2026, via WsCube Tech); UK #36 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "nbcnews.com",
+   "category": "News",
+   "rank_hint": "US newspapers #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "usatoday.com",
+   "category": "News",
+   "rank_hint": "US #90 (Ahrefs Oct 2026); US newspapers #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "apnews.com",
+   "category": "News",
+   "rank_hint": "US newspapers #15 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cbsnews.com",
+   "category": "News",
+   "rank_hint": "US #87 (Ahrefs Oct 2026); US newspapers #17 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "forbes.com",
+   "category": "News",
+   "rank_hint": "global #88 (Similarweb Jun 2026, via WsCube Tech); US newspapers #18 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "dailymail.com",
+   "category": "News",
+   "rank_hint": "US newspapers #19 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "washingtonpost.com",
+   "category": "News",
+   "rank_hint": "global #86 (Similarweb Jun 2026, via WsCube Tech); US newspapers #20 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "reuters.com",
+   "category": "News",
+   "rank_hint": "global #87 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "cnbc.com",
+   "category": "News",
+   "rank_hint": "global #89 (Similarweb Jun 2026, via WsCube Tech); US finance #12 (Semrush Aug 2026)",
+   "note": "business news; could argue Money"
+  },
+  {
+   "domain": "wsj.com",
+   "category": "News",
+   "rank_hint": "US finance #19 (Semrush Aug 2026)",
+   "note": "business news"
+  },
+  {
+   "domain": "medium.com",
+   "category": "News",
+   "rank_hint": "global #90 (Similarweb Jun 2026, via WsCube Tech); US #62 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "mashable.com",
+   "category": "News",
+   "rank_hint": "global #24 (Ahrefs Oct 2026); US #78 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "usnews.com",
+   "category": "News",
+   "rank_hint": "US #75 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "bild.de",
+   "category": "News",
+   "rank_hint": "Germany #13 (Semrush Aug 2026); Germany #10 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "n-tv.de",
+   "category": "News",
+   "rank_hint": "Germany #20 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "spiegel.de",
+   "category": "News",
+   "rank_hint": "Germany #28 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "tagesschau.de",
+   "category": "News",
+   "rank_hint": "Germany #34 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "welt.de",
+   "category": "News",
+   "rank_hint": "Germany #38 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "focus.de",
+   "category": "News",
+   "rank_hint": "Germany #82 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "sueddeutsche.de",
+   "category": "News",
+   "rank_hint": "Germany #85 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "faz.net",
+   "category": "News",
+   "rank_hint": "Germany #90 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "thesun.co.uk",
+   "category": "News",
+   "rank_hint": "UK #39 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "express.co.uk",
+   "category": "News",
+   "rank_hint": "UK #56 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "mirror.co.uk",
+   "category": "News",
+   "rank_hint": "UK #70 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "telegraph.co.uk",
+   "category": "News",
+   "rank_hint": "UK #75 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "independent.co.uk",
+   "category": "News",
+   "rank_hint": "UK #84 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "ycombinator.com",
+   "category": "News",
+   "rank_hint": "global #60 (Ahrefs Oct 2026)",
+   "note": "traffic is mostly Hacker News (news.ycombinator.com)"
+  },
+  {
+   "domain": "rollingstone.com",
+   "category": "News",
+   "rank_hint": "US music #17 (Semrush Aug 2026)",
+   "note": "music/culture journalism"
+  },
+  {
+   "domain": "github.com",
+   "category": "Development",
+   "rank_hint": "global #50 (Similarweb Aug 2026, via Wikipedia); global #48 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "stackoverflow.com",
+   "category": "Development",
+   "rank_hint": "global #91 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "gitlab.com",
+   "category": "Development",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "bitbucket.org",
+   "category": "Development",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "vercel.com",
+   "category": "Development",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "netlify.com",
+   "category": "Development",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "npmjs.com",
+   "category": "Development",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "replit.com",
+   "category": "Development",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "codepen.io",
+   "category": "Development",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "cloudflare.com",
+   "category": "Development",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "leetcode.com",
+   "category": "Development",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings; coding interview practice; could argue Learning"
+  },
+  {
+   "domain": "canva.com",
+   "category": "Design",
+   "rank_hint": "global #36 (Similarweb Aug 2026, via Wikipedia); global #36 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "figma.com",
+   "category": "Design",
+   "rank_hint": "global software & dev #18 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "capcut.com",
+   "category": "Design",
+   "rank_hint": "global #35 (Similarweb Jun 2026, via WsCube Tech)",
+   "note": "web video editor"
+  },
+  {
+   "domain": "shutterstock.com",
+   "category": "Design",
+   "rank_hint": "global #100 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "dribbble.com",
+   "category": "Design",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "behance.net",
+   "category": "Design",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "photopea.com",
+   "category": "Design",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "atlassian.net",
+   "category": "Work tools",
+   "rank_hint": "US IT #16 (Semrush Aug 2026); global software & dev #14 (Semrush Aug 2026)",
+   "note": "Jira and Confluence cloud tenants"
+  },
+  {
+   "domain": "atlassian.com",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "salesforce.com",
+   "category": "Work tools",
+   "rank_hint": "global #71 (Similarweb Jun 2026, via WsCube Tech); US IT #17 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "force.com",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings; Salesforce Lightning tenants (*.lightning.force.com)"
+  },
+  {
+   "domain": "notion.so",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "notion.com",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "trello.com",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "asana.com",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "monday.com",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "clickup.com",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "linear.app",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "airtable.com",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings; database tool; could argue Sheets"
+  },
+  {
+   "domain": "hubspot.com",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "service-now.com",
+   "category": "Work tools",
+   "rank_hint": "US IT #20 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "zendesk.com",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "miro.com",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings; whiteboard; could argue Design"
+  },
+  {
+   "domain": "smartsheet.com",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "workday.com",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "mykronos.com",
+   "category": "Work tools",
+   "rank_hint": "US healthcare #11 (Semrush Aug 2026)",
+   "note": "UKG/Kronos employee time clock"
+  },
+  {
+   "domain": "adp.com",
+   "category": "Work tools",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "shopify.com",
+   "category": "Work tools",
+   "rank_hint": "US software & dev #7 (Semrush Aug 2026); global software & dev #8 (Semrush Aug 2026)",
+   "note": "traffic is mostly merchant admin, not shoppers"
+  },
+  {
+   "domain": "dropbox.com",
+   "category": "Files",
+   "rank_hint": "US software & dev #16 (Semrush Aug 2026); US IT #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "box.com",
+   "category": "Files",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "wetransfer.com",
+   "category": "Files",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "mega.nz",
+   "category": "Files",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "ilovepdf.com",
+   "category": "Docs",
+   "rank_hint": "global #47 (Ahrefs Oct 2026)",
+   "note": "PDF tools"
+  },
+  {
+   "domain": "smallpdf.com",
+   "category": "Docs",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings; PDF tools"
+  },
+  {
+   "domain": "docusign.com",
+   "category": "Docs",
+   "rank_hint": "US IT #14 (Semrush Aug 2026)",
+   "note": "e-signature"
+  },
+  {
+   "domain": "docusign.net",
+   "category": "Docs",
+   "rank_hint": "US IT #15 (Semrush Aug 2026)",
+   "note": "e-signature signing pages"
+  },
+  {
+   "domain": "grammarly.com",
+   "category": "Docs",
+   "rank_hint": "US distance learning #5 (Semrush Aug 2026)",
+   "note": "writing assistant; could argue AI"
+  },
+  {
+   "domain": "booking.com",
+   "category": "Travel",
+   "rank_hint": "global #44 (Similarweb Aug 2026, via Wikipedia); global #50 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "expedia.com",
+   "category": "Travel",
+   "rank_hint": "global #79 (Similarweb Jun 2026, via WsCube Tech); US #89 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "tripadvisor.com",
+   "category": "Travel",
+   "rank_hint": "global #78 (Similarweb Jun 2026, via WsCube Tech); global #63 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "tripadvisor.co.uk",
+   "category": "Travel",
+   "rank_hint": "UK #15 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "tripadvisor.de",
+   "category": "Travel",
+   "rank_hint": "Germany #46 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "airbnb.com",
+   "category": "Travel",
+   "rank_hint": "US travel #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "agoda.com",
+   "category": "Travel",
+   "rank_hint": "global #80 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "aa.com",
+   "category": "Travel",
+   "rank_hint": "US travel #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "united.com",
+   "category": "Travel",
+   "rank_hint": "US travel #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "delta.com",
+   "category": "Travel",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "southwest.com",
+   "category": "Travel",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "marriott.com",
+   "category": "Travel",
+   "rank_hint": "US travel #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "hilton.com",
+   "category": "Travel",
+   "rank_hint": "US travel #10 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "priceline.com",
+   "category": "Travel",
+   "rank_hint": "US travel #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "kayak.com",
+   "category": "Travel",
+   "rank_hint": "US travel #11 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "flightaware.com",
+   "category": "Travel",
+   "rank_hint": "US travel #12 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "hotels.com",
+   "category": "Travel",
+   "rank_hint": "US travel #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "vrbo.com",
+   "category": "Travel",
+   "rank_hint": "US travel #14 (Semrush Aug 2026); US real estate #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "amtrak.com",
+   "category": "Travel",
+   "rank_hint": "US travel #15 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "nps.gov",
+   "category": "Travel",
+   "rank_hint": "US travel #19 (Semrush Aug 2026)",
+   "note": "US national parks trip planning"
+  },
+  {
+   "domain": "thetrainline.com",
+   "category": "Travel",
+   "rank_hint": "UK #54 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "nationalrail.co.uk",
+   "category": "Travel",
+   "rank_hint": "UK #74 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "tfl.gov.uk",
+   "category": "Travel",
+   "rank_hint": "UK #67 (Ahrefs Oct 2026)",
+   "note": "London transit journey planner"
+  },
+  {
+   "domain": "easyjet.com",
+   "category": "Travel",
+   "rank_hint": "UK #93 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "ryanair.com",
+   "category": "Travel",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "skyscanner.net",
+   "category": "Travel",
+   "rank_hint": "UK #78 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "tui.co.uk",
+   "category": "Travel",
+   "rank_hint": "UK #46 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "bahn.de",
+   "category": "Travel",
+   "rank_hint": "Germany #29 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "mapquest.com",
+   "category": "Maps",
+   "rank_hint": "US #58 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "openstreetmap.org",
+   "category": "Maps",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "paypal.com",
+   "category": "Money",
+   "rank_hint": "global #74 (Similarweb Jun 2026, via WsCube Tech); Germany #18 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "capitalone.com",
+   "category": "Money",
+   "rank_hint": "US #85 (Ahrefs Oct 2026); US finance #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "chase.com",
+   "category": "Money",
+   "rank_hint": "US finance #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bankofamerica.com",
+   "category": "Money",
+   "rank_hint": "US #96 (Ahrefs Oct 2026); US finance #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "wellsfargo.com",
+   "category": "Money",
+   "rank_hint": "US finance #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cash.app",
+   "category": "Money",
+   "rank_hint": "US finance #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "citi.com",
+   "category": "Money",
+   "rank_hint": "US finance #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "stripe.com",
+   "category": "Money",
+   "rank_hint": "US software & dev #14 (Semrush Aug 2026); US finance #10 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "americanexpress.com",
+   "category": "Money",
+   "rank_hint": "US finance #14 (Semrush Aug 2026); US travel #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "sofi.com",
+   "category": "Money",
+   "rank_hint": "US finance #15 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "creditkarma.com",
+   "category": "Money",
+   "rank_hint": "US finance #16 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "schwab.com",
+   "category": "Money",
+   "rank_hint": "US finance #17 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "chime.com",
+   "category": "Money",
+   "rank_hint": "US finance #18 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "intuit.com",
+   "category": "Money",
+   "rank_hint": "US software & dev #12 (Semrush Aug 2026)",
+   "note": "TurboTax/QuickBooks/Credit Karma login"
+  },
+  {
+   "domain": "squareup.com",
+   "category": "Money",
+   "rank_hint": "US software & dev #20 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "wise.com",
+   "category": "Money",
+   "rank_hint": "global #59 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "investing.com",
+   "category": "Money",
+   "rank_hint": "global #45 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "tradingview.com",
+   "category": "Money",
+   "rank_hint": "global #68 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "finanzen.net",
+   "category": "Money",
+   "rank_hint": "Germany #35 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "santander.co.uk",
+   "category": "Money",
+   "rank_hint": "UK #91 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "lloydsbank.com",
+   "category": "Money",
+   "rank_hint": "UK #99 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "moneysavingexpert.com",
+   "category": "Money",
+   "rank_hint": "UK #57 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "robinhood.com",
+   "category": "Money",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "coinbase.com",
+   "category": "Money",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "binance.com",
+   "category": "Money",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "fidelity.com",
+   "category": "Money",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "doordash.com",
+   "category": "Food",
+   "rank_hint": "US #59 (Ahrefs Oct 2026); US restaurants #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ubereats.com",
+   "category": "Food",
+   "rank_hint": "US restaurants #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "grubhub.com",
+   "category": "Food",
+   "rank_hint": "US restaurants #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "instacart.com",
+   "category": "Food",
+   "rank_hint": "US retail #19 (Semrush Aug 2026)",
+   "note": "grocery delivery -> Food per 'food delivery' rule"
+  },
+  {
+   "domain": "dominos.com",
+   "category": "Food",
+   "rank_hint": "US restaurants #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "opentable.com",
+   "category": "Food",
+   "rank_hint": "US restaurants #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "allrecipes.com",
+   "category": "Food",
+   "rank_hint": "US #44 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "bbcgoodfood.com",
+   "category": "Food",
+   "rank_hint": "UK #30 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "chefkoch.de",
+   "category": "Food",
+   "rank_hint": "Germany #26 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "deliveroo.co.uk",
+   "category": "Food",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "lieferando.de",
+   "category": "Food",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "instructure.com",
+   "category": "Learning",
+   "rank_hint": "global #69 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "clever.com",
+   "category": "Learning",
+   "rank_hint": "US #46 (Ahrefs Oct 2026); US distance learning #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "powerschool.com",
+   "category": "Learning",
+   "rank_hint": "US distance learning #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "schoology.com",
+   "category": "Learning",
+   "rank_hint": "US distance learning #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "classdojo.com",
+   "category": "Learning",
+   "rank_hint": "US distance learning #11 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "quizlet.com",
+   "category": "Learning",
+   "rank_hint": "US #81 (Ahrefs Oct 2026); US distance learning #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "khanacademy.org",
+   "category": "Learning",
+   "rank_hint": "US distance learning #12 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "coursera.org",
+   "category": "Learning",
+   "rank_hint": "US distance learning #15 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "udemy.com",
+   "category": "Learning",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "duolingo.com",
+   "category": "Learning",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "ixl.com",
+   "category": "Learning",
+   "rank_hint": "US distance learning #16 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "kahoot.com",
+   "category": "Learning",
+   "rank_hint": "US #48 (Ahrefs Oct 2026)",
+   "note": "classroom quiz games"
+  },
+  {
+   "domain": "chegg.com",
+   "category": "Learning",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "w3schools.com",
+   "category": "Learning",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "geeksforgeeks.org",
+   "category": "Learning",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "wikipedia.org",
+   "category": "Reference",
+   "rank_hint": "global #11 (Similarweb Aug 2026, via Wikipedia); global #11 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "quora.com",
+   "category": "Reference",
+   "rank_hint": "global #56 (Similarweb Jun 2026, via WsCube Tech); global #39 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "merriam-webster.com",
+   "category": "Reference",
+   "rank_hint": "global #77 (Ahrefs Oct 2026); US #34 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "cambridge.org",
+   "category": "Reference",
+   "rank_hint": "global #83 (Ahrefs Oct 2026); US #64 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "britannica.com",
+   "category": "Reference",
+   "rank_hint": "US #74 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "dictionary.com",
+   "category": "Reference",
+   "rank_hint": "US distance learning #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "biblegateway.com",
+   "category": "Reference",
+   "rank_hint": "US #54 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "gutefrage.net",
+   "category": "Reference",
+   "rank_hint": "Germany #74 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "trustpilot.com",
+   "category": "Reference",
+   "rank_hint": "global #72 (Ahrefs Oct 2026); US #100 (Ahrefs Oct 2026)",
+   "note": "business reviews"
+  },
+  {
+   "domain": "yelp.com",
+   "category": "Reference",
+   "rank_hint": "global #34 (Ahrefs Oct 2026); US #13 (Ahrefs Oct 2026)",
+   "note": "local reviews (mostly restaurants); could argue Food"
+  },
+  {
+   "domain": "justanswer.com",
+   "category": "Reference",
+   "rank_hint": "US #40 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "stackexchange.com",
+   "category": "Reference",
+   "rank_hint": "US distance learning #10 (Semrush Aug 2026)",
+   "note": "Q&A network across many subjects; stackoverflow.com is Development"
+  },
+  {
+   "domain": "scribd.com",
+   "category": "Reference",
+   "rank_hint": "global #25 (Ahrefs Oct 2026)",
+   "note": "document/ebook library"
+  },
+  {
+   "domain": "deepl.com",
+   "category": "Reference",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings; translator; Google Translate also mapped to Reference"
+  },
+  {
+   "domain": "duckduckgo.com",
+   "category": "Search",
+   "rank_hint": "global #41 (Similarweb Aug 2026, via Wikipedia); global #42 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "ecosia.org",
+   "category": "Search",
+   "rank_hint": "Germany #19 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "startpage.com",
+   "category": "Search",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "indeed.com",
+   "category": "Jobs",
+   "rank_hint": "global #76 (Similarweb Jun 2026, via WsCube Tech); global #30 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "glassdoor.com",
+   "category": "Jobs",
+   "rank_hint": "global #77 (Similarweb Jun 2026, via WsCube Tech); US #98 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "ziprecruiter.com",
+   "category": "Jobs",
+   "rank_hint": "US #66 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "monster.com",
+   "category": "Jobs",
+   "rank_hint": "US recruitment #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "stepstone.de",
+   "category": "Jobs",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "myworkdayjobs.com",
+   "category": "Jobs",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "espn.com",
+   "category": "Sports",
+   "rank_hint": "global #53 (Similarweb Jun 2026, via WsCube Tech); global #26 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "espn.co.uk",
+   "category": "Sports",
+   "rank_hint": "UK #40 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "espncricinfo.com",
+   "category": "Sports",
+   "rank_hint": "global #84 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "cricinfo.com",
+   "category": "Sports",
+   "rank_hint": "global #49 (Ahrefs Oct 2026)",
+   "note": "same property as espncricinfo.com"
+  },
+  {
+   "domain": "cricbuzz.com",
+   "category": "Sports",
+   "rank_hint": "global #54 (Similarweb Jun 2026, via WsCube Tech); global #51 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "fifa.com",
+   "category": "Sports",
+   "rank_hint": "global #21 (Ahrefs Oct 2026); US #47 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "mlb.com",
+   "category": "Sports",
+   "rank_hint": "US #39 (Ahrefs Oct 2026); US newspapers #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "nfl.com",
+   "category": "Sports",
+   "rank_hint": "US #38 (Ahrefs Oct 2026); US sports #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "nba.com",
+   "category": "Sports",
+   "rank_hint": "US sports #19 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cbssports.com",
+   "category": "Sports",
+   "rank_hint": "US #60 (Ahrefs Oct 2026); US sports #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "foxsports.com",
+   "category": "Sports",
+   "rank_hint": "US #79 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "si.com",
+   "category": "Sports",
+   "rank_hint": "US sports #10 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bleacherreport.com",
+   "category": "Sports",
+   "rank_hint": "US sports #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "nbcsports.com",
+   "category": "Sports",
+   "rank_hint": "US sports #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "sofascore.com",
+   "category": "Sports",
+   "rank_hint": "US sports #20 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "livescore.com",
+   "category": "Sports",
+   "rank_hint": "global #98 (Ahrefs Oct 2026); UK #83 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "flashscore.co.uk",
+   "category": "Sports",
+   "rank_hint": "UK #90 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "skysports.com",
+   "category": "Sports",
+   "rank_hint": "UK #42 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "premierleague.com",
+   "category": "Sports",
+   "rank_hint": "UK #68 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "kicker.de",
+   "category": "Sports",
+   "rank_hint": "Germany #12 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "sportschau.de",
+   "category": "Sports",
+   "rank_hint": "Germany #16 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "transfermarkt.de",
+   "category": "Sports",
+   "rank_hint": "Germany #30 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "bundesliga.com",
+   "category": "Sports",
+   "rank_hint": "Germany #75 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "uefa.com",
+   "category": "Sports",
+   "rank_hint": "Germany #96 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "dazn.com",
+   "category": "Sports",
+   "rank_hint": "Germany #98 (Ahrefs Oct 2026)",
+   "note": "sports streaming; could argue Video"
+  },
+  {
+   "domain": "draftkings.com",
+   "category": "Sports",
+   "rank_hint": "US sports #15 (Semrush Aug 2026)",
+   "note": "sports betting - no gambling category"
+  },
+  {
+   "domain": "roblox.com",
+   "category": "Gaming",
+   "rank_hint": "global #58 (Similarweb Jun 2026, via WsCube Tech); global #35 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "steampowered.com",
+   "category": "Gaming",
+   "rank_hint": "global #59 (Similarweb Jun 2026, via WsCube Tech); global #84 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "steamcommunity.com",
+   "category": "Gaming",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "epicgames.com",
+   "category": "Gaming",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "poki.com",
+   "category": "Gaming",
+   "rank_hint": "global #69 (Ahrefs Oct 2026); US games #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "crazygames.com",
+   "category": "Gaming",
+   "rank_hint": "global #92 (Ahrefs Oct 2026); US games #11 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "coolmathgames.com",
+   "category": "Gaming",
+   "rank_hint": "US #68 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "xbox.com",
+   "category": "Gaming",
+   "rank_hint": "US games #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "playstation.com",
+   "category": "Gaming",
+   "rank_hint": "US games #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "nintendo.com",
+   "category": "Gaming",
+   "rank_hint": "US games #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "gamespot.com",
+   "category": "Gaming",
+   "rank_hint": "US games #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ign.com",
+   "category": "Gaming",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "gamerant.com",
+   "category": "Gaming",
+   "rank_hint": "US games #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "nexusmods.com",
+   "category": "Gaming",
+   "rank_hint": "US games #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "chess.com",
+   "category": "Gaming",
+   "rank_hint": "US sports #4 (Semrush Aug 2026)",
+   "note": "Semrush files it under Sports"
+  },
+  {
+   "domain": "lichess.org",
+   "category": "Gaming",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "nih.gov",
+   "category": "Health",
+   "rank_hint": "global #37 (Ahrefs Oct 2026); US #21 (Ahrefs Oct 2026)",
+   "note": "government site but traffic is health info (MedlinePlus/PubMed)"
+  },
+  {
+   "domain": "clevelandclinic.org",
+   "category": "Health",
+   "rank_hint": "global #44 (Ahrefs Oct 2026); US #25 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "mayoclinic.org",
+   "category": "Health",
+   "rank_hint": "global #46 (Ahrefs Oct 2026); US #27 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "healthline.com",
+   "category": "Health",
+   "rank_hint": "US #57 (Ahrefs Oct 2026); US healthcare #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "webmd.com",
+   "category": "Health",
+   "rank_hint": "US #91 (Ahrefs Oct 2026); US healthcare #10 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "goodrx.com",
+   "category": "Health",
+   "rank_hint": "US #83 (Ahrefs Oct 2026); US healthcare #12 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "drugs.com",
+   "category": "Health",
+   "rank_hint": "US healthcare #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cdc.gov",
+   "category": "Health",
+   "rank_hint": "US #93 (Ahrefs Oct 2026); US healthcare #18 (Semrush Aug 2026)",
+   "note": "public health"
+  },
+  {
+   "domain": "nhs.uk",
+   "category": "Health",
+   "rank_hint": "global #94 (Ahrefs Oct 2026); UK #11 (Ahrefs Oct 2026)",
+   "note": "public health service (UK); also could argue Government"
+  },
+  {
+   "domain": "apotheken-umschau.de",
+   "category": "Health",
+   "rank_hint": "Germany #54 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "athenahealth.com",
+   "category": "Health",
+   "rank_hint": "US IT #18 (Semrush Aug 2026); US healthcare #5 (Semrush Aug 2026)",
+   "note": "patient portal"
+  },
+  {
+   "domain": "gov.uk",
+   "category": "Government",
+   "rank_hint": "UK #14 (Semrush Aug 2026); UK #10 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "service.gov.uk",
+   "category": "Government",
+   "rank_hint": "UK #17 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "ca.gov",
+   "category": "Government",
+   "rank_hint": "US #84 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "studentaid.gov",
+   "category": "Government",
+   "rank_hint": "US finance #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "irs.gov",
+   "category": "Government",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "ssa.gov",
+   "category": "Government",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "arbeitsagentur.de",
+   "category": "Government",
+   "rank_hint": "Germany #42 (Ahrefs Oct 2026)",
+   "note": "German federal employment agency: job search plus benefits"
+  },
+  {
+   "domain": "turkiye.gov.tr",
+   "category": "Government",
+   "rank_hint": "global #100 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "zillow.com",
+   "category": "Real estate",
+   "rank_hint": "US #33 (Ahrefs Oct 2026); US real estate #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "realtor.com",
+   "category": "Real estate",
+   "rank_hint": "US #70 (Ahrefs Oct 2026); US real estate #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "apartments.com",
+   "category": "Real estate",
+   "rank_hint": "US real estate #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "trulia.com",
+   "category": "Real estate",
+   "rank_hint": "US real estate #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "redfin.com",
+   "category": "Real estate",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "rightmove.co.uk",
+   "category": "Real estate",
+   "rank_hint": "UK #22 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "zoopla.co.uk",
+   "category": "Real estate",
+   "rank_hint": "UK #69 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "immobilienscout24.de",
+   "category": "Real estate",
+   "rank_hint": "Germany #37 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "imdb.com",
+   "category": "Entertainment",
+   "rank_hint": "global #49 (Similarweb Aug 2026, via Wikipedia); global #75 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "fandom.com",
+   "category": "Entertainment",
+   "rank_hint": "global #38 (Similarweb Aug 2026, via Wikipedia); global #38 (Similarweb Jun 2026, via WsCube Tech)"
+  },
+  {
+   "domain": "rottentomatoes.com",
+   "category": "Entertainment",
+   "rank_hint": "US #52 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "letterboxd.com",
+   "category": "Entertainment",
+   "rank_hint": "US TV & movies #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "people.com",
+   "category": "Entertainment",
+   "rank_hint": "US #95 (Ahrefs Oct 2026); US newspapers #8 (Semrush Aug 2026)",
+   "note": "celebrity news"
+  },
+  {
+   "domain": "amctheatres.com",
+   "category": "Entertainment",
+   "rank_hint": "US TV & movies #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ticketmaster.com",
+   "category": "Entertainment",
+   "rank_hint": "US music #2 (Semrush Aug 2026)",
+   "note": "event tickets"
+  },
+  {
+   "domain": "stubhub.com",
+   "category": "Entertainment",
+   "rank_hint": "US sports #5 (Semrush Aug 2026)",
+   "note": "event tickets"
+  },
+  {
+   "domain": "seatgeek.com",
+   "category": "Entertainment",
+   "rank_hint": "US sports #9 (Semrush Aug 2026)",
+   "note": "event tickets"
+  },
+  {
+   "domain": "imgur.com",
+   "category": "Entertainment",
+   "rank_hint": "global #99 (Similarweb Jun 2026, via WsCube Tech)",
+   "note": "image hosting, meme-heavy"
+  },
+  {
+   "domain": "9gag.com",
+   "category": "Entertainment",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings"
+  },
+  {
+   "domain": "tvspielfilm.de",
+   "category": "Entertainment",
+   "rank_hint": "Germany #31 (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "weather.com",
+   "category": "Other",
+   "rank_hint": "global #32 (Similarweb Aug 2026, via Wikipedia); global #30 (Similarweb Jun 2026, via WsCube Tech)",
+   "note": "weather - no Weather category; consider adding one or folding into News"
+  },
+  {
+   "domain": "accuweather.com",
+   "category": "Other",
+   "rank_hint": "global #41 (Ahrefs Oct 2026); US #67 (Ahrefs Oct 2026)",
+   "note": "weather"
+  },
+  {
+   "domain": "metoffice.gov.uk",
+   "category": "Other",
+   "rank_hint": "UK #28 (Ahrefs Oct 2026)",
+   "note": "weather (UK gov)"
+  },
+  {
+   "domain": "wetteronline.de",
+   "category": "Other",
+   "rank_hint": "Germany #62 (Ahrefs Oct 2026)",
+   "note": "weather"
+  },
+  {
+   "domain": "wetter.com",
+   "category": "Other",
+   "rank_hint": "Germany #15 (Semrush Aug 2026); Germany #91 (Ahrefs Oct 2026)",
+   "note": "weather"
+  },
+  {
+   "domain": "usps.com",
+   "category": "Other",
+   "rank_hint": "US #20 (Semrush Aug 2026)",
+   "note": "parcel tracking/postal - no Shipping category"
+  },
+  {
+   "domain": "fedex.com",
+   "category": "Other",
+   "rank_hint": "US #63 (Ahrefs Oct 2026)",
+   "note": "parcel tracking"
+  },
+  {
+   "domain": "dhl.de",
+   "category": "Other",
+   "rank_hint": "Germany #16 (Semrush Aug 2026); Germany #51 (Ahrefs Oct 2026)",
+   "note": "parcel tracking"
+  },
+  {
+   "domain": "royalmail.com",
+   "category": "Other",
+   "rank_hint": "UK #66 (Ahrefs Oct 2026)",
+   "note": "parcel tracking"
+  },
+  {
+   "domain": "xfinity.com",
+   "category": "Other",
+   "rank_hint": "US #61 (Ahrefs Oct 2026)",
+   "note": "telecom account portal (also hosts Comcast email/TV)"
+  },
+  {
+   "domain": "att.com",
+   "category": "Other",
+   "rank_hint": "US #72 (Ahrefs Oct 2026)",
+   "note": "telecom account portal"
+  },
+  {
+   "domain": "t-mobile.com",
+   "category": "Other",
+   "rank_hint": "US #73 (Ahrefs Oct 2026)",
+   "note": "telecom account portal"
+  },
+  {
+   "domain": "vodafone.de",
+   "category": "Other",
+   "rank_hint": "Germany #58 (Ahrefs Oct 2026)",
+   "note": "telecom account portal"
+  },
+  {
+   "domain": "telekom.de",
+   "category": "Other",
+   "rank_hint": "Germany #83 (Ahrefs Oct 2026)",
+   "note": "telecom portal; email lives on t-online.de"
+  },
+  {
+   "domain": "bt.com",
+   "category": "Other",
+   "rank_hint": "UK #89 (Ahrefs Oct 2026)",
+   "note": "telecom portal (BT email too)"
+  },
+  {
+   "domain": "sky.com",
+   "category": "Other",
+   "rank_hint": "UK #23 (Ahrefs Oct 2026)",
+   "note": "UK pay-TV/broadband account portal; skysports.com and news.sky.com are separate"
+  },
+  {
+   "domain": "wordpress.com",
+   "category": "Other",
+   "rank_hint": "global #44 (Similarweb Jun 2026, via WsCube Tech)",
+   "note": "blog host - reading vs. authoring is ambiguous"
+  },
+  {
+   "domain": "okta.com",
+   "category": "Other",
+   "rank_hint": "US software & dev #8 (Semrush Aug 2026); US IT #3 (Semrush Aug 2026)",
+   "note": "SSO login pages - transient tab, not a destination"
+  }
+ ],
+ "mixed": [
+  {
+   "domain": "google.com",
+   "rank_hint": "global #1 (Similarweb Aug 2026, via Wikipedia); global #1 (Similarweb Jun 2026, via WsCube Tech)",
+   "note": "'*' = everything else (www.google.com/search). Same rules apply to ccTLDs below.",
+   "rules": [
+    {
+     "match": "mail.google.com",
+     "category": "Email"
+    },
+    {
+     "match": "calendar.google.com",
+     "category": "Calendar"
+    },
+    {
+     "match": "meet.google.com",
+     "category": "Meetings"
+    },
+    {
+     "match": "chat.google.com",
+     "category": "Chat"
+    },
+    {
+     "match": "drive.google.com",
+     "category": "Files"
+    },
+    {
+     "match": "photos.google.com",
+     "category": "Files"
+    },
+    {
+     "match": "docs.google.com/document",
+     "category": "Docs"
+    },
+    {
+     "match": "docs.google.com/spreadsheets",
+     "category": "Sheets"
+    },
+    {
+     "match": "docs.google.com/presentation",
+     "category": "Slides"
+    },
+    {
+     "match": "docs.google.com/forms",
+     "category": "Docs"
+    },
+    {
+     "match": "keep.google.com",
+     "category": "Docs"
+    },
+    {
+     "match": "gemini.google.com",
+     "category": "AI"
+    },
+    {
+     "match": "notebooklm.google.com",
+     "category": "AI"
+    },
+    {
+     "match": "aistudio.google.com",
+     "category": "AI"
+    },
+    {
+     "match": "maps.google.com",
+     "category": "Maps"
+    },
+    {
+     "match": "google.com/maps",
+     "category": "Maps"
+    },
+    {
+     "match": "news.google.com",
+     "category": "News"
+    },
+    {
+     "match": "translate.google.com",
+     "category": "Reference"
+    },
+    {
+     "match": "scholar.google.com",
+     "category": "Reference"
+    },
+    {
+     "match": "google.com/travel",
+     "category": "Travel"
+    },
+    {
+     "match": "google.com/finance",
+     "category": "Money"
+    },
+    {
+     "match": "classroom.google.com",
+     "category": "Learning"
+    },
+    {
+     "match": "play.google.com",
+     "category": "Shopping"
+    },
+    {
+     "match": "colab.research.google.com",
+     "category": "Development"
+    },
+    {
+     "match": "console.cloud.google.com",
+     "category": "Development"
+    },
+    {
+     "match": "firebase.google.com",
+     "category": "Development"
+    },
+    {
+     "match": "analytics.google.com",
+     "category": "Work tools"
+    },
+    {
+     "match": "ads.google.com",
+     "category": "Work tools"
+    },
+    {
+     "match": "search.google.com/search-console",
+     "category": "Work tools"
+    },
+    {
+     "match": "contacts.google.com",
+     "category": "Email"
+    },
+    {
+     "match": "*",
+     "category": "Search"
+    }
+   ]
+  },
+  {
+   "domain": "google.co.uk",
+   "rank_hint": "UK #12 (Semrush Aug 2026)",
+   "note": "ccTLD: apply google.com rules (search, maps paths)",
+   "rules": [
+    {
+     "match": "google.co.uk/maps",
+     "category": "Maps"
+    },
+    {
+     "match": "google.co.uk/travel",
+     "category": "Travel"
+    },
+    {
+     "match": "*",
+     "category": "Search"
+    }
+   ]
+  },
+  {
+   "domain": "google.de",
+   "rank_hint": "Germany #12 (Semrush Aug 2026)",
+   "note": "ccTLD: apply google.com rules (search, maps paths)",
+   "rules": [
+    {
+     "match": "google.de/maps",
+     "category": "Maps"
+    },
+    {
+     "match": "google.de/travel",
+     "category": "Travel"
+    },
+    {
+     "match": "*",
+     "category": "Search"
+    }
+   ]
+  },
+  {
+   "domain": "youtube.com",
+   "rank_hint": "global #2 (Similarweb Aug 2026, via Wikipedia); global #2 (Similarweb Jun 2026, via WsCube Tech)",
+   "rules": [
+    {
+     "match": "music.youtube.com",
+     "category": "Music"
+    },
+    {
+     "match": "studio.youtube.com",
+     "category": "Work tools"
+    },
+    {
+     "match": "*",
+     "category": "Video"
+    }
+   ]
+  },
+  {
+   "domain": "microsoft.com",
+   "rank_hint": "global #31 (Similarweb Aug 2026, via Wikipedia); global #31 (Similarweb Jun 2026, via WsCube Tech)",
+   "rules": [
+    {
+     "match": "teams.microsoft.com",
+     "category": "Chat"
+    },
+    {
+     "match": "copilot.microsoft.com",
+     "category": "AI"
+    },
+    {
+     "match": "learn.microsoft.com",
+     "category": "Development"
+    },
+    {
+     "match": "outlook.office.com",
+     "category": "Email"
+    },
+    {
+     "match": "*",
+     "category": "Other"
+    }
+   ],
+   "note": "default is product/support pages; Teams is chat-first but also meetings"
+  },
+  {
+   "domain": "cloud.microsoft",
+   "rank_hint": "global #22 (Similarweb Aug 2026, via Wikipedia); global #23 (Similarweb Jun 2026, via WsCube Tech)",
+   "note": "new Microsoft 365 domain (m365.cloud.microsoft, outlook.cloud.microsoft)",
+   "rules": [
+    {
+     "match": "outlook.cloud.microsoft/calendar",
+     "category": "Calendar"
+    },
+    {
+     "match": "outlook.cloud.microsoft",
+     "category": "Email"
+    },
+    {
+     "match": "teams.cloud.microsoft",
+     "category": "Chat"
+    },
+    {
+     "match": "word.cloud.microsoft",
+     "category": "Docs"
+    },
+    {
+     "match": "excel.cloud.microsoft",
+     "category": "Sheets"
+    },
+    {
+     "match": "powerpoint.cloud.microsoft",
+     "category": "Slides"
+    },
+    {
+     "match": "copilot.cloud.microsoft",
+     "category": "AI"
+    },
+    {
+     "match": "m365.cloud.microsoft/chat",
+     "category": "AI"
+    },
+    {
+     "match": "*",
+     "category": "Work tools"
+    }
+   ]
+  },
+  {
+   "domain": "office.com",
+   "rank_hint": "global #73 (Similarweb Jun 2026, via WsCube Tech); US software & dev #6 (Semrush Aug 2026)",
+   "rules": [
+    {
+     "match": "outlook.office.com/calendar",
+     "category": "Calendar"
+    },
+    {
+     "match": "outlook.office.com",
+     "category": "Email"
+    },
+    {
+     "match": "outlook.office365.com",
+     "category": "Email"
+    },
+    {
+     "match": "word",
+     "category": "Docs"
+    },
+    {
+     "match": "excel",
+     "category": "Sheets"
+    },
+    {
+     "match": "powerpoint",
+     "category": "Slides"
+    },
+    {
+     "match": "*",
+     "category": "Work tools"
+    }
+   ],
+   "note": "office.com app launcher; 'word'/'excel'/'powerpoint' = path or subdomain contains it"
+  },
+  {
+   "domain": "live.com",
+   "rank_hint": "global #23 (Similarweb Aug 2026, via Wikipedia); global #24 (Similarweb Jun 2026, via WsCube Tech)",
+   "rules": [
+    {
+     "match": "outlook.live.com/calendar",
+     "category": "Calendar"
+    },
+    {
+     "match": "outlook.live.com",
+     "category": "Email"
+    },
+    {
+     "match": "onedrive.live.com",
+     "category": "Files"
+    },
+    {
+     "match": "teams.live.com",
+     "category": "Chat"
+    },
+    {
+     "match": "*",
+     "category": "Other"
+    }
+   ],
+   "note": "login.live.com = transient sign-in"
+  },
+  {
+   "domain": "sharepoint.com",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings",
+   "rules": [
+    {
+     "match": "/:w:/",
+     "category": "Docs"
+    },
+    {
+     "match": "/:x:/",
+     "category": "Sheets"
+    },
+    {
+     "match": "/:p:/",
+     "category": "Slides"
+    },
+    {
+     "match": "-my.sharepoint.com",
+     "category": "Files"
+    },
+    {
+     "match": "*",
+     "category": "Work tools"
+    }
+   ]
+  },
+  {
+   "domain": "bing.com",
+   "rank_hint": "global #8 (Similarweb Aug 2026, via Wikipedia); global #9 (Similarweb Jun 2026, via WsCube Tech)",
+   "rules": [
+    {
+     "match": "bing.com/chat",
+     "category": "AI"
+    },
+    {
+     "match": "bing.com/maps",
+     "category": "Maps"
+    },
+    {
+     "match": "bing.com/news",
+     "category": "News"
+    },
+    {
+     "match": "*",
+     "category": "Search"
+    }
+   ]
+  },
+  {
+   "domain": "msn.com",
+   "rank_hint": "global #95 (Ahrefs Oct 2026); US #88 (Ahrefs Oct 2026)",
+   "rules": [
+    {
+     "match": "msn.com/*/weather",
+     "category": "Other"
+    },
+    {
+     "match": "msn.com/*/money",
+     "category": "Money"
+    },
+    {
+     "match": "msn.com/*/sports",
+     "category": "Sports"
+    },
+    {
+     "match": "*",
+     "category": "News"
+    }
+   ]
+  },
+  {
+   "domain": "yahoo.com",
+   "rank_hint": "global #14 (Similarweb Aug 2026, via Wikipedia); global #14 (Similarweb Jun 2026, via WsCube Tech)",
+   "rules": [
+    {
+     "match": "mail.yahoo.com",
+     "category": "Email"
+    },
+    {
+     "match": "finance.yahoo.com",
+     "category": "Money"
+    },
+    {
+     "match": "news.yahoo.com",
+     "category": "News"
+    },
+    {
+     "match": "sports.yahoo.com",
+     "category": "Sports"
+    },
+    {
+     "match": "search.yahoo.com",
+     "category": "Search"
+    },
+    {
+     "match": "*",
+     "category": "News"
+    }
+   ],
+   "note": "www.yahoo.com homepage is a news portal"
+  },
+  {
+   "domain": "yahoo.co.jp",
+   "rank_hint": "global #12 (Similarweb Aug 2026, via Wikipedia); global #13 (Similarweb Jun 2026, via WsCube Tech)",
+   "rules": [
+    {
+     "match": "news.yahoo.co.jp",
+     "category": "News"
+    },
+    {
+     "match": "mail.yahoo.co.jp",
+     "category": "Email"
+    },
+    {
+     "match": "finance.yahoo.co.jp",
+     "category": "Money"
+    },
+    {
+     "match": "shopping.yahoo.co.jp",
+     "category": "Shopping"
+    },
+    {
+     "match": "auctions.yahoo.co.jp",
+     "category": "Shopping"
+    },
+    {
+     "match": "search.yahoo.co.jp",
+     "category": "Search"
+    },
+    {
+     "match": "transit.yahoo.co.jp",
+     "category": "Travel"
+    },
+    {
+     "match": "*",
+     "category": "News"
+    }
+   ]
+  },
+  {
+   "domain": "aol.com",
+   "rank_hint": "",
+   "note": "curated: common tab, not in the fetched rankings",
+   "rules": [
+    {
+     "match": "mail.aol.com",
+     "category": "Email"
+    },
+    {
+     "match": "search.aol.com",
+     "category": "Search"
+    },
+    {
+     "match": "*",
+     "category": "News"
+    }
+   ]
+  },
+  {
+   "domain": "naver.com",
+   "rank_hint": "global #21 (Similarweb Aug 2026, via Wikipedia); global #20 (Similarweb Jun 2026, via WsCube Tech)",
+   "rules": [
+    {
+     "match": "mail.naver.com",
+     "category": "Email"
+    },
+    {
+     "match": "news.naver.com",
+     "category": "News"
+    },
+    {
+     "match": "search.naver.com",
+     "category": "Search"
+    },
+    {
+     "match": "map.naver.com",
+     "category": "Maps"
+    },
+    {
+     "match": "shopping.naver.com",
+     "category": "Shopping"
+    },
+    {
+     "match": "blog.naver.com",
+     "category": "Social"
+    },
+    {
+     "match": "cafe.naver.com",
+     "category": "Social"
+    },
+    {
+     "match": "comic.naver.com",
+     "category": "Entertainment"
+    },
+    {
+     "match": "sports.naver.com",
+     "category": "Sports"
+    },
+    {
+     "match": "finance.naver.com",
+     "category": "Money"
+    },
+    {
+     "match": "*",
+     "category": "Search"
+    }
+   ]
+  },
+  {
+   "domain": "yandex.ru",
+   "rank_hint": "global #15 (Similarweb Aug 2026, via Wikipedia); global #15 (Similarweb Jun 2026, via WsCube Tech)",
+   "rules": [
+    {
+     "match": "mail.yandex",
+     "category": "Email"
+    },
+    {
+     "match": "/maps",
+     "category": "Maps"
+    },
+    {
+     "match": "music.yandex",
+     "category": "Music"
+    },
+    {
+     "match": "market.yandex",
+     "category": "Shopping"
+    },
+    {
+     "match": "disk.yandex",
+     "category": "Files"
+    },
+    {
+     "match": "translate.yandex",
+     "category": "Reference"
+    },
+    {
+     "match": "*",
+     "category": "Search"
+    }
+   ]
+  },
+  {
+   "domain": "yandex.com",
+   "rank_hint": "US IT #7 (Semrush Aug 2026)",
+   "note": "same rules as yandex.ru",
+   "rules": [
+    {
+     "match": "mail.yandex",
+     "category": "Email"
+    },
+    {
+     "match": "/maps",
+     "category": "Maps"
+    },
+    {
+     "match": "disk.yandex",
+     "category": "Files"
+    },
+    {
+     "match": "translate.yandex",
+     "category": "Reference"
+    },
+    {
+     "match": "*",
+     "category": "Search"
+    }
+   ]
+  },
+  {
+   "domain": "yandex.com.tr",
+   "rank_hint": "global #67 (Ahrefs Oct 2026)",
+   "note": "same rules as yandex.ru",
+   "rules": [
+    {
+     "match": "mail.yandex",
+     "category": "Email"
+    },
+    {
+     "match": "/maps",
+     "category": "Maps"
+    },
+    {
+     "match": "*",
+     "category": "Search"
+    }
+   ]
+  },
+  {
+   "domain": "mail.ru",
+   "rank_hint": "global #42 (Similarweb Aug 2026, via Wikipedia); global #40 (Similarweb Jun 2026, via WsCube Tech)",
+   "rules": [
+    {
+     "match": "e.mail.ru",
+     "category": "Email"
+    },
+    {
+     "match": "news.mail.ru",
+     "category": "News"
+    },
+    {
+     "match": "cloud.mail.ru",
+     "category": "Files"
+    },
+    {
+     "match": "*",
+     "category": "Email"
+    }
+   ]
+  },
+  {
+   "domain": "baidu.com",
+   "rank_hint": "global #18 (Similarweb Aug 2026, via Wikipedia); global #18 (Similarweb Jun 2026, via WsCube Tech)",
+   "rules": [
+    {
+     "match": "baike.baidu.com",
+     "category": "Reference"
+    },
+    {
+     "match": "tieba.baidu.com",
+     "category": "Social"
+    },
+    {
+     "match": "pan.baidu.com",
+     "category": "Files"
+    },
+    {
+     "match": "map.baidu.com",
+     "category": "Maps"
+    },
+    {
+     "match": "yiyan.baidu.com",
+     "category": "AI"
+    },
+    {
+     "match": "*",
+     "category": "Search"
+    }
+   ]
+  },
+  {
+   "domain": "amazon.com",
+   "rank_hint": "global #13 (Similarweb Aug 2026, via Wikipedia); global #16 (Similarweb Jun 2026, via WsCube Tech)",
+   "rules": [
+    {
+     "match": "music.amazon.com",
+     "category": "Music"
+    },
+    {
+     "match": "amazon.com/gp/video",
+     "category": "Video"
+    },
+    {
+     "match": "console.aws.amazon.com",
+     "category": "Development"
+    },
+    {
+     "match": "aws.amazon.com",
+     "category": "Development"
+    },
+    {
+     "match": "read.amazon.com",
+     "category": "Reference"
+    },
+    {
+     "match": "*",
+     "category": "Shopping"
+    }
+   ],
+   "note": "other Amazon storefronts listed under sites as Shopping"
+  },
+  {
+   "domain": "apple.com",
+   "rank_hint": "global #72 (Similarweb Jun 2026, via WsCube Tech); global #7 (Ahrefs Oct 2026)",
+   "rules": [
+    {
+     "match": "music.apple.com",
+     "category": "Music"
+    },
+    {
+     "match": "tv.apple.com",
+     "category": "Video"
+    },
+    {
+     "match": "podcasts.apple.com",
+     "category": "Music"
+    },
+    {
+     "match": "maps.apple.com",
+     "category": "Maps"
+    },
+    {
+     "match": "developer.apple.com",
+     "category": "Development"
+    },
+    {
+     "match": "support.apple.com",
+     "category": "Reference"
+    },
+    {
+     "match": "*",
+     "category": "Shopping"
+    }
+   ]
+  },
+  {
+   "domain": "icloud.com",
+   "rank_hint": "US software & dev #15 (Semrush Aug 2026); US IT #6 (Semrush Aug 2026)",
+   "rules": [
+    {
+     "match": "icloud.com/mail",
+     "category": "Email"
+    },
+    {
+     "match": "icloud.com/calendar",
+     "category": "Calendar"
+    },
+    {
+     "match": "icloud.com/pages",
+     "category": "Docs"
+    },
+    {
+     "match": "icloud.com/numbers",
+     "category": "Sheets"
+    },
+    {
+     "match": "icloud.com/keynote",
+     "category": "Slides"
+    },
+    {
+     "match": "icloud.com/notes",
+     "category": "Docs"
+    },
+    {
+     "match": "*",
+     "category": "Files"
+    }
+   ]
+  },
+  {
+   "domain": "facebook.com",
+   "rank_hint": "global #3 (Similarweb Aug 2026, via Wikipedia); global #3 (Similarweb Jun 2026, via WsCube Tech)",
+   "rules": [
+    {
+     "match": "facebook.com/marketplace",
+     "category": "Shopping"
+    },
+    {
+     "match": "facebook.com/messages",
+     "category": "Chat"
+    },
+    {
+     "match": "facebook.com/watch",
+     "category": "Video"
+    },
+    {
+     "match": "facebook.com/gaming",
+     "category": "Gaming"
+    },
+    {
+     "match": "business.facebook.com",
+     "category": "Work tools"
+    },
+    {
+     "match": "*",
+     "category": "Social"
+    }
+   ]
+  },
+  {
+   "domain": "linkedin.com",
+   "rank_hint": "global #17 (Similarweb Aug 2026, via Wikipedia); global #17 (Similarweb Jun 2026, via WsCube Tech)",
+   "rules": [
+    {
+     "match": "linkedin.com/jobs",
+     "category": "Jobs"
+    },
+    {
+     "match": "linkedin.com/learning",
+     "category": "Learning"
+    },
+    {
+     "match": "linkedin.com/messaging",
+     "category": "Chat"
+    },
+    {
+     "match": "*",
+     "category": "Social"
+    }
+   ]
+  },
+  {
+   "domain": "adobe.com",
+   "rank_hint": "global #70 (Similarweb Jun 2026, via WsCube Tech); global #38 (Ahrefs Oct 2026)",
+   "rules": [
+    {
+     "match": "acrobat.adobe.com",
+     "category": "Docs"
+    },
+    {
+     "match": "documentcloud.adobe.com",
+     "category": "Docs"
+    },
+    {
+     "match": "express.adobe.com",
+     "category": "Design"
+    },
+    {
+     "match": "stock.adobe.com",
+     "category": "Design"
+    },
+    {
+     "match": "firefly.adobe.com",
+     "category": "AI"
+    },
+    {
+     "match": "*",
+     "category": "Design"
+    }
+   ]
+  },
+  {
+   "domain": "openai.com",
+   "rank_hint": "global #26 (Similarweb Jun 2026, via WsCube Tech); global #22 (Ahrefs Oct 2026)",
+   "rules": [
+    {
+     "match": "platform.openai.com",
+     "category": "Development"
+    },
+    {
+     "match": "help.openai.com",
+     "category": "Reference"
+    },
+    {
+     "match": "*",
+     "category": "AI"
+    }
+   ],
+   "note": "chatgpt.com is the chat app; openai.com is platform/blog/login"
+  },
+  {
+   "domain": "brave.com",
+   "rank_hint": "global #47 (Similarweb Aug 2026, via Wikipedia); global #49 (Similarweb Jun 2026, via WsCube Tech)",
+   "rules": [
+    {
+     "match": "search.brave.com",
+     "category": "Search"
+    },
+    {
+     "match": "*",
+     "category": "Other"
+    }
+   ],
+   "note": "rank driven by Brave Search; root is browser downloads"
+  },
+  {
+   "domain": "bbc.co.uk",
+   "rank_hint": "global #45 (Similarweb Jun 2026, via WsCube Tech); global #29 (Ahrefs Oct 2026)",
+   "rules": [
+    {
+     "match": "bbc.co.uk/sport",
+     "category": "Sports"
+    },
+    {
+     "match": "bbc.co.uk/iplayer",
+     "category": "Video"
+    },
+    {
+     "match": "bbc.co.uk/sounds",
+     "category": "Music"
+    },
+    {
+     "match": "bbc.co.uk/food",
+     "category": "Food"
+    },
+    {
+     "match": "bbc.co.uk/bitesize",
+     "category": "Learning"
+    },
+    {
+     "match": "bbc.co.uk/weather",
+     "category": "Other"
+    },
+    {
+     "match": "*",
+     "category": "News"
+    }
+   ]
+  },
+  {
+   "domain": "bbc.com",
+   "rank_hint": "global #58 (Ahrefs Oct 2026); US #80 (Ahrefs Oct 2026)",
+   "rules": [
+    {
+     "match": "bbc.com/sport",
+     "category": "Sports"
+    },
+    {
+     "match": "bbc.com/weather",
+     "category": "Other"
+    },
+    {
+     "match": "*",
+     "category": "News"
+    }
+   ]
+  },
+  {
+   "domain": "t-online.de",
+   "rank_hint": "Germany #22 (Ahrefs Oct 2026)",
+   "rules": [
+    {
+     "match": "email.t-online.de",
+     "category": "Email"
+    },
+    {
+     "match": "*",
+     "category": "News"
+    }
+   ],
+   "note": "Deutsche Telekom portal; big German webmail"
+  },
+  {
+   "domain": "interia.pl",
+   "rank_hint": "global #90 (Ahrefs Oct 2026)",
+   "rules": [
+    {
+     "match": "poczta.interia.pl",
+     "category": "Email"
+    },
+    {
+     "match": "*",
+     "category": "News"
+    }
+   ]
+  },
+  {
+   "domain": "mozilla.org",
+   "rank_hint": "",
+   "note": "Ahrefs lists it as trending (#166) only",
+   "rules": [
+    {
+     "match": "developer.mozilla.org",
+     "category": "Development"
+    },
+    {
+     "match": "*",
+     "category": "Other"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2730 @@
+{
+ "sources": [
+  {
+   "name": "Microsoft Learn: Unified cloud.microsoft domain",
+   "url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/cloud-microsoft-domain"
+  },
+  {
+   "name": "Microsoft Learn: Shorter share link format in OneDrive and SharePoint",
+   "url": "https://learn.microsoft.com/en-us/sharepoint/dev/spfx/shorter-share-link-format"
+  },
+  {
+   "name": "Microsoft Q&A: decode SharePoint URL (:w: :x: :p: :f: :b:)",
+   "url": "https://learn.microsoft.com/en-us/answers/a/1294186"
+  },
+  {
+   "name": "Message Center MC1392563: OneDrive transitions to cloud.microsoft",
+   "url": "https://mc.merill.net/message/MC1392563"
+  },
+  {
+   "name": "Message Center MC796476: Shortened URLs in OneDrive web",
+   "url": "https://mc.merill.net/message/MC796476"
+  },
+  {
+   "name": "Message Center MC772556: Teams meeting URL format",
+   "url": "https://mc.merill.net/message/MC772556"
+  },
+  {
+   "name": "Message Center MC878423: Product transitions to cloud.microsoft",
+   "url": "https://mc.merill.net/message/MC878423"
+  },
+  {
+   "name": "sharepointr README (real Doc.aspx example)",
+   "url": "https://github.com/elipousson/sharepointr/"
+  },
+  {
+   "name": "Figma embed resources (URL types design/board/slides/deck)",
+   "url": "https://developers.figma.com/docs/embeds/resources"
+  },
+  {
+   "name": "Zoho WorkDrive Multi-DC support (DC domains)",
+   "url": "https://www.zoho.com/workdrive/developer/docs/api/v1/getting-started-multi-dc-support.html"
+  },
+  {
+   "name": "Salesforce: My Domain URL formats",
+   "url": "https://developer.salesforce.com/docs/atlas.en-us.identityImplGuide.meta/identityImplGuide/domain_name_app_url_changes.htm"
+  },
+  {
+   "name": "Apple iCloud User Guide",
+   "url": "https://support.apple.com/guide/icloud/welcome/icloud"
+  },
+  {
+   "name": "Live HTTP probes (curl, 2026-10-11) of every host marked 'Probed' in notes",
+   "url": "local"
+  }
+ ],
+ "rules": [
+  {
+   "host": "docs.google.com",
+   "path_prefix": "/document",
+   "category": "Docs",
+   "example": "https://docs.google.com/document/d/<id>/edit",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; /document/ redirects to Docs product page"
+  },
+  {
+   "host": "docs.google.com",
+   "path_prefix": "/spreadsheets",
+   "category": "Sheets",
+   "example": "https://docs.google.com/spreadsheets/d/<id>/edit",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "docs.google.com",
+   "path_prefix": "/presentation",
+   "category": "Slides",
+   "example": "https://docs.google.com/presentation/d/<id>/edit",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "docs.google.com",
+   "path_prefix": "/forms",
+   "category": "Docs",
+   "example": "https://docs.google.com/forms/d/<id>/edit",
+   "verified": true,
+   "note": "Forms: no dedicated label; grouped with Docs. /forms/ redirects to /forms/create"
+  },
+  {
+   "host": "docs.google.com",
+   "path_prefix": "/drawings",
+   "category": "Design",
+   "example": "https://docs.google.com/drawings/d/<id>/edit",
+   "verified": true,
+   "note": "/drawings/ redirects to /drawings/create"
+  },
+  {
+   "host": "docs.google.com",
+   "path_prefix": "/videos",
+   "category": "Video",
+   "example": "https://docs.google.com/videos/d/<id>/edit",
+   "verified": true,
+   "note": "Google Vids lives here; vids.google.com 301s to docs.google.com/videos"
+  },
+  {
+   "host": "docs.google.com",
+   "category": "Docs",
+   "example": "https://docs.google.com/<other>",
+   "verified": true,
+   "note": "Fallback for any other docs.google.com path; order after the path-specific rules"
+  },
+  {
+   "host": "forms.gle",
+   "category": "Docs",
+   "example": "https://forms.gle/<code>",
+   "verified": false,
+   "note": "Forms short link; not probed"
+  },
+  {
+   "host": "vids.google.com",
+   "category": "Video",
+   "example": "https://vids.google.com/",
+   "verified": true,
+   "note": "301 -> docs.google.com/videos"
+  },
+  {
+   "host": "sites.google.com",
+   "category": "Work tools",
+   "example": "https://sites.google.com/view/<site>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds (login redirect). Builder and published sites share the host"
+  },
+  {
+   "host": "keep.google.com",
+   "category": "Docs",
+   "example": "https://keep.google.com/#NOTE/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; notes app, grouped with Docs"
+  },
+  {
+   "host": "drive.google.com",
+   "category": "Files",
+   "example": "https://drive.google.com/drive/my-drive",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "drive.google.com",
+   "path_prefix": "/file",
+   "category": "Files",
+   "example": "https://drive.google.com/file/d/<id>/view",
+   "verified": true,
+   "note": "File preview (PDFs, images, Office files viewed in Drive)"
+  },
+  {
+   "host": "mail.google.com",
+   "path_prefix": "/chat",
+   "category": "Chat",
+   "example": "https://mail.google.com/chat/u/0/#chat/home",
+   "verified": true,
+   "note": "Google Chat inside Gmail; /chat/ 301s to /chat/u/0/. Must be ordered before the /mail rule's host fallback"
+  },
+  {
+   "host": "mail.google.com",
+   "path_prefix": "/mail",
+   "query": "#meet",
+   "category": "Meetings",
+   "example": "https://mail.google.com/mail/u/0/#meet",
+   "verified": false,
+   "note": "Meet tab inside Gmail is a URL fragment (#meet); fragments are visible in tab.url in Chrome but may not be worth special-casing"
+  },
+  {
+   "host": "mail.google.com",
+   "category": "Email",
+   "example": "https://mail.google.com/mail/u/0/#inbox",
+   "verified": true,
+   "note": "/ 301s to /mail/"
+  },
+  {
+   "host": "calendar.google.com",
+   "category": "Calendar",
+   "example": "https://calendar.google.com/calendar/u/0/r",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "meet.google.com",
+   "category": "Meetings",
+   "example": "https://meet.google.com/abc-defg-hij",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "chat.google.com",
+   "category": "Chat",
+   "example": "https://chat.google.com/room/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "contacts.google.com",
+   "category": "Email",
+   "example": "https://contacts.google.com/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; address book grouped with Email (judgement call)"
+  },
+  {
+   "host": "tasks.google.com",
+   "category": "Work tools",
+   "example": "https://tasks.google.com/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "photos.google.com",
+   "category": "Files",
+   "example": "https://photos.google.com/photo/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; signed-out goes to marketing page"
+  },
+  {
+   "host": "www.google.com",
+   "path_prefix": "/maps",
+   "category": "Maps",
+   "example": "https://www.google.com/maps/place/<name>/@lat,lng,15z",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "maps.google.com",
+   "category": "Maps",
+   "example": "https://maps.google.com/maps?q=<query>",
+   "verified": true,
+   "note": "302 -> /maps"
+  },
+  {
+   "host": "maps.app.goo.gl",
+   "category": "Maps",
+   "example": "https://maps.app.goo.gl/<code>",
+   "verified": false,
+   "note": "Maps share short link; resolves to google.com/maps after redirect"
+  },
+  {
+   "host": "earth.google.com",
+   "category": "Maps",
+   "example": "https://earth.google.com/web/",
+   "verified": true,
+   "note": "301 -> /web/"
+  },
+  {
+   "host": "translate.google.com",
+   "category": "Reference",
+   "example": "https://translate.google.com/?sl=auto&tl=en",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "gemini.google.com",
+   "category": "AI",
+   "example": "https://gemini.google.com/app/<chat-id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; bard.google.com 301s here"
+  },
+  {
+   "host": "bard.google.com",
+   "category": "AI",
+   "example": "https://bard.google.com/",
+   "verified": true,
+   "note": "301 -> gemini.google.com"
+  },
+  {
+   "host": "notebooklm.google.com",
+   "category": "AI",
+   "example": "https://notebooklm.google.com/notebook/<id>",
+   "verified": true,
+   "note": "Probe showed 301 -> notebook.google.com"
+  },
+  {
+   "host": "notebook.google.com",
+   "category": "AI",
+   "example": "https://notebook.google.com/notebook/<id>",
+   "verified": true,
+   "note": "Current NotebookLM host per redirect (2026)"
+  },
+  {
+   "host": "aistudio.google.com",
+   "category": "AI",
+   "example": "https://aistudio.google.com/prompts/new_chat",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "www.google.com",
+   "path_prefix": "/search",
+   "category": "Search",
+   "example": "https://www.google.com/search?q=<query>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds. Country domains (google.co.in, google.co.uk, ...) behave the same; add them or match google.* in code"
+  },
+  {
+   "host": "www.google.com",
+   "category": "Search",
+   "example": "https://www.google.com/",
+   "verified": true,
+   "note": "Fallback for the homepage; ordered after /maps and /search"
+  },
+  {
+   "host": "scholar.google.com",
+   "category": "Reference",
+   "example": "https://scholar.google.com/scholar?q=<query>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "news.google.com",
+   "category": "Reference",
+   "example": "https://news.google.com/home",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "www.youtube.com",
+   "category": "Video",
+   "example": "https://www.youtube.com/watch?v=<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "m.youtube.com",
+   "category": "Video",
+   "example": "https://m.youtube.com/watch?v=<id>",
+   "verified": false,
+   "note": "Mobile host; rarely seen on desktop"
+  },
+  {
+   "host": "youtu.be",
+   "category": "Video",
+   "example": "https://youtu.be/<id>",
+   "verified": true,
+   "note": "303 -> www.youtube.com/watch"
+  },
+  {
+   "host": "music.youtube.com",
+   "category": "Music",
+   "example": "https://music.youtube.com/watch?v=<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "studio.youtube.com",
+   "category": "Video",
+   "example": "https://studio.youtube.com/channel/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; creator tool, still Video"
+  },
+  {
+   "host": "classroom.google.com",
+   "category": "Learning",
+   "example": "https://classroom.google.com/c/<course-id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "analytics.google.com",
+   "category": "Work tools",
+   "example": "https://analytics.google.com/analytics/web/#/p<property>/reports",
+   "verified": true,
+   "note": "301 -> /analytics/web/"
+  },
+  {
+   "host": "search.google.com",
+   "path_prefix": "/search-console",
+   "category": "Work tools",
+   "example": "https://search.google.com/search-console?resource_id=<site>",
+   "verified": true,
+   "note": "Signed-out redirects to /search-console/about"
+  },
+  {
+   "host": "ads.google.com",
+   "category": "Work tools",
+   "example": "https://ads.google.com/aw/overview?ocid=<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "lookerstudio.google.com",
+   "category": "Work tools",
+   "example": "https://lookerstudio.google.com/reporting/<id>",
+   "verified": true,
+   "note": "301 -> datastudio.google.com (2026)"
+  },
+  {
+   "host": "datastudio.google.com",
+   "category": "Work tools",
+   "example": "https://datastudio.google.com/reporting/<id>",
+   "verified": true,
+   "note": "Current Looker Studio host per redirect"
+  },
+  {
+   "host": "console.cloud.google.com",
+   "category": "Development",
+   "example": "https://console.cloud.google.com/home/dashboard?project=<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "console.firebase.google.com",
+   "category": "Development",
+   "example": "https://console.firebase.google.com/project/<id>/overview",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "colab.research.google.com",
+   "category": "Development",
+   "example": "https://colab.research.google.com/drive/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "script.google.com",
+   "category": "Development",
+   "example": "https://script.google.com/home",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "m365.cloud.microsoft",
+   "path_prefix": "/chat",
+   "category": "AI",
+   "example": "https://m365.cloud.microsoft/chat",
+   "verified": true,
+   "note": "Microsoft 365 Copilot Chat; /chat 302s to login with ru=/chat"
+  },
+  {
+   "host": "m365.cloud.microsoft",
+   "path_prefix": "/launch/word",
+   "category": "Docs",
+   "example": "https://m365.cloud.microsoft/launch/word",
+   "verified": true,
+   "note": "301 -> word.cloud.microsoft"
+  },
+  {
+   "host": "m365.cloud.microsoft",
+   "path_prefix": "/launch/excel",
+   "category": "Sheets",
+   "example": "https://m365.cloud.microsoft/launch/excel",
+   "verified": true,
+   "note": "Redirects to excel.cloud.microsoft (pattern verified for Word/Excel)"
+  },
+  {
+   "host": "m365.cloud.microsoft",
+   "path_prefix": "/launch/powerpoint",
+   "category": "Slides",
+   "example": "https://m365.cloud.microsoft/launch/powerpoint",
+   "verified": true,
+   "note": "Same launch pattern; www.microsoft365.com/launch/powerpoint confirmed"
+  },
+  {
+   "host": "m365.cloud.microsoft",
+   "path_prefix": "/launch/onenote",
+   "category": "Docs",
+   "example": "https://m365.cloud.microsoft/launch/onenote",
+   "verified": false,
+   "note": "Assumed by analogy with other /launch/ paths"
+  },
+  {
+   "host": "m365.cloud.microsoft",
+   "category": "Work tools",
+   "example": "https://m365.cloud.microsoft/",
+   "verified": true,
+   "note": "Microsoft 365 home/launcher. www.office.com and www.microsoft365.com both redirect here"
+  },
+  {
+   "host": "www.office.com",
+   "path_prefix": "/launch/word",
+   "category": "Docs",
+   "example": "https://www.office.com/launch/word",
+   "verified": true,
+   "note": "Redirects to word.cloud.microsoft"
+  },
+  {
+   "host": "www.office.com",
+   "path_prefix": "/launch/excel",
+   "category": "Sheets",
+   "example": "https://www.office.com/launch/excel",
+   "verified": true,
+   "note": "Redirects to excel.cloud.microsoft"
+  },
+  {
+   "host": "www.office.com",
+   "path_prefix": "/launch/powerpoint",
+   "category": "Slides",
+   "example": "https://www.office.com/launch/powerpoint",
+   "verified": true,
+   "note": "Redirects to powerpoint.cloud.microsoft"
+  },
+  {
+   "host": "www.office.com",
+   "category": "Work tools",
+   "example": "https://www.office.com/",
+   "verified": true,
+   "note": "Redirects to m365.cloud.microsoft"
+  },
+  {
+   "host": "office.com",
+   "path_prefix": "/launch/word",
+   "category": "Docs",
+   "example": "https://office.com/launch/word",
+   "verified": true,
+   "note": "Redirects to word.cloud.microsoft"
+  },
+  {
+   "host": "office.com",
+   "path_prefix": "/launch/excel",
+   "category": "Sheets",
+   "example": "https://office.com/launch/excel",
+   "verified": true,
+   "note": "Redirects to excel.cloud.microsoft"
+  },
+  {
+   "host": "office.com",
+   "path_prefix": "/launch/powerpoint",
+   "category": "Slides",
+   "example": "https://office.com/launch/powerpoint",
+   "verified": true,
+   "note": "Redirects to powerpoint.cloud.microsoft"
+  },
+  {
+   "host": "office.com",
+   "category": "Work tools",
+   "example": "https://office.com/",
+   "verified": true,
+   "note": "Redirects to m365.cloud.microsoft"
+  },
+  {
+   "host": "www.microsoft365.com",
+   "path_prefix": "/launch/word",
+   "category": "Docs",
+   "example": "https://www.microsoft365.com/launch/word",
+   "verified": true,
+   "note": "Redirects to word.cloud.microsoft"
+  },
+  {
+   "host": "www.microsoft365.com",
+   "path_prefix": "/launch/excel",
+   "category": "Sheets",
+   "example": "https://www.microsoft365.com/launch/excel",
+   "verified": true,
+   "note": "Redirects to excel.cloud.microsoft"
+  },
+  {
+   "host": "www.microsoft365.com",
+   "path_prefix": "/launch/powerpoint",
+   "category": "Slides",
+   "example": "https://www.microsoft365.com/launch/powerpoint",
+   "verified": true,
+   "note": "Redirects to powerpoint.cloud.microsoft"
+  },
+  {
+   "host": "www.microsoft365.com",
+   "category": "Work tools",
+   "example": "https://www.microsoft365.com/",
+   "verified": true,
+   "note": "Redirects to m365.cloud.microsoft"
+  },
+  {
+   "host": "word.cloud.microsoft",
+   "category": "Docs",
+   "example": "https://word.cloud.microsoft/open/onedrive/?docId=<id>&driveId=<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; path shape of opened docs not verified"
+  },
+  {
+   "host": "excel.cloud.microsoft",
+   "category": "Sheets",
+   "example": "https://excel.cloud.microsoft/open/onedrive/?docId=<id>&driveId=<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "powerpoint.cloud.microsoft",
+   "category": "Slides",
+   "example": "https://powerpoint.cloud.microsoft/open/onedrive/?docId=<id>&driveId=<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "onenote.cloud.microsoft",
+   "category": "Docs",
+   "example": "https://onenote.cloud.microsoft/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; www.onenote.com/notebooks 307s here"
+  },
+  {
+   "host": "word.office.com",
+   "category": "Docs",
+   "example": "https://word.office.com/",
+   "verified": true,
+   "note": "Legacy; 302 -> microsoft365.com/launch/word"
+  },
+  {
+   "host": "excel.office.com",
+   "category": "Sheets",
+   "example": "https://excel.office.com/",
+   "verified": true,
+   "note": "Legacy; 302 -> microsoft365.com/launch/excel"
+  },
+  {
+   "host": "powerpoint.office.com",
+   "category": "Slides",
+   "example": "https://powerpoint.office.com/",
+   "verified": true,
+   "note": "Legacy; 302 -> microsoft365.com/launch/powerpoint"
+  },
+  {
+   "host": "www.onenote.com",
+   "category": "Docs",
+   "example": "https://www.onenote.com/notebooks",
+   "verified": true,
+   "note": "307 -> onenote.cloud.microsoft"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/:w:/",
+   "category": "Docs",
+   "example": "https://contoso-my.sharepoint.com/:w:/p/john_contoso_com/<token>",
+   "verified": true,
+   "note": "Official MS Learn short-share-link doc shows :w:. Second segment (/r/, /g/, /p/, /s/) is link kind, not file type; ignore it"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/:x:/",
+   "category": "Sheets",
+   "example": "https://contoso.sharepoint.com/:x:/r/sites/<site>/<token>",
+   "verified": true,
+   "note": ":x: = Excel per Microsoft Q&A answer (community, on learn.microsoft.com)"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/:p:/",
+   "category": "Slides",
+   "example": "https://contoso.sharepoint.com/:p:/r/sites/<site>/<token>",
+   "verified": true,
+   "note": ":p: = PowerPoint per Microsoft Q&A answer"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/:o:/",
+   "category": "Docs",
+   "example": "https://contoso.sharepoint.com/:o:/g/personal/<user>/<token>",
+   "verified": false,
+   "note": "OneNote prefix; widely observed, no official source found"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/:b:/",
+   "category": "Docs",
+   "example": "https://contoso.sharepoint.com/:b:/g/<token>",
+   "verified": true,
+   "note": ":b: = PDF per Microsoft Q&A answer; PDFs grouped with Docs"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/:f:/",
+   "category": "Files",
+   "example": "https://contoso.sharepoint.com/:f:/g/<token>",
+   "verified": true,
+   "note": ":f: = folder per Microsoft Q&A answer"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/:u:/",
+   "category": "Files",
+   "example": "https://contoso.sharepoint.com/:u:/g/<token>",
+   "verified": false,
+   "note": "Generic/other file type; observed, not officially documented"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/:v:/",
+   "category": "Video",
+   "example": "https://contoso.sharepoint.com/:v:/g/<token>",
+   "verified": false,
+   "note": "Video (Stream on SharePoint); observed, not officially documented"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/_layouts/15/Doc.aspx",
+   "query": ".docx",
+   "category": "Docs",
+   "example": "https://contoso.sharepoint.com/sites/<site>/_layouts/15/Doc.aspx?sourcedoc=%7B<guid>%7D&file=Report.docx&action=default&mobileredirect=true",
+   "verified": true,
+   "note": "Doc.aspx is shared by Word/Excel/PowerPoint; the app is decided by the extension in the file= param (substring match on query), NOT by action= (action is default/edit/view/embedview). Real .docx example seen in sharepointr README; other extensions by analogy. Check longest extension first (.docx before .doc)"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/_layouts/15/Doc.aspx",
+   "query": ".doc",
+   "category": "Docs",
+   "example": "https://contoso.sharepoint.com/sites/<site>/_layouts/15/Doc.aspx?sourcedoc=%7B<guid>%7D&file=Report.doc&action=default&mobileredirect=true",
+   "verified": false,
+   "note": "See .docx rule; same Doc.aspx structure"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/_layouts/15/Doc.aspx",
+   "query": ".xlsx",
+   "category": "Sheets",
+   "example": "https://contoso.sharepoint.com/sites/<site>/_layouts/15/Doc.aspx?sourcedoc=%7B<guid>%7D&file=Report.xlsx&action=default&mobileredirect=true",
+   "verified": false,
+   "note": "See .docx rule; same Doc.aspx structure"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/_layouts/15/Doc.aspx",
+   "query": ".xlsm",
+   "category": "Sheets",
+   "example": "https://contoso.sharepoint.com/sites/<site>/_layouts/15/Doc.aspx?sourcedoc=%7B<guid>%7D&file=Report.xlsm&action=default&mobileredirect=true",
+   "verified": false,
+   "note": "See .docx rule; same Doc.aspx structure"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/_layouts/15/Doc.aspx",
+   "query": ".xls",
+   "category": "Sheets",
+   "example": "https://contoso.sharepoint.com/sites/<site>/_layouts/15/Doc.aspx?sourcedoc=%7B<guid>%7D&file=Report.xls&action=default&mobileredirect=true",
+   "verified": false,
+   "note": "See .docx rule; same Doc.aspx structure"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/_layouts/15/Doc.aspx",
+   "query": ".pptx",
+   "category": "Slides",
+   "example": "https://contoso.sharepoint.com/sites/<site>/_layouts/15/Doc.aspx?sourcedoc=%7B<guid>%7D&file=Report.pptx&action=default&mobileredirect=true",
+   "verified": false,
+   "note": "See .docx rule; same Doc.aspx structure"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/_layouts/15/Doc.aspx",
+   "query": ".ppt",
+   "category": "Slides",
+   "example": "https://contoso.sharepoint.com/sites/<site>/_layouts/15/Doc.aspx?sourcedoc=%7B<guid>%7D&file=Report.ppt&action=default&mobileredirect=true",
+   "verified": false,
+   "note": "See .docx rule; same Doc.aspx structure"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/_layouts/15/Doc.aspx",
+   "category": "Docs",
+   "example": "https://contoso.sharepoint.com/sites/<site>/_layouts/15/Doc.aspx?sourcedoc=%7B<guid>%7D&action=edit",
+   "verified": false,
+   "note": "Fallback when no extension visible in query (often Word or Loop); judgement call"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/_layouts/15/xlviewer.aspx",
+   "category": "Sheets",
+   "example": "https://contoso.sharepoint.com/sites/<site>/_layouts/15/xlviewer.aspx?id=<path>",
+   "verified": false,
+   "note": "Excel viewer endpoint; long-standing but not re-verified"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/_layouts/15/WopiFrame.aspx",
+   "category": "Docs",
+   "example": "https://contoso.sharepoint.com/sites/<site>/_layouts/15/WopiFrame.aspx?sourcedoc=<guid>&file=x.docx&action=default",
+   "verified": false,
+   "note": "Older Office Online frame; apply the same file-extension query logic as Doc.aspx"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/_layouts/15/stream.aspx",
+   "category": "Video",
+   "example": "https://contoso.sharepoint.com/sites/<site>/_layouts/15/stream.aspx?id=<path>",
+   "verified": false,
+   "note": "Stream (on SharePoint) player"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/personal",
+   "category": "Files",
+   "example": "https://contoso-my.sharepoint.com/personal/<user>/_layouts/15/onedrive.aspx",
+   "verified": true,
+   "note": "OneDrive for Business lives on <tenant>-my.sharepoint.com; 2024 change shortened the visible browser URL (MC796476)"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "path_prefix": "/sites",
+   "category": "Files",
+   "example": "https://contoso.sharepoint.com/sites/<site>/Shared%20Documents/Forms/AllItems.aspx",
+   "verified": false,
+   "note": "Document libraries; but /sites/ also holds intranet pages (SitePages/*.aspx). Consider Work tools for /SitePages/"
+  },
+  {
+   "host": "*.sharepoint.com",
+   "category": "Work tools",
+   "example": "https://contoso.sharepoint.com/",
+   "verified": true,
+   "note": "Fallback: SharePoint intranet. Must come after all path rules above"
+  },
+  {
+   "host": "onedrive.cloud.microsoft",
+   "category": "Files",
+   "example": "https://onedrive.cloud.microsoft/",
+   "verified": true,
+   "note": "New OneDrive for Business host (MC1392563, rollout from July 2026); probe 302s to _layouts/15/authenticate.aspx. Likely to carry the same /:w:/ and Doc.aspx shapes as SharePoint, apply those rules here too"
+  },
+  {
+   "host": "onedrive.live.com",
+   "category": "Files",
+   "example": "https://onedrive.live.com/?id=<id>&cid=<cid>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds (consumer OneDrive)"
+  },
+  {
+   "host": "onedrive.live.com",
+   "path_prefix": "/personal",
+   "query": ".docx",
+   "category": "Docs",
+   "example": "https://onedrive.live.com/personal/<cid>/_layouts/15/Doc.aspx?resid=<id>&file=x.docx",
+   "verified": false,
+   "note": "Consumer OneDrive moved onto SharePoint-style URLs; exact shape not verified. Many consumer docs instead open on word/excel/powerpoint.cloud.microsoft"
+  },
+  {
+   "host": "onedrive.live.com",
+   "path_prefix": "/personal",
+   "query": ".xlsx",
+   "category": "Sheets",
+   "example": "https://onedrive.live.com/personal/<cid>/_layouts/15/Doc.aspx?resid=<id>&file=x.xlsx",
+   "verified": false,
+   "note": "Consumer OneDrive moved onto SharePoint-style URLs; exact shape not verified. Many consumer docs instead open on word/excel/powerpoint.cloud.microsoft"
+  },
+  {
+   "host": "onedrive.live.com",
+   "path_prefix": "/personal",
+   "query": ".pptx",
+   "category": "Slides",
+   "example": "https://onedrive.live.com/personal/<cid>/_layouts/15/Doc.aspx?resid=<id>&file=x.pptx",
+   "verified": false,
+   "note": "Consumer OneDrive moved onto SharePoint-style URLs; exact shape not verified. Many consumer docs instead open on word/excel/powerpoint.cloud.microsoft"
+  },
+  {
+   "host": "1drv.ms",
+   "path_prefix": "/w/",
+   "category": "Docs",
+   "example": "https://1drv.ms/w/c/<cid>/<token>",
+   "verified": false,
+   "note": "Consumer OneDrive short share link; letters mirror SharePoint :w:/:x:/... prefixes. Not officially documented"
+  },
+  {
+   "host": "1drv.ms",
+   "path_prefix": "/x/",
+   "category": "Sheets",
+   "example": "https://1drv.ms/x/c/<cid>/<token>",
+   "verified": false,
+   "note": "Consumer OneDrive short share link; letters mirror SharePoint :w:/:x:/... prefixes. Not officially documented"
+  },
+  {
+   "host": "1drv.ms",
+   "path_prefix": "/p/",
+   "category": "Slides",
+   "example": "https://1drv.ms/p/c/<cid>/<token>",
+   "verified": false,
+   "note": "Consumer OneDrive short share link; letters mirror SharePoint :w:/:x:/... prefixes. Not officially documented"
+  },
+  {
+   "host": "1drv.ms",
+   "path_prefix": "/o/",
+   "category": "Docs",
+   "example": "https://1drv.ms/o/c/<cid>/<token>",
+   "verified": false,
+   "note": "Consumer OneDrive short share link; letters mirror SharePoint :w:/:x:/... prefixes. Not officially documented"
+  },
+  {
+   "host": "1drv.ms",
+   "path_prefix": "/b/",
+   "category": "Docs",
+   "example": "https://1drv.ms/b/c/<cid>/<token>",
+   "verified": false,
+   "note": "Consumer OneDrive short share link; letters mirror SharePoint :w:/:x:/... prefixes. Not officially documented"
+  },
+  {
+   "host": "1drv.ms",
+   "path_prefix": "/f/",
+   "category": "Files",
+   "example": "https://1drv.ms/f/c/<cid>/<token>",
+   "verified": false,
+   "note": "Consumer OneDrive short share link; letters mirror SharePoint :w:/:x:/... prefixes. Not officially documented"
+  },
+  {
+   "host": "1drv.ms",
+   "path_prefix": "/u/",
+   "category": "Files",
+   "example": "https://1drv.ms/u/c/<cid>/<token>",
+   "verified": false,
+   "note": "Consumer OneDrive short share link; letters mirror SharePoint :w:/:x:/... prefixes. Not officially documented"
+  },
+  {
+   "host": "outlook.office.com",
+   "path_prefix": "/calendar",
+   "category": "Calendar",
+   "example": "https://outlook.office.com/calendar/view/week",
+   "verified": false,
+   "note": "Well-known path but server returns 417 to non-browser probes; not verified this session"
+  },
+  {
+   "host": "outlook.office.com",
+   "path_prefix": "/people",
+   "category": "Email",
+   "example": "https://outlook.office.com/people/",
+   "verified": false,
+   "note": "Contacts in Outlook web; grouped with Email"
+  },
+  {
+   "host": "outlook.office.com",
+   "path_prefix": "/tasks",
+   "category": "Work tools",
+   "example": "https://outlook.office.com/tasks/",
+   "verified": false,
+   "note": "Outlook-hosted To Do view (judgement call)"
+  },
+  {
+   "host": "outlook.office.com",
+   "category": "Email",
+   "example": "https://outlook.office.com/mail/inbox",
+   "verified": true,
+   "note": "/ 301s to /mail/ (probed)"
+  },
+  {
+   "host": "outlook.office365.com",
+   "path_prefix": "/calendar",
+   "category": "Calendar",
+   "example": "https://outlook.office365.com/calendar/view/week",
+   "verified": false,
+   "note": "Well-known path but server returns 417 to non-browser probes; not verified this session"
+  },
+  {
+   "host": "outlook.office365.com",
+   "path_prefix": "/people",
+   "category": "Email",
+   "example": "https://outlook.office365.com/people/",
+   "verified": false,
+   "note": "Contacts in Outlook web; grouped with Email"
+  },
+  {
+   "host": "outlook.office365.com",
+   "path_prefix": "/tasks",
+   "category": "Work tools",
+   "example": "https://outlook.office365.com/tasks/",
+   "verified": false,
+   "note": "Outlook-hosted To Do view (judgement call)"
+  },
+  {
+   "host": "outlook.office365.com",
+   "category": "Email",
+   "example": "https://outlook.office365.com/mail/inbox",
+   "verified": true,
+   "note": "/ 301s to /mail/ (probed)"
+  },
+  {
+   "host": "outlook.live.com",
+   "path_prefix": "/calendar",
+   "category": "Calendar",
+   "example": "https://outlook.live.com/calendar/view/week",
+   "verified": false,
+   "note": "Well-known path but server returns 417 to non-browser probes; not verified this session"
+  },
+  {
+   "host": "outlook.live.com",
+   "path_prefix": "/people",
+   "category": "Email",
+   "example": "https://outlook.live.com/people/",
+   "verified": false,
+   "note": "Contacts in Outlook web; grouped with Email"
+  },
+  {
+   "host": "outlook.live.com",
+   "path_prefix": "/tasks",
+   "category": "Work tools",
+   "example": "https://outlook.live.com/tasks/",
+   "verified": false,
+   "note": "Outlook-hosted To Do view (judgement call)"
+  },
+  {
+   "host": "outlook.live.com",
+   "category": "Email",
+   "example": "https://outlook.live.com/mail/inbox",
+   "verified": true,
+   "note": "/ 301s to /mail/ (probed)"
+  },
+  {
+   "host": "outlook.cloud.microsoft",
+   "path_prefix": "/calendar",
+   "category": "Calendar",
+   "example": "https://outlook.cloud.microsoft/calendar/view/week",
+   "verified": false,
+   "note": "Well-known path but server returns 417 to non-browser probes; not verified this session"
+  },
+  {
+   "host": "outlook.cloud.microsoft",
+   "path_prefix": "/people",
+   "category": "Email",
+   "example": "https://outlook.cloud.microsoft/people/",
+   "verified": false,
+   "note": "Contacts in Outlook web; grouped with Email"
+  },
+  {
+   "host": "outlook.cloud.microsoft",
+   "path_prefix": "/tasks",
+   "category": "Work tools",
+   "example": "https://outlook.cloud.microsoft/tasks/",
+   "verified": false,
+   "note": "Outlook-hosted To Do view (judgement call)"
+  },
+  {
+   "host": "outlook.cloud.microsoft",
+   "category": "Email",
+   "example": "https://outlook.cloud.microsoft/mail/inbox",
+   "verified": true,
+   "note": "/ 301s to /mail/ (probed)"
+  },
+  {
+   "host": "todo.cloud.microsoft",
+   "category": "Work tools",
+   "example": "https://todo.cloud.microsoft/tasks/",
+   "verified": true,
+   "note": "Probe: 301 -> /tasks/. New To Do host"
+  },
+  {
+   "host": "to-do.office.com",
+   "category": "Work tools",
+   "example": "https://to-do.office.com/tasks/",
+   "verified": true,
+   "note": "Host responds (417 to probes)"
+  },
+  {
+   "host": "to-do.live.com",
+   "category": "Work tools",
+   "example": "https://to-do.live.com/tasks/",
+   "verified": true,
+   "note": "Consumer To Do; host responds (417 to probes)"
+  },
+  {
+   "host": "teams.microsoft.com",
+   "path_prefix": "/l/meetup-join",
+   "category": "Meetings",
+   "example": "https://teams.microsoft.com/l/meetup-join/<thread>/<n>?context=...",
+   "verified": true,
+   "note": "Older long meeting link (MC772556)"
+  },
+  {
+   "host": "teams.microsoft.com",
+   "path_prefix": "/meet",
+   "category": "Meetings",
+   "example": "https://teams.microsoft.com/meet/<meeting_id>?p=<hash>",
+   "verified": true,
+   "note": "New short meeting link, default for invites from Jan 2026 (MC772556)"
+  },
+  {
+   "host": "teams.microsoft.com",
+   "category": "Chat",
+   "example": "https://teams.microsoft.com/v2/",
+   "verified": true,
+   "note": "Teams app: chat-first; / 302s to /v2. Judgement call: Chat, with meeting links split out above"
+  },
+  {
+   "host": "teams.cloud.microsoft",
+   "path_prefix": "/meet",
+   "category": "Meetings",
+   "example": "https://teams.cloud.microsoft/meet/<meeting_id>?p=<hash>",
+   "verified": false,
+   "note": "Assumed same shape as teams.microsoft.com"
+  },
+  {
+   "host": "teams.cloud.microsoft",
+   "category": "Chat",
+   "example": "https://teams.cloud.microsoft/v2/",
+   "verified": true,
+   "note": "New Teams host; probe 302s to /v2/"
+  },
+  {
+   "host": "teams.live.com",
+   "path_prefix": "/meet",
+   "category": "Meetings",
+   "example": "https://teams.live.com/meet/<id>?p=<hash>",
+   "verified": false,
+   "note": "Consumer Teams meeting link"
+  },
+  {
+   "host": "teams.live.com",
+   "category": "Chat",
+   "example": "https://teams.live.com/v2",
+   "verified": true,
+   "note": "Consumer Teams; web.skype.com now 301s here (Skype retired)"
+  },
+  {
+   "host": "web.skype.com",
+   "category": "Chat",
+   "example": "https://web.skype.com/",
+   "verified": true,
+   "note": "301 -> teams.live.com/v2"
+  },
+  {
+   "host": "copilot.microsoft.com",
+   "category": "AI",
+   "example": "https://copilot.microsoft.com/chats/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; consumer Copilot"
+  },
+  {
+   "host": "copilot.cloud.microsoft",
+   "category": "AI",
+   "example": "https://copilot.cloud.microsoft/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "www.bing.com",
+   "path_prefix": "/chat",
+   "category": "AI",
+   "example": "https://www.bing.com/chat",
+   "verified": true,
+   "note": "302 -> copilot.microsoft.com"
+  },
+  {
+   "host": "www.bing.com",
+   "path_prefix": "/maps",
+   "category": "Maps",
+   "example": "https://www.bing.com/maps?q=<query>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "www.bing.com",
+   "path_prefix": "/videos",
+   "category": "Video",
+   "example": "https://www.bing.com/videos/search?q=<q>",
+   "verified": false,
+   "note": "Arguably Search; judgement call"
+  },
+  {
+   "host": "www.bing.com",
+   "category": "Search",
+   "example": "https://www.bing.com/search?q=<query>",
+   "verified": true,
+   "note": "Host fallback"
+  },
+  {
+   "host": "portal.azure.com",
+   "category": "Development",
+   "example": "https://portal.azure.com/#home",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "dev.azure.com",
+   "category": "Development",
+   "example": "https://dev.azure.com/<org>/<project>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "entra.microsoft.com",
+   "category": "Development",
+   "example": "https://entra.microsoft.com/",
+   "verified": true,
+   "note": "Host responds (403 to probe); identity admin, could be Work tools"
+  },
+  {
+   "host": "admin.cloud.microsoft",
+   "category": "Work tools",
+   "example": "https://admin.cloud.microsoft/",
+   "verified": true,
+   "note": "admin.microsoft.com 302s here"
+  },
+  {
+   "host": "admin.microsoft.com",
+   "category": "Work tools",
+   "example": "https://admin.microsoft.com/",
+   "verified": true,
+   "note": "302 -> admin.cloud.microsoft"
+  },
+  {
+   "host": "app.powerbi.com",
+   "category": "Work tools",
+   "example": "https://app.powerbi.com/groups/me/reports/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "app.fabric.microsoft.com",
+   "category": "Work tools",
+   "example": "https://app.fabric.microsoft.com/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "loop.cloud.microsoft",
+   "category": "Docs",
+   "example": "https://loop.cloud.microsoft/p/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; loop.microsoft.com 307s here"
+  },
+  {
+   "host": "loop.microsoft.com",
+   "category": "Docs",
+   "example": "https://loop.microsoft.com/",
+   "verified": true,
+   "note": "307 -> loop.cloud.microsoft"
+  },
+  {
+   "host": "planner.cloud.microsoft",
+   "category": "Work tools",
+   "example": "https://planner.cloud.microsoft/webui/plan/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "tasks.office.com",
+   "category": "Work tools",
+   "example": "https://tasks.office.com/",
+   "verified": true,
+   "note": "302 -> planner.cloud.microsoft"
+  },
+  {
+   "host": "forms.cloud.microsoft",
+   "category": "Docs",
+   "example": "https://forms.cloud.microsoft/r/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; forms.office.com 301s here"
+  },
+  {
+   "host": "forms.office.com",
+   "category": "Docs",
+   "example": "https://forms.office.com/r/<id>",
+   "verified": true,
+   "note": "301 -> forms.cloud.microsoft"
+  },
+  {
+   "host": "whiteboard.cloud.microsoft",
+   "category": "Design",
+   "example": "https://whiteboard.cloud.microsoft/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "sway.cloud.microsoft",
+   "category": "Slides",
+   "example": "https://sway.cloud.microsoft/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "designer.microsoft.com",
+   "category": "Design",
+   "example": "https://designer.microsoft.com/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "clipchamp.com",
+   "category": "Video",
+   "example": "https://app.clipchamp.com/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "make.powerapps.com",
+   "category": "Development",
+   "example": "https://make.powerapps.com/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "make.powerautomate.com",
+   "category": "Work tools",
+   "example": "https://make.powerautomate.com/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "bookings.cloud.microsoft",
+   "category": "Calendar",
+   "example": "https://bookings.cloud.microsoft/bookings/",
+   "verified": true,
+   "note": "301 -> /bookings/"
+  },
+  {
+   "host": "mail.zoho.com",
+   "category": "Email",
+   "example": "https://mail.zoho.com/zm/#mail/folder/inbox",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "mail.zoho.in",
+   "category": "Email",
+   "example": "https://mail.zoho.in/zm/#mail/folder/inbox",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "mail.zoho.eu",
+   "category": "Email",
+   "example": "https://mail.zoho.eu/zm/#mail/folder/inbox",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "mail.zoho.com.au",
+   "category": "Email",
+   "example": "https://mail.zoho.com.au/zm/#mail/folder/inbox",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "mail.zoho.jp",
+   "category": "Email",
+   "example": "https://mail.zoho.jp/zm/#mail/folder/inbox",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "mail.zoho.ae",
+   "category": "Email",
+   "example": "https://mail.zoho.ae/zm/#mail/folder/inbox",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "mail.zoho.sa",
+   "category": "Email",
+   "example": "https://mail.zoho.sa/zm/#mail/folder/inbox",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "mail.zohocloud.ca",
+   "category": "Email",
+   "example": "https://mail.zohocloud.ca/zm/#mail/folder/inbox",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "mail.zoho.com.cn",
+   "category": "Email",
+   "example": "https://mail.zoho.com.cn/zm/#mail/folder/inbox",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "writer.zoho.com",
+   "category": "Docs",
+   "example": "https://writer.zoho.com/writer/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "writer.zoho.in",
+   "category": "Docs",
+   "example": "https://writer.zoho.in/writer/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "writer.zoho.eu",
+   "category": "Docs",
+   "example": "https://writer.zoho.eu/writer/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "writer.zoho.com.au",
+   "category": "Docs",
+   "example": "https://writer.zoho.com.au/writer/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "writer.zoho.jp",
+   "category": "Docs",
+   "example": "https://writer.zoho.jp/writer/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "writer.zoho.ae",
+   "category": "Docs",
+   "example": "https://writer.zoho.ae/writer/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "writer.zoho.sa",
+   "category": "Docs",
+   "example": "https://writer.zoho.sa/writer/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "writer.zohocloud.ca",
+   "category": "Docs",
+   "example": "https://writer.zohocloud.ca/writer/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "writer.zoho.com.cn",
+   "category": "Docs",
+   "example": "https://writer.zoho.com.cn/writer/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "sheet.zoho.com",
+   "category": "Sheets",
+   "example": "https://sheet.zoho.com/sheet/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "sheet.zoho.in",
+   "category": "Sheets",
+   "example": "https://sheet.zoho.in/sheet/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "sheet.zoho.eu",
+   "category": "Sheets",
+   "example": "https://sheet.zoho.eu/sheet/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "sheet.zoho.com.au",
+   "category": "Sheets",
+   "example": "https://sheet.zoho.com.au/sheet/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "sheet.zoho.jp",
+   "category": "Sheets",
+   "example": "https://sheet.zoho.jp/sheet/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "sheet.zoho.ae",
+   "category": "Sheets",
+   "example": "https://sheet.zoho.ae/sheet/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "sheet.zoho.sa",
+   "category": "Sheets",
+   "example": "https://sheet.zoho.sa/sheet/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "sheet.zohocloud.ca",
+   "category": "Sheets",
+   "example": "https://sheet.zohocloud.ca/sheet/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "sheet.zoho.com.cn",
+   "category": "Sheets",
+   "example": "https://sheet.zoho.com.cn/sheet/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "show.zoho.com",
+   "category": "Slides",
+   "example": "https://show.zoho.com/show/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "show.zoho.in",
+   "category": "Slides",
+   "example": "https://show.zoho.in/show/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "show.zoho.eu",
+   "category": "Slides",
+   "example": "https://show.zoho.eu/show/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "show.zoho.com.au",
+   "category": "Slides",
+   "example": "https://show.zoho.com.au/show/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "show.zoho.jp",
+   "category": "Slides",
+   "example": "https://show.zoho.jp/show/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "show.zoho.ae",
+   "category": "Slides",
+   "example": "https://show.zoho.ae/show/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "show.zoho.sa",
+   "category": "Slides",
+   "example": "https://show.zoho.sa/show/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "show.zohocloud.ca",
+   "category": "Slides",
+   "example": "https://show.zohocloud.ca/show/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "show.zoho.com.cn",
+   "category": "Slides",
+   "example": "https://show.zoho.com.cn/show/open/<id>",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "crm.zoho.com",
+   "category": "Work tools",
+   "example": "https://crm.zoho.com/crm/org<id>/tab/Home/begin",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "crm.zoho.in",
+   "category": "Work tools",
+   "example": "https://crm.zoho.in/crm/org<id>/tab/Home/begin",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "crm.zoho.eu",
+   "category": "Work tools",
+   "example": "https://crm.zoho.eu/crm/org<id>/tab/Home/begin",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "crm.zoho.com.au",
+   "category": "Work tools",
+   "example": "https://crm.zoho.com.au/crm/org<id>/tab/Home/begin",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "crm.zoho.jp",
+   "category": "Work tools",
+   "example": "https://crm.zoho.jp/crm/org<id>/tab/Home/begin",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "crm.zoho.ae",
+   "category": "Work tools",
+   "example": "https://crm.zoho.ae/crm/org<id>/tab/Home/begin",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "crm.zoho.sa",
+   "category": "Work tools",
+   "example": "https://crm.zoho.sa/crm/org<id>/tab/Home/begin",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "crm.zohocloud.ca",
+   "category": "Work tools",
+   "example": "https://crm.zohocloud.ca/crm/org<id>/tab/Home/begin",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "crm.zoho.com.cn",
+   "category": "Work tools",
+   "example": "https://crm.zoho.com.cn/crm/org<id>/tab/Home/begin",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "books.zoho.com",
+   "category": "Work tools",
+   "example": "https://books.zoho.com/app/<org>#/home/dashboard",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "books.zoho.in",
+   "category": "Work tools",
+   "example": "https://books.zoho.in/app/<org>#/home/dashboard",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "books.zoho.eu",
+   "category": "Work tools",
+   "example": "https://books.zoho.eu/app/<org>#/home/dashboard",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "books.zoho.com.au",
+   "category": "Work tools",
+   "example": "https://books.zoho.com.au/app/<org>#/home/dashboard",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "books.zoho.jp",
+   "category": "Work tools",
+   "example": "https://books.zoho.jp/app/<org>#/home/dashboard",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "books.zoho.ae",
+   "category": "Work tools",
+   "example": "https://books.zoho.ae/app/<org>#/home/dashboard",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "books.zoho.sa",
+   "category": "Work tools",
+   "example": "https://books.zoho.sa/app/<org>#/home/dashboard",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "books.zohocloud.ca",
+   "category": "Work tools",
+   "example": "https://books.zohocloud.ca/app/<org>#/home/dashboard",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "books.zoho.com.cn",
+   "category": "Work tools",
+   "example": "https://books.zoho.com.cn/app/<org>#/home/dashboard",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "projects.zoho.com",
+   "category": "Work tools",
+   "example": "https://projects.zoho.com/portal/<portal>#home",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "projects.zoho.in",
+   "category": "Work tools",
+   "example": "https://projects.zoho.in/portal/<portal>#home",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "projects.zoho.eu",
+   "category": "Work tools",
+   "example": "https://projects.zoho.eu/portal/<portal>#home",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "projects.zoho.com.au",
+   "category": "Work tools",
+   "example": "https://projects.zoho.com.au/portal/<portal>#home",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "projects.zoho.jp",
+   "category": "Work tools",
+   "example": "https://projects.zoho.jp/portal/<portal>#home",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "projects.zoho.ae",
+   "category": "Work tools",
+   "example": "https://projects.zoho.ae/portal/<portal>#home",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "projects.zoho.sa",
+   "category": "Work tools",
+   "example": "https://projects.zoho.sa/portal/<portal>#home",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "projects.zohocloud.ca",
+   "category": "Work tools",
+   "example": "https://projects.zohocloud.ca/portal/<portal>#home",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "projects.zoho.com.cn",
+   "category": "Work tools",
+   "example": "https://projects.zoho.com.cn/portal/<portal>#home",
+   "verified": true,
+   "note": "Probed: host responds. Host alone decides; regional DC list from Zoho WorkDrive Multi-DC doc"
+  },
+  {
+   "host": "workdrive.zoho.com",
+   "category": "Files",
+   "example": "https://workdrive.zoho.com/home/",
+   "verified": true,
+   "note": "Probed: host responds"
+  },
+  {
+   "host": "workdrive.zoho.in",
+   "category": "Files",
+   "example": "https://workdrive.zoho.in/home/",
+   "verified": true,
+   "note": "Probed: host responds"
+  },
+  {
+   "host": "workdrive.zoho.eu",
+   "category": "Files",
+   "example": "https://workdrive.zoho.eu/home/",
+   "verified": true,
+   "note": "Probed: host responds"
+  },
+  {
+   "host": "cliq.zoho.com",
+   "category": "Chat",
+   "example": "https://cliq.zoho.com/index.do",
+   "verified": true,
+   "note": "Probed: host responds"
+  },
+  {
+   "host": "cliq.zoho.in",
+   "category": "Chat",
+   "example": "https://cliq.zoho.in/index.do",
+   "verified": true,
+   "note": "Probed: host responds"
+  },
+  {
+   "host": "cliq.zoho.eu",
+   "category": "Chat",
+   "example": "https://cliq.zoho.eu/index.do",
+   "verified": true,
+   "note": "Probed: host responds"
+  },
+  {
+   "host": "meeting.zoho.com",
+   "category": "Meetings",
+   "example": "https://meeting.zoho.com/meeting/",
+   "verified": true,
+   "note": "Probed: host responds"
+  },
+  {
+   "host": "meeting.zoho.in",
+   "category": "Meetings",
+   "example": "https://meeting.zoho.in/meeting/",
+   "verified": true,
+   "note": "Probed: host responds"
+  },
+  {
+   "host": "meeting.zoho.eu",
+   "category": "Meetings",
+   "example": "https://meeting.zoho.eu/meeting/",
+   "verified": true,
+   "note": "Probed: host responds"
+  },
+  {
+   "host": "calendar.zoho.com",
+   "category": "Calendar",
+   "example": "https://calendar.zoho.com/zm/",
+   "verified": true,
+   "note": "Probed: host responds"
+  },
+  {
+   "host": "calendar.zoho.in",
+   "category": "Calendar",
+   "example": "https://calendar.zoho.in/zm/",
+   "verified": true,
+   "note": "Probed: host responds"
+  },
+  {
+   "host": "calendar.zoho.eu",
+   "category": "Calendar",
+   "example": "https://calendar.zoho.eu/zm/",
+   "verified": true,
+   "note": "Probed: host responds"
+  },
+  {
+   "host": "www.icloud.com",
+   "path_prefix": "/mail",
+   "category": "Email",
+   "example": "https://www.icloud.com/mail/<id>",
+   "verified": true,
+   "note": "Probed: 200 for this path vs 404 for a nonsense path. Shared files keep the app path (e.g. /numbers/<id>#Name)"
+  },
+  {
+   "host": "www.icloud.com",
+   "path_prefix": "/pages",
+   "category": "Docs",
+   "example": "https://www.icloud.com/pages/<id>",
+   "verified": true,
+   "note": "Probed: 200 for this path vs 404 for a nonsense path. Shared files keep the app path (e.g. /numbers/<id>#Name)"
+  },
+  {
+   "host": "www.icloud.com",
+   "path_prefix": "/numbers",
+   "category": "Sheets",
+   "example": "https://www.icloud.com/numbers/<id>",
+   "verified": true,
+   "note": "Probed: 200 for this path vs 404 for a nonsense path. Shared files keep the app path (e.g. /numbers/<id>#Name)"
+  },
+  {
+   "host": "www.icloud.com",
+   "path_prefix": "/keynote",
+   "category": "Slides",
+   "example": "https://www.icloud.com/keynote/<id>",
+   "verified": true,
+   "note": "Probed: 200 for this path vs 404 for a nonsense path. Shared files keep the app path (e.g. /numbers/<id>#Name)"
+  },
+  {
+   "host": "www.icloud.com",
+   "path_prefix": "/iclouddrive",
+   "category": "Files",
+   "example": "https://www.icloud.com/iclouddrive/<id>",
+   "verified": true,
+   "note": "Probed: 200 for this path vs 404 for a nonsense path. Shared files keep the app path (e.g. /numbers/<id>#Name)"
+  },
+  {
+   "host": "www.icloud.com",
+   "path_prefix": "/notes",
+   "category": "Docs",
+   "example": "https://www.icloud.com/notes/<id>",
+   "verified": true,
+   "note": "Probed: 200 for this path vs 404 for a nonsense path. Shared files keep the app path (e.g. /numbers/<id>#Name)"
+  },
+  {
+   "host": "www.icloud.com",
+   "path_prefix": "/calendar",
+   "category": "Calendar",
+   "example": "https://www.icloud.com/calendar/<id>",
+   "verified": true,
+   "note": "Probed: 200 for this path vs 404 for a nonsense path. Shared files keep the app path (e.g. /numbers/<id>#Name)"
+  },
+  {
+   "host": "www.icloud.com",
+   "path_prefix": "/photos",
+   "category": "Files",
+   "example": "https://www.icloud.com/photos/<id>",
+   "verified": true,
+   "note": "Probed: 200 for this path vs 404 for a nonsense path. Shared files keep the app path (e.g. /numbers/<id>#Name)"
+  },
+  {
+   "host": "www.icloud.com",
+   "path_prefix": "/reminders",
+   "category": "Work tools",
+   "example": "https://www.icloud.com/reminders",
+   "verified": false,
+   "note": "Listed on iCloud.com app grid; path not probed"
+  },
+  {
+   "host": "www.icloud.com",
+   "path_prefix": "/contacts",
+   "category": "Email",
+   "example": "https://www.icloud.com/contacts",
+   "verified": false,
+   "note": "Listed on iCloud.com app grid; path not probed"
+  },
+  {
+   "host": "www.icloud.com",
+   "path_prefix": "/find",
+   "category": "Other",
+   "example": "https://www.icloud.com/find",
+   "verified": false,
+   "note": "Listed on iCloud.com app grid; path not probed"
+  },
+  {
+   "host": "www.icloud.com",
+   "category": "Files",
+   "example": "https://www.icloud.com/",
+   "verified": true,
+   "note": "Fallback (iCloud home). icloud.com.cn for China not covered"
+  },
+  {
+   "host": "www.notion.so",
+   "category": "Docs",
+   "example": "https://www.notion.so/<workspace>/<page-id>",
+   "verified": true,
+   "note": "307 -> www.notion.com (2026); both seen"
+  },
+  {
+   "host": "www.notion.com",
+   "category": "Docs",
+   "example": "https://www.notion.com/<workspace>/<page-id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "*.notion.site",
+   "category": "Docs",
+   "example": "https://<workspace>.notion.site/<page>",
+   "verified": false,
+   "note": "Public published pages"
+  },
+  {
+   "host": "mail.notion.so",
+   "category": "Email",
+   "example": "https://mail.notion.so/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds (Notion Mail)"
+  },
+  {
+   "host": "calendar.notion.so",
+   "category": "Calendar",
+   "example": "https://calendar.notion.so/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds (Notion Calendar)"
+  },
+  {
+   "host": "coda.io",
+   "category": "Docs",
+   "example": "https://coda.io/d/<doc>_d<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "airtable.com",
+   "category": "Sheets",
+   "example": "https://airtable.com/app<id>/tbl<id>/viw<id>",
+   "verified": true,
+   "note": "Bare host 301s to www.airtable.com marketing; app URLs stay on airtable.com/app..."
+  },
+  {
+   "host": "app.smartsheet.com",
+   "category": "Sheets",
+   "example": "https://app.smartsheet.com/sheets/<id>",
+   "verified": true,
+   "note": "/ 301s to /b/home"
+  },
+  {
+   "host": "paper.dropbox.com",
+   "category": "Docs",
+   "example": "https://paper.dropbox.com/doc/<id>",
+   "verified": true,
+   "note": "302 -> dropbox.com/paper (Paper folded into Dropbox)"
+  },
+  {
+   "host": "www.dropbox.com",
+   "path_prefix": "/paper",
+   "category": "Docs",
+   "example": "https://www.dropbox.com/paper/start",
+   "verified": true,
+   "note": "302 seen to /paper/start"
+  },
+  {
+   "host": "www.dropbox.com",
+   "category": "Files",
+   "example": "https://www.dropbox.com/scl/fi/<id>/<name>?rlkey=<key>",
+   "verified": true,
+   "note": "Host fallback: /home, /scl/fi share links. A shared .docx previews here, still Files"
+  },
+  {
+   "host": "app.box.com",
+   "path_prefix": "/notes",
+   "category": "Docs",
+   "example": "https://app.box.com/notes/<id>",
+   "verified": false,
+   "note": "Box Notes; not probed"
+  },
+  {
+   "host": "app.box.com",
+   "category": "Files",
+   "example": "https://app.box.com/folder/0",
+   "verified": true,
+   "note": "302 -> login"
+  },
+  {
+   "host": "*.app.box.com",
+   "category": "Files",
+   "example": "https://<company>.app.box.com/s/<id>",
+   "verified": false,
+   "note": "Enterprise custom subdomain share links"
+  },
+  {
+   "host": "www.figma.com",
+   "path_prefix": "/design/",
+   "category": "Design",
+   "example": "https://www.figma.com/design/<key>/<name>",
+   "verified": true,
+   "note": "Official embed doc. NOTE: bare /design/ is a marketing page; real files have /design/<key>/"
+  },
+  {
+   "host": "www.figma.com",
+   "path_prefix": "/file/",
+   "category": "Design",
+   "example": "https://www.figma.com/file/<key>/<name>",
+   "verified": true,
+   "note": "Legacy design URL; still resolves"
+  },
+  {
+   "host": "www.figma.com",
+   "path_prefix": "/board/",
+   "category": "Design",
+   "example": "https://www.figma.com/board/<key>/<name>",
+   "verified": true,
+   "note": "FigJam (official embed doc). Whiteboard; grouped with Design"
+  },
+  {
+   "host": "www.figma.com",
+   "path_prefix": "/slides/",
+   "category": "Slides",
+   "example": "https://www.figma.com/slides/<key>/<name>",
+   "verified": true,
+   "note": "Figma Slides (official embed doc). Bare /slides/ is the marketing page"
+  },
+  {
+   "host": "www.figma.com",
+   "path_prefix": "/deck/",
+   "category": "Slides",
+   "example": "https://www.figma.com/deck/<key>/<name>",
+   "verified": true,
+   "note": "Slides in presentation view (official embed doc)"
+  },
+  {
+   "host": "www.figma.com",
+   "path_prefix": "/proto/",
+   "category": "Design",
+   "example": "https://www.figma.com/proto/<key>/<name>",
+   "verified": true,
+   "note": "Prototype view; long-standing"
+  },
+  {
+   "host": "www.figma.com",
+   "path_prefix": "/make/",
+   "category": "Design",
+   "example": "https://www.figma.com/make/<key>/<name>",
+   "verified": false,
+   "note": "Figma Make (AI app builder); could be AI. Bare /make/ is marketing"
+  },
+  {
+   "host": "www.figma.com",
+   "path_prefix": "/site/",
+   "category": "Design",
+   "example": "https://www.figma.com/site/<key>/<name>",
+   "verified": false,
+   "note": "Figma Sites editor; not verified"
+  },
+  {
+   "host": "www.figma.com",
+   "path_prefix": "/buzz/",
+   "category": "Design",
+   "example": "https://www.figma.com/buzz/<key>/<name>",
+   "verified": false,
+   "note": "Figma Buzz; not verified"
+  },
+  {
+   "host": "www.figma.com",
+   "category": "Design",
+   "example": "https://www.figma.com/files/recents-and-sharing",
+   "verified": true,
+   "note": "Fallback"
+  },
+  {
+   "host": "www.canva.com",
+   "category": "Design",
+   "example": "https://www.canva.com/design/<id>/edit",
+   "verified": true,
+   "note": "Host responds (403 to bot). Presentations and docs share /design/<id>/ so Canva can't be split into Slides/Docs by URL"
+  },
+  {
+   "host": "miro.com",
+   "path_prefix": "/app/board",
+   "category": "Design",
+   "example": "https://miro.com/app/board/<id>=/",
+   "verified": true,
+   "note": "/app/ redirects to signup when signed out; whiteboard grouped with Design"
+  },
+  {
+   "host": "miro.com",
+   "category": "Design",
+   "example": "https://miro.com/app/dashboard/",
+   "verified": true,
+   "note": "Host fallback; marketing pages also live here"
+  },
+  {
+   "host": "excalidraw.com",
+   "category": "Design",
+   "example": "https://excalidraw.com/#room=<id>,<key>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "app.excalidraw.com",
+   "category": "Design",
+   "example": "https://app.excalidraw.com/s/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds (Excalidraw+)"
+  },
+  {
+   "host": "app.diagrams.net",
+   "category": "Design",
+   "example": "https://app.diagrams.net/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "lucid.app",
+   "path_prefix": "/lucidchart",
+   "category": "Design",
+   "example": "https://lucid.app/lucidchart/<id>/edit",
+   "verified": true,
+   "note": "Host responds (403 to bot)"
+  },
+  {
+   "host": "lucid.app",
+   "path_prefix": "/lucidspark",
+   "category": "Design",
+   "example": "https://lucid.app/lucidspark/<id>/edit",
+   "verified": true,
+   "note": "Host responds (403 to bot); whiteboard"
+  },
+  {
+   "host": "lucid.app",
+   "category": "Design",
+   "example": "https://lucid.app/documents",
+   "verified": true,
+   "note": "Fallback"
+  },
+  {
+   "host": "*.atlassian.net",
+   "path_prefix": "/wiki",
+   "category": "Docs",
+   "example": "https://<site>.atlassian.net/wiki/spaces/<KEY>/pages/<id>/<title>",
+   "verified": true,
+   "note": "Confluence Cloud; long-standing documented structure"
+  },
+  {
+   "host": "*.atlassian.net",
+   "path_prefix": "/browse",
+   "category": "Work tools",
+   "example": "https://<site>.atlassian.net/browse/PROJ-123",
+   "verified": true,
+   "note": "Jira issue"
+  },
+  {
+   "host": "*.atlassian.net",
+   "path_prefix": "/jira",
+   "category": "Work tools",
+   "example": "https://<site>.atlassian.net/jira/software/projects/PROJ/boards/1",
+   "verified": true,
+   "note": "Jira"
+  },
+  {
+   "host": "*.atlassian.net",
+   "category": "Work tools",
+   "example": "https://<site>.atlassian.net/",
+   "verified": true,
+   "note": "Fallback"
+  },
+  {
+   "host": "home.atlassian.com",
+   "category": "Work tools",
+   "example": "https://home.atlassian.com/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "start.atlassian.com",
+   "category": "Work tools",
+   "example": "https://start.atlassian.com/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "trello.com",
+   "category": "Work tools",
+   "example": "https://trello.com/b/<id>/<name>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "bitbucket.org",
+   "category": "Development",
+   "example": "https://bitbucket.org/<workspace>/<repo>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "linear.app",
+   "category": "Work tools",
+   "example": "https://linear.app/<team>/issue/ENG-123",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "app.asana.com",
+   "category": "Work tools",
+   "example": "https://app.asana.com/0/<project>/<task>",
+   "verified": true,
+   "note": "Redirects to /-/login signed out"
+  },
+  {
+   "host": "*.monday.com",
+   "category": "Work tools",
+   "example": "https://<account>.monday.com/boards/<id>",
+   "verified": false,
+   "note": "Accounts use a subdomain; monday.com itself is marketing"
+  },
+  {
+   "host": "app.clickup.com",
+   "category": "Work tools",
+   "example": "https://app.clickup.com/<team>/v/l/<list>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds. ClickUp Docs (/<team>/v/dc/...) can't be split with a path prefix"
+  },
+  {
+   "host": "app.slack.com",
+   "category": "Chat",
+   "example": "https://app.slack.com/client/<team>/<channel>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "*.slack.com",
+   "category": "Chat",
+   "example": "https://<workspace>.slack.com/archives/<channel>",
+   "verified": false,
+   "note": "Workspace subdomains redirect into app.slack.com"
+  },
+  {
+   "host": "discord.com",
+   "path_prefix": "/channels",
+   "category": "Chat",
+   "example": "https://discord.com/channels/<guild>/<channel>",
+   "verified": true,
+   "note": "/app also opens the client"
+  },
+  {
+   "host": "discord.com",
+   "category": "Chat",
+   "example": "https://discord.com/app",
+   "verified": true,
+   "note": "Fallback (includes marketing pages)"
+  },
+  {
+   "host": "web.whatsapp.com",
+   "category": "Chat",
+   "example": "https://web.whatsapp.com/",
+   "verified": true,
+   "note": "Host responds (400 to curl)"
+  },
+  {
+   "host": "web.telegram.org",
+   "category": "Chat",
+   "example": "https://web.telegram.org/k/#<peer>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; /k/ and /a/ are two web clients"
+  },
+  {
+   "host": "app.zoom.us",
+   "path_prefix": "/wc",
+   "category": "Meetings",
+   "example": "https://app.zoom.us/wc/<id>/join",
+   "verified": true,
+   "note": "zoom.us/wc 302s here"
+  },
+  {
+   "host": "zoom.us",
+   "path_prefix": "/j",
+   "category": "Meetings",
+   "example": "https://zoom.us/j/<id>?pwd=<pwd>",
+   "verified": true,
+   "note": "Join link; widely documented"
+  },
+  {
+   "host": "*.zoom.us",
+   "category": "Meetings",
+   "example": "https://<company>.zoom.us/j/<id>",
+   "verified": false,
+   "note": "Vanity subdomains"
+  },
+  {
+   "host": "zoom.us",
+   "category": "Meetings",
+   "example": "https://zoom.us/",
+   "verified": true,
+   "note": "Fallback; marketing pages too"
+  },
+  {
+   "host": "web.webex.com",
+   "category": "Meetings",
+   "example": "https://web.webex.com/meetings",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "*.webex.com",
+   "category": "Meetings",
+   "example": "https://<site>.webex.com/meet/<user>",
+   "verified": false,
+   "note": "Personal room / site URLs"
+  },
+  {
+   "host": "calendly.com",
+   "category": "Calendar",
+   "example": "https://calendly.com/<user>/<event>",
+   "verified": true,
+   "note": "Booking pages and /app/ dashboard"
+  },
+  {
+   "host": "*.lightning.force.com",
+   "category": "Work tools",
+   "example": "https://<mydomain>.lightning.force.com/lightning/r/Account/<id>/view",
+   "verified": true,
+   "note": "Salesforce My Domain docs; Salesforce says UI URLs are not officially supported/stable"
+  },
+  {
+   "host": "*.my.salesforce.com",
+   "category": "Work tools",
+   "example": "https://<mydomain>.my.salesforce.com/",
+   "verified": true,
+   "note": "Salesforce My Domain URL formats doc"
+  },
+  {
+   "host": "login.salesforce.com",
+   "category": "Work tools",
+   "example": "https://login.salesforce.com/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "app.hubspot.com",
+   "category": "Work tools",
+   "example": "https://app.hubspot.com/contacts/<portal>",
+   "verified": true,
+   "note": "301 -> /home"
+  },
+  {
+   "host": "app-eu1.hubspot.com",
+   "category": "Work tools",
+   "example": "https://app-eu1.hubspot.com/contacts/<portal>",
+   "verified": true,
+   "note": "EU data centre host"
+  },
+  {
+   "host": "gist.github.com",
+   "category": "Development",
+   "example": "https://gist.github.com/<user>/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "github.com",
+   "path_prefix": "/copilot",
+   "category": "AI",
+   "example": "https://github.com/copilot",
+   "verified": false,
+   "note": "Copilot chat on github.com; judgement call"
+  },
+  {
+   "host": "github.com",
+   "category": "Development",
+   "example": "https://github.com/<owner>/<repo>",
+   "verified": true,
+   "note": "Includes /codespaces listing"
+  },
+  {
+   "host": "github.dev",
+   "category": "Development",
+   "example": "https://github.dev/<owner>/<repo>",
+   "verified": true,
+   "note": "Bare host 302s to vscode.dev/github/"
+  },
+  {
+   "host": "*.github.dev",
+   "category": "Development",
+   "example": "https://<codespace-name>.github.dev/",
+   "verified": false,
+   "note": "Codespaces in browser (also *.app.github.dev for forwarded ports)"
+  },
+  {
+   "host": "vscode.dev",
+   "category": "Development",
+   "example": "https://vscode.dev/github/<owner>/<repo>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "gitlab.com",
+   "category": "Development",
+   "example": "https://gitlab.com/<group>/<project>",
+   "verified": true,
+   "note": "Bare host 301s to about.gitlab.com when signed out"
+  },
+  {
+   "host": "stackoverflow.com",
+   "category": "Development",
+   "example": "https://stackoverflow.com/questions/<id>/<slug>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "*.stackexchange.com",
+   "category": "Reference",
+   "example": "https://<site>.stackexchange.com/questions/<id>",
+   "verified": false,
+   "note": "Network sites; topic varies (some are programming)"
+  },
+  {
+   "host": "superuser.com",
+   "category": "Development",
+   "example": "https://superuser.com/questions/<id>",
+   "verified": false,
+   "note": "Stack Exchange site on its own domain"
+  },
+  {
+   "host": "serverfault.com",
+   "category": "Development",
+   "example": "https://serverfault.com/questions/<id>",
+   "verified": false,
+   "note": "Stack Exchange site on its own domain"
+  },
+  {
+   "host": "askubuntu.com",
+   "category": "Development",
+   "example": "https://askubuntu.com/questions/<id>",
+   "verified": false,
+   "note": "Stack Exchange site on its own domain"
+  },
+  {
+   "host": "mathoverflow.net",
+   "category": "Reference",
+   "example": "https://mathoverflow.net/questions/<id>",
+   "verified": false,
+   "note": "Stack Exchange site on its own domain"
+  },
+  {
+   "host": "vercel.com",
+   "category": "Development",
+   "example": "https://vercel.com/<team>/<project>",
+   "verified": true,
+   "note": "Host responds"
+  },
+  {
+   "host": "v0.app",
+   "category": "AI",
+   "example": "https://v0.app/chat/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; v0.dev 307s here"
+  },
+  {
+   "host": "app.netlify.com",
+   "category": "Development",
+   "example": "https://app.netlify.com/sites/<site>/overview",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "console.aws.amazon.com",
+   "category": "Development",
+   "example": "https://console.aws.amazon.com/console/home",
+   "verified": true,
+   "note": "302 -> /console/home"
+  },
+  {
+   "host": "*.console.aws.amazon.com",
+   "category": "Development",
+   "example": "https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1",
+   "verified": false,
+   "note": "Region-prefixed console hosts"
+  },
+  {
+   "host": "dash.cloudflare.com",
+   "category": "Development",
+   "example": "https://dash.cloudflare.com/<account>/<zone>",
+   "verified": true,
+   "note": "Host responds (403 to bot)"
+  },
+  {
+   "host": "replit.com",
+   "category": "Development",
+   "example": "https://replit.com/@<user>/<repl>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "*.replit.dev",
+   "category": "Development",
+   "example": "https://<id>.replit.dev/",
+   "verified": false,
+   "note": "Running app previews"
+  },
+  {
+   "host": "codesandbox.io",
+   "category": "Development",
+   "example": "https://codesandbox.io/p/sandbox/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "*.csb.app",
+   "category": "Development",
+   "example": "https://<id>.csb.app/",
+   "verified": false,
+   "note": "Sandbox previews"
+  },
+  {
+   "host": "stackblitz.com",
+   "category": "Development",
+   "example": "https://stackblitz.com/edit/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "bolt.new",
+   "category": "AI",
+   "example": "https://bolt.new/~/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; AI app builder"
+  },
+  {
+   "host": "localhost",
+   "path_prefix": "/lab",
+   "category": "Development",
+   "example": "http://localhost:8888/lab/tree/notebook.ipynb",
+   "verified": false,
+   "note": "JupyterLab; host is whatever server runs it (localhost, *.jupyterhub, etc.). Same for /tree and /notebooks"
+  },
+  {
+   "host": "jupyter.org",
+   "category": "Development",
+   "example": "https://jupyter.org/try",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "www.kaggle.com",
+   "path_prefix": "/code",
+   "category": "Development",
+   "example": "https://www.kaggle.com/code/<user>/<notebook>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "www.kaggle.com",
+   "category": "Learning",
+   "example": "https://www.kaggle.com/competitions/<name>",
+   "verified": true,
+   "note": "Fallback (competitions, learn, datasets)"
+  },
+  {
+   "host": "huggingface.co",
+   "path_prefix": "/chat",
+   "category": "AI",
+   "example": "https://huggingface.co/chat/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds (HuggingChat)"
+  },
+  {
+   "host": "huggingface.co",
+   "category": "Development",
+   "example": "https://huggingface.co/<org>/<model>",
+   "verified": true,
+   "note": "Models, datasets, /spaces"
+  },
+  {
+   "host": "chatgpt.com",
+   "category": "AI",
+   "example": "https://chatgpt.com/c/<id>",
+   "verified": true,
+   "note": "Host responds (403 to bot)"
+  },
+  {
+   "host": "chat.openai.com",
+   "category": "AI",
+   "example": "https://chat.openai.com/c/<id>",
+   "verified": true,
+   "note": "308 -> chatgpt.com"
+  },
+  {
+   "host": "sora.chatgpt.com",
+   "category": "AI",
+   "example": "https://sora.chatgpt.com/",
+   "verified": true,
+   "note": "Host responds; video generation"
+  },
+  {
+   "host": "claude.ai",
+   "category": "AI",
+   "example": "https://claude.ai/chat/<id>",
+   "verified": true,
+   "note": "Host responds (403 to bot)"
+  },
+  {
+   "host": "www.perplexity.ai",
+   "category": "AI",
+   "example": "https://www.perplexity.ai/search/<slug>",
+   "verified": true,
+   "note": "perplexity.ai 301s here"
+  },
+  {
+   "host": "perplexity.ai",
+   "category": "AI",
+   "example": "https://perplexity.ai/",
+   "verified": true,
+   "note": "301 -> www.perplexity.ai"
+  },
+  {
+   "host": "www.meta.ai",
+   "category": "AI",
+   "example": "https://www.meta.ai/",
+   "verified": true,
+   "note": "Host responds (403 to bot)"
+  },
+  {
+   "host": "meta.ai",
+   "category": "AI",
+   "example": "https://meta.ai/",
+   "verified": true,
+   "note": "Host responds (403 to bot)"
+  },
+  {
+   "host": "grok.com",
+   "category": "AI",
+   "example": "https://grok.com/chat/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "chat.deepseek.com",
+   "category": "AI",
+   "example": "https://chat.deepseek.com/a/chat/s/<id>",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "chat.mistral.ai",
+   "category": "AI",
+   "example": "https://chat.mistral.ai/chat/<id>",
+   "verified": true,
+   "note": "Le Chat; host responds (403 to bot)"
+  },
+  {
+   "host": "poe.com",
+   "category": "AI",
+   "example": "https://poe.com/<bot>",
+   "verified": true,
+   "note": "Redirects to /login"
+  },
+  {
+   "host": "character.ai",
+   "category": "AI",
+   "example": "https://character.ai/chat/<id>",
+   "verified": true,
+   "note": "Host responds (403 to bot)"
+  },
+  {
+   "host": "www.midjourney.com",
+   "category": "AI",
+   "example": "https://www.midjourney.com/imagine",
+   "verified": true,
+   "note": "Host responds (403 to bot)"
+  },
+  {
+   "host": "ideogram.ai",
+   "category": "AI",
+   "example": "https://ideogram.ai/t/explore",
+   "verified": true,
+   "note": "Host responds (403 to bot)"
+  },
+  {
+   "host": "app.runwayml.com",
+   "category": "AI",
+   "example": "https://app.runwayml.com/",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds"
+  },
+  {
+   "host": "suno.com",
+   "category": "AI",
+   "example": "https://suno.com/create",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; AI music, grouped with AI"
+  },
+  {
+   "host": "x.com",
+   "path_prefix": "/i/grok",
+   "category": "AI",
+   "example": "https://x.com/i/grok?conversation=<id>",
+   "verified": true,
+   "note": "Probe: 307 to login with redirect_after_login=/i/grok. Rest of x.com is social (Other)"
+  },
+  {
+   "host": "elevenlabs.io",
+   "path_prefix": "/app",
+   "category": "AI",
+   "example": "https://elevenlabs.io/app/speech-synthesis",
+   "verified": true,
+   "note": "Probed 2026-10-11: host responds; root is marketing"
+  }
+ ]
+}

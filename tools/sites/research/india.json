@@ -1,0 +1,3077 @@
+{
+ "sources": [
+  {
+   "name": "Semrush Trending Websites - India (all + ~45 category lists, top 100 each)",
+   "url": "https://www.semrush.com/trending-websites/in/all",
+   "date": "August 2026 data, fetched 2026-10-11"
+  },
+  {
+   "name": "Ahrefs Top Websites in India (by organic search traffic, overall + category pages)",
+   "url": "https://ahrefstop.com/websites/india",
+   "date": "October 2026 data, fetched 2026-10-11"
+  },
+  {
+   "name": "Countly: Top 10 e-commerce websites in India 2026 (secondary summary of Similarweb Q2 2026 estimates)",
+   "url": "https://countly.net/top-10-e-commerce-websites-india-2026-traffic-market-leaders",
+   "date": "Updated July 2026, fetched 2026-10-11"
+  }
+ ],
+ "sites": [
+  {
+   "domain": "flipkart.com",
+   "category": "Shopping",
+   "rank_hint": "India #9 by organic search traffic (Ahrefs Oct 2026)",
+   "note": "Absent from Semrush trending lists (likely excluded); Similarweb-derived summary (countly.net, Q2 2026) puts it #2 in Indian e-commerce."
+  },
+  {
+   "domain": "myntra.com",
+   "category": "Shopping",
+   "rank_hint": "India #49 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "meesho.com",
+   "category": "Shopping",
+   "rank_hint": "India #61 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ajio.com",
+   "category": "Shopping",
+   "rank_hint": "India Apparel & Fashion #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "nykaa.com",
+   "category": "Shopping",
+   "rank_hint": "India Beauty & Cosmetics #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "nykaafashion.com",
+   "category": "Shopping",
+   "rank_hint": "India Apparel & Fashion #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "shopsy.in",
+   "category": "Shopping",
+   "rank_hint": "India #72 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "indiamart.com",
+   "category": "Shopping",
+   "rank_hint": "India #90 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "croma.com",
+   "category": "Shopping",
+   "rank_hint": "India Consumer Electronics #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "reliancedigital.in",
+   "category": "Shopping",
+   "rank_hint": "India Consumer Electronics #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "snapdeal.com",
+   "category": "Shopping",
+   "rank_hint": "India Apparel & Fashion #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "tatacliq.com",
+   "category": "Shopping",
+   "rank_hint": "India Retail #23 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "lenskart.com",
+   "category": "Shopping",
+   "rank_hint": "India Apparel & Fashion #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "boat-lifestyle.com",
+   "category": "Shopping",
+   "rank_hint": "India Consumer Electronics #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "mi.com",
+   "category": "Shopping",
+   "rank_hint": "India Consumer Electronics #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "vijaysales.com",
+   "category": "Shopping",
+   "rank_hint": "India Consumer Electronics #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "purplle.com",
+   "category": "Shopping",
+   "rank_hint": "India Beauty & Cosmetics #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "mamaearth.in",
+   "category": "Shopping",
+   "rank_hint": "India Beauty & Cosmetics #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "thesouledstore.com",
+   "category": "Shopping",
+   "rank_hint": "India Apparel & Fashion #10 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bewakoof.com",
+   "category": "Shopping",
+   "rank_hint": "India Apparel & Fashion #31 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "hm.com",
+   "category": "Shopping",
+   "rank_hint": "India Apparel & Fashion #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "zara.com",
+   "category": "Shopping",
+   "rank_hint": "India Apparel & Fashion #17 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "westside.com",
+   "category": "Shopping",
+   "rank_hint": "India Apparel & Fashion #12 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "shoppersstop.com",
+   "category": "Shopping",
+   "rank_hint": "India Apparel & Fashion #32 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "lifestylestores.com",
+   "category": "Shopping",
+   "rank_hint": "India Apparel & Fashion #36 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "decathlon.in",
+   "category": "Shopping",
+   "rank_hint": "India Wellness #15 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ikea.com",
+   "category": "Shopping",
+   "rank_hint": "India Retail #24 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "pepperfry.com",
+   "category": "Shopping",
+   "rank_hint": "India Retail #73 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "tanishq.co.in",
+   "category": "Shopping",
+   "rank_hint": "India Jewelry & Luxury Products #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "caratlane.com",
+   "category": "Shopping",
+   "rank_hint": "India Jewelry & Luxury Products #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bluestone.com",
+   "category": "Shopping",
+   "rank_hint": "India Jewelry & Luxury Products #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "giva.co",
+   "category": "Shopping",
+   "rank_hint": "India Jewelry & Luxury Products #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "titan.co.in",
+   "category": "Shopping",
+   "rank_hint": "India Jewelry & Luxury Products #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bata.com",
+   "category": "Shopping",
+   "rank_hint": "India Apparel & Fashion #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "libas.in",
+   "category": "Shopping",
+   "rank_hint": "India Apparel & Fashion #19 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "limeroad.com",
+   "category": "Shopping",
+   "rank_hint": "India Apparel & Fashion #20 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "fnp.com",
+   "category": "Shopping",
+   "rank_hint": "India Food & Beverages #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "igp.com",
+   "category": "Shopping",
+   "rank_hint": "India Food & Beverages #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "olx.in",
+   "category": "Shopping",
+   "rank_hint": "India Automotive #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cashkaro.com",
+   "category": "Shopping",
+   "rank_hint": "India Wellness #12 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "buyhatke.com",
+   "category": "Shopping",
+   "rank_hint": "India Retail #22 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "aliexpress.com",
+   "category": "Shopping",
+   "rank_hint": "India Retail #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "amazon.com",
+   "category": "Shopping",
+   "rank_hint": "India #70 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ebay.com",
+   "category": "Shopping",
+   "rank_hint": "India Retail #33 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "etsy.com",
+   "category": "Shopping",
+   "rank_hint": "India Retail #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "smartprix.com",
+   "category": "Shopping",
+   "rank_hint": "India Telecom #14 (Semrush Aug 2026)",
+   "note": "Price comparison."
+  },
+  {
+   "domain": "carwale.com",
+   "category": "Shopping",
+   "rank_hint": "India Automotive #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cardekho.com",
+   "category": "Shopping",
+   "rank_hint": "India Automotive #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bikewale.com",
+   "category": "Shopping",
+   "rank_hint": "India Automotive #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cars24.com",
+   "category": "Shopping",
+   "rank_hint": "India Automotive #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "spinny.com",
+   "category": "Shopping",
+   "rank_hint": "India Automotive #18 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "moglix.com",
+   "category": "Shopping",
+   "rank_hint": "India Retail #50 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "samsung.com",
+   "category": "Shopping",
+   "rank_hint": "India #58 overall (Semrush Aug 2026)",
+   "note": "Mostly product store and support pages."
+  },
+  {
+   "domain": "urbancompany.com",
+   "category": "Shopping",
+   "rank_hint": "India Retail #72 (Semrush Aug 2026)",
+   "note": "Home services booking; Semrush files under Retail."
+  },
+  {
+   "domain": "amzn.to",
+   "category": "Shopping",
+   "rank_hint": "India Retail #16 (Semrush Aug 2026)",
+   "note": "Amazon short links; resolves to amazon.in."
+  },
+  {
+   "domain": "swiggy.com",
+   "category": "Food",
+   "rank_hint": "India Restaurants #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "zomato.com",
+   "category": "Food",
+   "rank_hint": "India Restaurants #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "blinkit.com",
+   "category": "Food",
+   "rank_hint": "",
+   "note": "Quick commerce; largely app-first, not in fetched web rankings. Included per brief."
+  },
+  {
+   "domain": "zeptonow.com",
+   "category": "Food",
+   "rank_hint": "",
+   "note": "Zepto web domain; app-first, not in fetched web rankings."
+  },
+  {
+   "domain": "bigbasket.com",
+   "category": "Food",
+   "rank_hint": "India Retail #11 (Semrush Aug 2026)",
+   "note": "Grocery delivery; Semrush files it under Retail."
+  },
+  {
+   "domain": "jiomart.com",
+   "category": "Food",
+   "rank_hint": "India Food & Beverages #3 (Semrush Aug 2026)",
+   "note": "Grocery-first but also sells electronics/fashion; ranked in both Semrush Retail and Food lists."
+  },
+  {
+   "domain": "dmart.in",
+   "category": "Food",
+   "rank_hint": "India Food & Beverages #13 (Semrush Aug 2026)",
+   "note": "DMart Ready online grocery."
+  },
+  {
+   "domain": "dominos.co.in",
+   "category": "Food",
+   "rank_hint": "India Restaurants #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "kfc.co.in",
+   "category": "Food",
+   "rank_hint": "India Restaurants #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "pizzahut.co.in",
+   "category": "Food",
+   "rank_hint": "India Restaurants #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "mcdelivery.co.in",
+   "category": "Food",
+   "rank_hint": "India Restaurants #11 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "burgerking.in",
+   "category": "Food",
+   "rank_hint": "India Restaurants #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "eazydiner.com",
+   "category": "Food",
+   "rank_hint": "India Restaurants #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "licious.in",
+   "category": "Food",
+   "rank_hint": "India Food & Beverages #50 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "freshtohome.com",
+   "category": "Food",
+   "rank_hint": "India Food & Beverages #44 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "countrydelight.in",
+   "category": "Food",
+   "rank_hint": "India Food & Beverages #29 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "tarladalal.com",
+   "category": "Food",
+   "rank_hint": "India Restaurants #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "vegrecipesofindia.com",
+   "category": "Food",
+   "rank_hint": "India Food & Beverages #36 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "indianhealthyrecipes.com",
+   "category": "Food",
+   "rank_hint": "India Food & Beverages #23 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "instagram.com",
+   "category": "Social",
+   "rank_hint": "India #3 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "facebook.com",
+   "category": "Social",
+   "rank_hint": "India #6 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "x.com",
+   "category": "Social",
+   "rank_hint": "India #9 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "twitter.com",
+   "category": "Social",
+   "rank_hint": "India Newspapers #29 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "reddit.com",
+   "category": "Social",
+   "rank_hint": "India #8 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "pinterest.com",
+   "category": "Social",
+   "rank_hint": "India #14 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "quora.com",
+   "category": "Social",
+   "rank_hint": "India #62 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "threads.com",
+   "category": "Social",
+   "rank_hint": "India Apparel & Fashion #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "snapchat.com",
+   "category": "Social",
+   "rank_hint": "India Computer Software & Development #12 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "sharechat.com",
+   "category": "Social",
+   "rank_hint": "India Mass Media #100 (Semrush Aug 2026)",
+   "note": "Indian regional social network (mostly app)."
+  },
+  {
+   "domain": "chatgpt.com",
+   "category": "AI",
+   "rank_hint": "India #4 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "claude.ai",
+   "category": "AI",
+   "rank_hint": "India #19 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "perplexity.ai",
+   "category": "AI",
+   "rank_hint": "",
+   "note": "Not in fetched India rankings; included as major AI tool."
+  },
+  {
+   "domain": "labs.google",
+   "category": "AI",
+   "rank_hint": "India #64 overall (Semrush Aug 2026)",
+   "note": "Google AI experiments (Flow, NotebookLM, etc.)."
+  },
+  {
+   "domain": "whatsapp.com",
+   "category": "Chat",
+   "rank_hint": "India #5 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "telegram.org",
+   "category": "Chat",
+   "rank_hint": "India #96 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "discord.com",
+   "category": "Chat",
+   "rank_hint": "India #53 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "slack.com",
+   "category": "Chat",
+   "rank_hint": "India Computer Software & Development #30 (Semrush Aug 2026)",
+   "note": "Team chat."
+  },
+  {
+   "domain": "zoom.us",
+   "category": "Meetings",
+   "rank_hint": "India #99 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "netflix.com",
+   "category": "Video",
+   "rank_hint": "India #18 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "primevideo.com",
+   "category": "Video",
+   "rank_hint": "India #59 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "hotstar.com",
+   "category": "Video",
+   "rank_hint": "India #29 by organic search traffic (Ahrefs Oct 2026)",
+   "note": "JioHotstar (merged JioCinema + Disney+ Hotstar, 2025). Not in Semrush lists."
+  },
+  {
+   "domain": "jiohotstar.com",
+   "category": "Video",
+   "rank_hint": "",
+   "note": "Alias/redirect for JioHotstar."
+  },
+  {
+   "domain": "sonyliv.com",
+   "category": "Video",
+   "rank_hint": "India Entertainment #10 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "zee5.com",
+   "category": "Video",
+   "rank_hint": "India Entertainment #11 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "mxplayer.in",
+   "category": "Video",
+   "rank_hint": "India Entertainment #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "airtelxstream.in",
+   "category": "Video",
+   "rank_hint": "India Telecom #10 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "dailymotion.com",
+   "category": "Video",
+   "rank_hint": "India #67 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "sunnxt.com",
+   "category": "Video",
+   "rank_hint": "India Entertainment #60 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "aha.video",
+   "category": "Video",
+   "rank_hint": "India Entertainment #69 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "twitch.tv",
+   "category": "Video",
+   "rank_hint": "India Computer & Video Games #5 (Semrush Aug 2026)",
+   "note": "Live game streaming; filed under Video."
+  },
+  {
+   "domain": "spotify.com",
+   "category": "Music",
+   "rank_hint": "India #35 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "jiosaavn.com",
+   "category": "Music",
+   "rank_hint": "India Music #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "gaana.com",
+   "category": "Music",
+   "rank_hint": "India Music #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "wynk.in",
+   "category": "Music",
+   "rank_hint": "India Music #35 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "hungama.com",
+   "category": "Music",
+   "rank_hint": "India Music #32 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "soundcloud.com",
+   "category": "Music",
+   "rank_hint": "India Music #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "saregama.com",
+   "category": "Music",
+   "rank_hint": "India Music #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "smule.com",
+   "category": "Music",
+   "rank_hint": "India Music #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ndtv.com",
+   "category": "News",
+   "rank_hint": "India #41 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ndtv.in",
+   "category": "News",
+   "rank_hint": "India #97 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "thehindu.com",
+   "category": "News",
+   "rank_hint": "India #78 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "aajtak.in",
+   "category": "News",
+   "rank_hint": "India #80 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "jagran.com",
+   "category": "News",
+   "rank_hint": "India #82 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "indianexpress.com",
+   "category": "News",
+   "rank_hint": "India #93 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "livehindustan.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "abplive.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "news18.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #15 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "eenadu.net",
+   "category": "News",
+   "rank_hint": "India Newspapers #17 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "india.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #18 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "oneindia.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #19 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bhaskar.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #21 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "anandabazar.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #22 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "deccanherald.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #23 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "indiatoday.in",
+   "category": "News",
+   "rank_hint": "India Newspapers #24 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "lokmat.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #25 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "livemint.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #26 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "amarujala.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #27 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "jansatta.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #30 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "newindianexpress.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #31 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "telegraphindia.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #32 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "asianetnews.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #33 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "thewire.in",
+   "category": "News",
+   "rank_hint": "India Newspapers #36 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "etvbharat.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #37 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "business-standard.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #43 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "manoramaonline.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #45 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "aninews.in",
+   "category": "News",
+   "rank_hint": "India Newspapers #49 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "esakal.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #50 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "sakshi.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #42 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "timesnownews.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #60 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "moneycontrol.com",
+   "category": "News",
+   "rank_hint": "India #52 by organic search traffic (Ahrefs Oct 2026)",
+   "note": "Market news plus portfolio tracker; filed under News. Not in Semrush lists."
+  },
+  {
+   "domain": "zeebiz.com",
+   "category": "News",
+   "rank_hint": "India Finance #34 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cnbctv18.com",
+   "category": "News",
+   "rank_hint": "India Finance #36 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "goodreturns.in",
+   "category": "News",
+   "rank_hint": "India Finance #20 (Semrush Aug 2026)",
+   "note": "Personal-finance and market news."
+  },
+  {
+   "domain": "financialexpress.com",
+   "category": "News",
+   "rank_hint": "India Automotive #17 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "scroll.in",
+   "category": "News",
+   "rank_hint": "India Sports #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "outlookindia.com",
+   "category": "News",
+   "rank_hint": "India Sports #25 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "firstpost.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #79 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "msn.com",
+   "category": "News",
+   "rank_hint": "India #44 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "sambad.com",
+   "category": "News",
+   "rank_hint": "India #18 by organic search traffic (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "bbc.com",
+   "category": "News",
+   "rank_hint": "India Newspapers #20 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "reuters.com",
+   "category": "News",
+   "rank_hint": "India Finance #19 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "gadgets360.com",
+   "category": "News",
+   "rank_hint": "India Consumer Electronics #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "gadgetsnow.com",
+   "category": "News",
+   "rank_hint": "India Consumer Electronics #11 (Semrush Aug 2026)",
+   "note": "Times group tech news."
+  },
+  {
+   "domain": "91mobiles.com",
+   "category": "News",
+   "rank_hint": "India Telecom #5 (Semrush Aug 2026)",
+   "note": "Phone news, specs and price comparison."
+  },
+  {
+   "domain": "cricbuzz.com",
+   "category": "Sports",
+   "rank_hint": "India #15 by organic search traffic (Ahrefs Oct 2026)",
+   "note": "Not in Semrush lists."
+  },
+  {
+   "domain": "espncricinfo.com",
+   "category": "Sports",
+   "rank_hint": "India Sports #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cricinfo.com",
+   "category": "Sports",
+   "rank_hint": "India Sports #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "sportskeeda.com",
+   "category": "Sports",
+   "rank_hint": "India Sports #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "espn.in",
+   "category": "Sports",
+   "rank_hint": "India Sports #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "fancode.com",
+   "category": "Sports",
+   "rank_hint": "India Sports #10 (Semrush Aug 2026)",
+   "note": "Sports streaming and scores."
+  },
+  {
+   "domain": "icc-cricket.com",
+   "category": "Sports",
+   "rank_hint": "India Sports #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "iplt20.com",
+   "category": "Sports",
+   "rank_hint": "",
+   "note": "Seasonal; not in fetched rankings."
+  },
+  {
+   "domain": "flashscore.com",
+   "category": "Sports",
+   "rank_hint": "India Sports #11 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "sofascore.com",
+   "category": "Sports",
+   "rank_hint": "India Sports #12 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "mykhel.com",
+   "category": "Sports",
+   "rank_hint": "India Sports #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "crickettimes.com",
+   "category": "Sports",
+   "rank_hint": "India Sports #15 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "fotmob.com",
+   "category": "Sports",
+   "rank_hint": "India Sports #21 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "olympics.com",
+   "category": "Sports",
+   "rank_hint": "India Sports #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "chess.com",
+   "category": "Gaming",
+   "rank_hint": "India Sports #3 (Semrush Aug 2026)",
+   "note": "Online chess; Semrush files under Sports."
+  },
+  {
+   "domain": "lichess.org",
+   "category": "Gaming",
+   "rank_hint": "India Computer & Video Games #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "poki.com",
+   "category": "Gaming",
+   "rank_hint": "India Computer & Video Games #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "crazygames.com",
+   "category": "Gaming",
+   "rank_hint": "India Computer & Video Games #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "garena.com",
+   "category": "Gaming",
+   "rank_hint": "India Computer & Video Games #10 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "supercell.com",
+   "category": "Gaming",
+   "rank_hint": "India Computer & Video Games #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "riotgames.com",
+   "category": "Gaming",
+   "rank_hint": "India Computer & Video Games #11 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "xbox.com",
+   "category": "Gaming",
+   "rank_hint": "India Computer & Video Games #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "playstation.com",
+   "category": "Gaming",
+   "rank_hint": "India Computer & Video Games #17 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ea.com",
+   "category": "Gaming",
+   "rank_hint": "India Computer & Video Games #12 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "gamezop.com",
+   "category": "Gaming",
+   "rank_hint": "India Computer & Video Games #25 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "jiogames.com",
+   "category": "Gaming",
+   "rank_hint": "India Computer & Video Games #38 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "aternos.org",
+   "category": "Gaming",
+   "rank_hint": "India Computer & Video Games #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "curseforge.com",
+   "category": "Gaming",
+   "rank_hint": "India Computer & Video Games #16 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "groww.in",
+   "category": "Money",
+   "rank_hint": "India Finance #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "upstox.com",
+   "category": "Money",
+   "rank_hint": "India Investment #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "icicidirect.com",
+   "category": "Money",
+   "rank_hint": "India Investment #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "5paisa.com",
+   "category": "Money",
+   "rank_hint": "India Investment #12 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "indmoney.com",
+   "category": "Money",
+   "rank_hint": "India Investment #16 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "fyers.in",
+   "category": "Money",
+   "rank_hint": "India Investment #18 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "sensibull.com",
+   "category": "Money",
+   "rank_hint": "India Investment #19 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "smallcase.com",
+   "category": "Money",
+   "rank_hint": "India Investment #28 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "etmoney.com",
+   "category": "Money",
+   "rank_hint": "India Investment #26 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "paytmmoney.com",
+   "category": "Money",
+   "rank_hint": "India Investment #38 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "motilaloswal.com",
+   "category": "Money",
+   "rank_hint": "India Investment #23 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "hdfcsec.com",
+   "category": "Money",
+   "rank_hint": "India Investment #22 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "sharekhan.com",
+   "category": "Money",
+   "rank_hint": "India Investment #25 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "kfintech.com",
+   "category": "Money",
+   "rank_hint": "India Investment #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "camsonline.com",
+   "category": "Money",
+   "rank_hint": "India Finance #84 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cdslindia.com",
+   "category": "Money",
+   "rank_hint": "India Investment #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "nseindia.com",
+   "category": "Money",
+   "rank_hint": "India Finance #21 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bseindia.com",
+   "category": "Money",
+   "rank_hint": "India Investment #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "screener.in",
+   "category": "Money",
+   "rank_hint": "India Finance #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "tradingview.com",
+   "category": "Money",
+   "rank_hint": "India #65 by organic search traffic (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "trendlyne.com",
+   "category": "Money",
+   "rank_hint": "India Investment #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "tickertape.in",
+   "category": "Money",
+   "rank_hint": "India Finance #71 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "valueresearchonline.com",
+   "category": "Money",
+   "rank_hint": "India Investment #15 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "chittorgarh.com",
+   "category": "Money",
+   "rank_hint": "India Investment #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ipowatch.in",
+   "category": "Money",
+   "rank_hint": "India Investment #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "investing.com",
+   "category": "Money",
+   "rank_hint": "India Finance #39 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "sbimf.com",
+   "category": "Money",
+   "rank_hint": "India Investment #21 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "hdfcfund.com",
+   "category": "Money",
+   "rank_hint": "India Investment #20 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "hdfcbank.com",
+   "category": "Money",
+   "rank_hint": "India Banking #16 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "icicibank.com",
+   "category": "Money",
+   "rank_hint": "India Banking #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "onlinesbi.sbi",
+   "category": "Money",
+   "rank_hint": "India Banking #19 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "sbi.co.in",
+   "category": "Money",
+   "rank_hint": "India Banking #31 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bank.sbi",
+   "category": "Money",
+   "rank_hint": "India Banking #61 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "axisbank.com",
+   "category": "Money",
+   "rank_hint": "India Banking #35 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "kotak.com",
+   "category": "Money",
+   "rank_hint": "India Insurance #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bankofbaroda.in",
+   "category": "Money",
+   "rank_hint": "India Banking #33 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "pnbindia.in",
+   "category": "Money",
+   "rank_hint": "India Banking #62 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "unionbankonline.co.in",
+   "category": "Money",
+   "rank_hint": "India Banking #40 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "federalbank.co.in",
+   "category": "Money",
+   "rank_hint": "India Banking #43 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "idfcfirstbank.com",
+   "category": "Money",
+   "rank_hint": "India Banking #56 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "indusind.com",
+   "category": "Money",
+   "rank_hint": "India Banking #52 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bank.in",
+   "category": "Money",
+   "rank_hint": "India #14 by organic search traffic (Ahrefs Oct 2026)",
+   "note": "RBI-mandated bank domain (e.g. hdfc.bank.in, sbi.bank.in); banks migrating from late 2025. Match any *.bank.in host."
+  },
+  {
+   "domain": "sbicard.com",
+   "category": "Money",
+   "rank_hint": "India Banking #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "americanexpress.com",
+   "category": "Money",
+   "rank_hint": "India Banking #17 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cred.club",
+   "category": "Money",
+   "rank_hint": "India Banking #21 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "phonepe.com",
+   "category": "Money",
+   "rank_hint": "India Banking #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "mobikwik.com",
+   "category": "Money",
+   "rank_hint": "India Telecom #43 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "razorpay.com",
+   "category": "Money",
+   "rank_hint": "India Information Technology #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "billdesk.com",
+   "category": "Money",
+   "rank_hint": "India Banking #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "payu.in",
+   "category": "Money",
+   "rank_hint": "India Information Technology #15 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ccavenue.com",
+   "category": "Money",
+   "rank_hint": "India Banking #12 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cashfree.com",
+   "category": "Money",
+   "rank_hint": "India Computer Software & Development #27 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "paypal.com",
+   "category": "Money",
+   "rank_hint": "India Computer Software & Development #35 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "wise.com",
+   "category": "Money",
+   "rank_hint": "India Banking #24 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bajajfinserv.in",
+   "category": "Money",
+   "rank_hint": "India Banking #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "tatacapital.com",
+   "category": "Money",
+   "rank_hint": "India Banking #30 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "navi.com",
+   "category": "Money",
+   "rank_hint": "India Banking #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "moneyview.in",
+   "category": "Money",
+   "rank_hint": "India Banking #20 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "kreditbee.in",
+   "category": "Money",
+   "rank_hint": "India Banking #46 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "paisabazaar.com",
+   "category": "Money",
+   "rank_hint": "India Banking #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bankbazaar.com",
+   "category": "Money",
+   "rank_hint": "India Banking #18 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cibil.com",
+   "category": "Money",
+   "rank_hint": "India Finance #26 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "policybazaar.com",
+   "category": "Money",
+   "rank_hint": "India #89 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "licindia.in",
+   "category": "Money",
+   "rank_hint": "India Insurance #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "starhealth.in",
+   "category": "Money",
+   "rank_hint": "India Insurance #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "icicilombard.com",
+   "category": "Money",
+   "rank_hint": "India Insurance #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "sbilife.co.in",
+   "category": "Money",
+   "rank_hint": "India Insurance #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "acko.com",
+   "category": "Money",
+   "rank_hint": "India Insurance #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "hdfclife.com",
+   "category": "Money",
+   "rank_hint": "India Insurance #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "tataaig.com",
+   "category": "Money",
+   "rank_hint": "India Insurance #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "iciciprulife.com",
+   "category": "Money",
+   "rank_hint": "India Insurance #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "hdfcergo.com",
+   "category": "Money",
+   "rank_hint": "India Insurance #10 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "careinsurance.com",
+   "category": "Money",
+   "rank_hint": "India Healthcare #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "godigit.com",
+   "category": "Money",
+   "rank_hint": "India Insurance #16 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "insurancedekho.com",
+   "category": "Money",
+   "rank_hint": "India Insurance #31 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bajajallianz.com",
+   "category": "Money",
+   "rank_hint": "India Insurance #50 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "jio.com",
+   "category": "Money",
+   "rank_hint": "India #52 overall (Semrush Aug 2026)",
+   "note": "Telecom recharge/bill pay/self-care; no telecom label, filed under Money."
+  },
+  {
+   "domain": "airtel.in",
+   "category": "Money",
+   "rank_hint": "India #57 overall (Semrush Aug 2026)",
+   "note": "Telecom recharge/bill pay, also Airtel Payments Bank; filed under Money."
+  },
+  {
+   "domain": "myvi.in",
+   "category": "Money",
+   "rank_hint": "India Telecom #13 (Semrush Aug 2026)",
+   "note": "Vodafone Idea recharge/bill pay; filed under Money."
+  },
+  {
+   "domain": "irctc.co.in",
+   "category": "Travel",
+   "rank_hint": "India #65 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "makemytrip.com",
+   "category": "Travel",
+   "rank_hint": "India Airlines #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "goibibo.com",
+   "category": "Travel",
+   "rank_hint": "India Hospitality #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ixigo.com",
+   "category": "Travel",
+   "rank_hint": "India Airlines #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "redbus.in",
+   "category": "Travel",
+   "rank_hint": "India Travel & Tourism #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cleartrip.com",
+   "category": "Travel",
+   "rank_hint": "India Airlines #10 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "easemytrip.com",
+   "category": "Travel",
+   "rank_hint": "India Airlines #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "yatra.com",
+   "category": "Travel",
+   "rank_hint": "India Airlines #19 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "booking.com",
+   "category": "Travel",
+   "rank_hint": "India Hospitality #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "agoda.com",
+   "category": "Travel",
+   "rank_hint": "India Hospitality #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "airbnb.co.in",
+   "category": "Travel",
+   "rank_hint": "India Real Estate #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "tripadvisor.in",
+   "category": "Travel",
+   "rank_hint": "India Travel & Tourism #12 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "skyscanner.co.in",
+   "category": "Travel",
+   "rank_hint": "India Airlines #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "goindigo.in",
+   "category": "Travel",
+   "rank_hint": "India Airlines #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "airindia.com",
+   "category": "Travel",
+   "rank_hint": "India Airlines #11 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "airindiaexpress.com",
+   "category": "Travel",
+   "rank_hint": "India Airlines #17 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "spicejet.com",
+   "category": "Travel",
+   "rank_hint": "India Airlines #30 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "railyatri.in",
+   "category": "Travel",
+   "rank_hint": "India Transportation & Logistics #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "confirmtkt.com",
+   "category": "Travel",
+   "rank_hint": "India Travel & Tourism #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "etrain.info",
+   "category": "Travel",
+   "rank_hint": "India Transportation & Logistics #15 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "erail.in",
+   "category": "Travel",
+   "rank_hint": "India Transportation & Logistics #19 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "indiarailinfo.com",
+   "category": "Travel",
+   "rank_hint": "India Travel & Tourism #23 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "indianrail.gov.in",
+   "category": "Travel",
+   "rank_hint": "India Transportation & Logistics #3 (Semrush Aug 2026)",
+   "note": "Indian Railways PNR/train enquiry."
+  },
+  {
+   "domain": "abhibus.com",
+   "category": "Travel",
+   "rank_hint": "India Transportation & Logistics #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "trip.com",
+   "category": "Travel",
+   "rank_hint": "India Airlines #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "oyorooms.com",
+   "category": "Travel",
+   "rank_hint": "India Hospitality #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "irctctourism.com",
+   "category": "Travel",
+   "rank_hint": "India Travel & Tourism #26 (Semrush Aug 2026)",
+   "note": "IRCTC tour packages."
+  },
+  {
+   "domain": "uber.com",
+   "category": "Travel",
+   "rank_hint": "India Airlines #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "olacabs.com",
+   "category": "Travel",
+   "rank_hint": "India Transportation & Logistics #29 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "rapido.bike",
+   "category": "Travel",
+   "rank_hint": "India Information Technology #37 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "thrillophilia.com",
+   "category": "Travel",
+   "rank_hint": "India Hospitality #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "flightradar24.com",
+   "category": "Travel",
+   "rank_hint": "India Airlines #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ksrtc.in",
+   "category": "Travel",
+   "rank_hint": "India Airlines #22 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "tnstc.in",
+   "category": "Travel",
+   "rank_hint": "India Travel & Tourism #50 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "delhimetrorail.com",
+   "category": "Travel",
+   "rank_hint": "India Transportation & Logistics #25 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "github.com",
+   "category": "Development",
+   "rank_hint": "India #20 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "stackoverflow.com",
+   "category": "Development",
+   "rank_hint": "India Distance Learning #67 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "leetcode.com",
+   "category": "Development",
+   "rank_hint": "India Distance Learning #2 (Semrush Aug 2026)",
+   "note": "Coding-interview practice; could be Learning."
+  },
+  {
+   "domain": "geeksforgeeks.org",
+   "category": "Development",
+   "rank_hint": "India Distance Learning #4 (Semrush Aug 2026)",
+   "note": "Programming tutorials and practice; could be Learning."
+  },
+  {
+   "domain": "w3schools.com",
+   "category": "Development",
+   "rank_hint": "India Distance Learning #18 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "hackerrank.com",
+   "category": "Development",
+   "rank_hint": "India Distance Learning #44 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "codechef.com",
+   "category": "Development",
+   "rank_hint": "India Distance Learning #64 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "replit.com",
+   "category": "Development",
+   "rank_hint": "India Distance Learning #43 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "kaggle.com",
+   "category": "Development",
+   "rank_hint": "India Distance Learning #37 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "vercel.com",
+   "category": "Development",
+   "rank_hint": "India Information Technology #41 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "canva.com",
+   "category": "Design",
+   "rank_hint": "India #45 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "figma.com",
+   "category": "Design",
+   "rank_hint": "India Design #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "behance.net",
+   "category": "Design",
+   "rank_hint": "India Design #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "dribbble.com",
+   "category": "Design",
+   "rank_hint": "India Design #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "flaticon.com",
+   "category": "Design",
+   "rank_hint": "India Design #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "vecteezy.com",
+   "category": "Design",
+   "rank_hint": "India Graphic Design #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "envato.com",
+   "category": "Design",
+   "rank_hint": "India Design #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "remove.bg",
+   "category": "Design",
+   "rank_hint": "India Computer Software & Development #19 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "picsart.com",
+   "category": "Design",
+   "rank_hint": "India Computer Software & Development #38 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "notion.com",
+   "category": "Work tools",
+   "rank_hint": "India Information Technology #34 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "keka.com",
+   "category": "Work tools",
+   "rank_hint": "India Human Resources #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "greythr.com",
+   "category": "Work tools",
+   "rank_hint": "India Human Resources #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "darwinbox.com",
+   "category": "Work tools",
+   "rank_hint": "India Human Resources #32 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "salesforce.com",
+   "category": "Work tools",
+   "rank_hint": "India Information Technology #46 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "shiprocket.in",
+   "category": "Work tools",
+   "rank_hint": "India Transportation & Logistics #13 (Semrush Aug 2026)",
+   "note": "Seller shipping dashboard."
+  },
+  {
+   "domain": "dropbox.com",
+   "category": "Files",
+   "rank_hint": "India Information Technology #44 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "wetransfer.com",
+   "category": "Files",
+   "rank_hint": "India Information Technology #47 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ilovepdf.com",
+   "category": "Files",
+   "rank_hint": "India #53 by organic search traffic (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "smallpdf.com",
+   "category": "Files",
+   "rank_hint": "India Computer Software & Development #29 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cloudconvert.com",
+   "category": "Files",
+   "rank_hint": "India Computer Software & Development #43 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "freeconvert.com",
+   "category": "Files",
+   "rank_hint": "India Computer Software & Development #33 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "iloveimg.com",
+   "category": "Files",
+   "rank_hint": "India Computer Software & Development #41 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "pw.live",
+   "category": "Learning",
+   "rank_hint": "India #81 overall (Semrush Aug 2026)",
+   "note": "Physics Wallah."
+  },
+  {
+   "domain": "unacademy.com",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #27 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "byjus.com",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #10 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "vedantu.com",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "testbook.com",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "adda247.com",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "udemy.com",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "coursera.org",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "nptel.ac.in",
+   "category": "Learning",
+   "rank_hint": "India Education #25 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "swayam2.ac.in",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #17 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ncert.nic.in",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #11 (Semrush Aug 2026)",
+   "note": "NCERT textbooks."
+  },
+  {
+   "domain": "shaalaa.com",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "learncbse.in",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "brainly.in",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #19 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "careers360.com",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #15 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "shiksha.com",
+   "category": "Learning",
+   "rank_hint": "India Education #17 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "jagranjosh.com",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #38 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "oliveboard.in",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #26 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "aakash.ac.in",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #30 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "simplilearn.com",
+   "category": "Learning",
+   "rank_hint": "India Training & Certification #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "duolingo.com",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #49 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "selfstudys.com",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #28 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "sarthaks.com",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #24 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "gktoday.in",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #45 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cbse.gov.in",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #25 (Semrush Aug 2026)",
+   "note": "School board (results, circulars); Government body, filed under Learning."
+  },
+  {
+   "domain": "nios.ac.in",
+   "category": "Learning",
+   "rank_hint": "India Distance Learning #31 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "digialm.com",
+   "category": "Learning",
+   "rank_hint": "India Education #6 (Semrush Aug 2026)",
+   "note": "TCS iON online exam/result portal used by many Indian exams."
+  },
+  {
+   "domain": "tcsion.com",
+   "category": "Learning",
+   "rank_hint": "India Education #50 (Semrush Aug 2026)",
+   "note": "TCS iON exam and learning platform."
+  },
+  {
+   "domain": "naukri.com",
+   "category": "Jobs",
+   "rank_hint": "India Online Services #58 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "indeed.com",
+   "category": "Jobs",
+   "rank_hint": "India Human Resources #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "shine.com",
+   "category": "Jobs",
+   "rank_hint": "India Recruitment & Staffing #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "jobhai.com",
+   "category": "Jobs",
+   "rank_hint": "India Recruitment & Staffing #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "iimjobs.com",
+   "category": "Jobs",
+   "rank_hint": "India Recruitment & Staffing #18 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "glassdoor.co.in",
+   "category": "Jobs",
+   "rank_hint": "India #102 by organic search traffic (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "internshala.com",
+   "category": "Jobs",
+   "rank_hint": "India Distance Learning #12 (Semrush Aug 2026)",
+   "note": "Internships plus paid trainings; filed under Jobs."
+  },
+  {
+   "domain": "naukrigulf.com",
+   "category": "Jobs",
+   "rank_hint": "India Human Resources #21 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "sarkariresult.com",
+   "category": "Jobs",
+   "rank_hint": "India Education #16 (Semrush Aug 2026)",
+   "note": "Government-job and exam-result aggregator."
+  },
+  {
+   "domain": "freejobalert.com",
+   "category": "Jobs",
+   "rank_hint": "India Education #41 (Semrush Aug 2026)",
+   "note": "Government-job aggregator."
+  },
+  {
+   "domain": "ibps.in",
+   "category": "Jobs",
+   "rank_hint": "India Banking #2 (Semrush Aug 2026)",
+   "note": "Bank recruitment exams; filed under Jobs (Semrush files it under Banking and Education)."
+  },
+  {
+   "domain": "upsc.gov.in",
+   "category": "Jobs",
+   "rank_hint": "India Government #69 (Semrush Aug 2026)",
+   "note": "Civil-services recruitment exams; Government body but used for exam/job applications."
+  },
+  {
+   "domain": "practo.com",
+   "category": "Health",
+   "rank_hint": "India Healthcare #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "1mg.com",
+   "category": "Health",
+   "rank_hint": "India Pharmaceuticals #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "pharmeasy.in",
+   "category": "Health",
+   "rank_hint": "India Wellness #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "netmeds.com",
+   "category": "Health",
+   "rank_hint": "India Wellness #11 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "apollo247.com",
+   "category": "Health",
+   "rank_hint": "India Healthcare #11 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "apollopharmacy.in",
+   "category": "Health",
+   "rank_hint": "India Pharmaceuticals #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "apollohospitals.com",
+   "category": "Health",
+   "rank_hint": "India Healthcare #12 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "lalpathlabs.com",
+   "category": "Health",
+   "rank_hint": "India Healthcare #9 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "medibuddy.in",
+   "category": "Health",
+   "rank_hint": "India Pharmaceuticals #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "healthians.com",
+   "category": "Health",
+   "rank_hint": "India Healthcare #34 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "thyrocare.com",
+   "category": "Health",
+   "rank_hint": "India Healthcare #38 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "metropolisindia.com",
+   "category": "Health",
+   "rank_hint": "India Healthcare #27 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "maxhealthcare.in",
+   "category": "Health",
+   "rank_hint": "India Healthcare #16 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "fortishealthcare.com",
+   "category": "Health",
+   "rank_hint": "India Healthcare #19 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "manipalhospitals.com",
+   "category": "Health",
+   "rank_hint": "India Healthcare #31 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "healthline.com",
+   "category": "Health",
+   "rank_hint": "India Healthcare #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "webmd.com",
+   "category": "Health",
+   "rank_hint": "India Healthcare #15 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "mayoclinic.org",
+   "category": "Health",
+   "rank_hint": "India Healthcare #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "clevelandclinic.org",
+   "category": "Health",
+   "rank_hint": "India Healthcare #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "myupchar.com",
+   "category": "Health",
+   "rank_hint": "India Healthcare #17 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "medplusmart.com",
+   "category": "Health",
+   "rank_hint": "India Wellness #29 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cult.fit",
+   "category": "Health",
+   "rank_hint": "India Wellness #85 (Semrush Aug 2026)",
+   "note": "Fitness classes and gym memberships."
+  },
+  {
+   "domain": "uidai.gov.in",
+   "category": "Government",
+   "rank_hint": "India #40 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "eci.gov.in",
+   "category": "Government",
+   "rank_hint": "India #86 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "parivahan.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "epfindia.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "indiapost.gov.in",
+   "category": "Government",
+   "rank_hint": "India Mail & Package Delivery #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "incometax.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #6 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "gst.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "passportindia.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #25 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "digilocker.gov.in",
+   "category": "Government",
+   "rank_hint": "India Education #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ecourts.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #23 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "india.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #24 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "mygov.in",
+   "category": "Government",
+   "rank_hint": "India Government #40 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "umang.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #44 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "cybercrime.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #43 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "udyamregistration.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #45 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "scholarships.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #49 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "pmkisan.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #60 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "nha.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #13 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "pib.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #16 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "mohfw.gov.in",
+   "category": "Government",
+   "rank_hint": "India Healthcare #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "esic.gov.in",
+   "category": "Government",
+   "rank_hint": "India #79 by organic search traffic (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "myscheme.gov.in",
+   "category": "Government",
+   "rank_hint": "India #114 by organic search traffic (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "csc.gov.in",
+   "category": "Government",
+   "rank_hint": "India Information Technology #11 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "rbi.org.in",
+   "category": "Government",
+   "rank_hint": "India Banking #4 (Semrush Aug 2026)",
+   "note": "Central bank / regulator."
+  },
+  {
+   "domain": "sebi.gov.in",
+   "category": "Government",
+   "rank_hint": "India Investment #11 (Semrush Aug 2026)",
+   "note": "Markets regulator."
+  },
+  {
+   "domain": "imd.gov.in",
+   "category": "Government",
+   "rank_hint": "India #63 by organic search traffic (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "cept.gov.in",
+   "category": "Government",
+   "rank_hint": "India #21 by organic search traffic (Ahrefs Oct 2026)",
+   "note": "India Post tech centre: parcel tracking and post office banking."
+  },
+  {
+   "domain": "rajasthan.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "karnataka.gov.in",
+   "category": "Government",
+   "rank_hint": "India Information Technology #5 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bihar.gov.in",
+   "category": "Government",
+   "rank_hint": "India Education #8 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "up.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #11 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "maharashtra.gov.in",
+   "category": "Government",
+   "rank_hint": "India Education #11 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "mahaonline.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #32 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ap.gov.in",
+   "category": "Government",
+   "rank_hint": "India Education #14 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "mp.gov.in",
+   "category": "Government",
+   "rank_hint": "India Information Technology #16 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "tn.gov.in",
+   "category": "Government",
+   "rank_hint": "India Education #18 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "telangana.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #20 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "wb.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "gujarat.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #22 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "kerala.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #27 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "delhi.gov.in",
+   "category": "Government",
+   "rank_hint": "India Government #26 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "goa.gov.in",
+   "category": "Government",
+   "rank_hint": "India #44 by organic search traffic (Ahrefs Oct 2026)"
+  },
+  {
+   "domain": "igrmaharashtra.gov.in",
+   "category": "Government",
+   "rank_hint": "India Real Estate #6 (Semrush Aug 2026)",
+   "note": "Property registration (Maharashtra); Semrush files it under Real Estate."
+  },
+  {
+   "domain": "99acres.com",
+   "category": "Real estate",
+   "rank_hint": "India Real Estate #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "magicbricks.com",
+   "category": "Real estate",
+   "rank_hint": "India Real Estate #2 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "housing.com",
+   "category": "Real estate",
+   "rank_hint": "India Real Estate #3 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "nobroker.in",
+   "category": "Real estate",
+   "rank_hint": "India Real Estate #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "squareyards.com",
+   "category": "Real estate",
+   "rank_hint": "India Real Estate #7 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "commonfloor.com",
+   "category": "Real estate",
+   "rank_hint": "India Real Estate #23 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "proptiger.com",
+   "category": "Real estate",
+   "rank_hint": "India Real Estate #38 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "stanzaliving.com",
+   "category": "Real estate",
+   "rank_hint": "India Real Estate #16 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "zolostays.com",
+   "category": "Real estate",
+   "rank_hint": "India Real Estate #20 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "nestaway.com",
+   "category": "Real estate",
+   "rank_hint": "India Real Estate #32 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bookmyshow.com",
+   "category": "Entertainment",
+   "rank_hint": "India #34 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "imdb.com",
+   "category": "Entertainment",
+   "rank_hint": "India #25 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "justwatch.com",
+   "category": "Entertainment",
+   "rank_hint": "India Entertainment #18 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "filmibeat.com",
+   "category": "Entertainment",
+   "rank_hint": "India Entertainment #21 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "koimoi.com",
+   "category": "Entertainment",
+   "rank_hint": "India Entertainment #23 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bollywoodhungama.com",
+   "category": "Entertainment",
+   "rank_hint": "India Entertainment #30 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "pinkvilla.com",
+   "category": "Entertainment",
+   "rank_hint": "India Entertainment #52 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "pvrcinemas.com",
+   "category": "Entertainment",
+   "rank_hint": "India Entertainment #40 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "ticketnew.com",
+   "category": "Entertainment",
+   "rank_hint": "India Entertainment #32 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "letterboxd.com",
+   "category": "Entertainment",
+   "rank_hint": "India Tv & Movies #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "webtoons.com",
+   "category": "Entertainment",
+   "rank_hint": "India Entertainment #41 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "indiaforums.com",
+   "category": "Entertainment",
+   "rank_hint": "India Entertainment #12 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "wikipedia.org",
+   "category": "Reference",
+   "rank_hint": "India #10 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "justdial.com",
+   "category": "Reference",
+   "rank_hint": "India #71 overall (Semrush Aug 2026)",
+   "note": "Local business directory."
+  },
+  {
+   "domain": "weather.com",
+   "category": "Reference",
+   "rank_hint": "India Mass Media #36 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "accuweather.com",
+   "category": "Reference",
+   "rank_hint": "India Mass Media #50 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "timeanddate.com",
+   "category": "Reference",
+   "rank_hint": "India Newspapers #47 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "merriam-webster.com",
+   "category": "Reference",
+   "rank_hint": "India Distance Learning #20 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "scribd.com",
+   "category": "Reference",
+   "rank_hint": "India #38 overall (Semrush Aug 2026)",
+   "note": "Document library (reading)."
+  },
+  {
+   "domain": "slideshare.net",
+   "category": "Reference",
+   "rank_hint": "India Distance Learning #7 (Semrush Aug 2026)",
+   "note": "Hosted slide decks for viewing; not an editor."
+  },
+  {
+   "domain": "truecaller.com",
+   "category": "Reference",
+   "rank_hint": "India Information Technology #3 (Semrush Aug 2026)",
+   "note": "Phone-number lookup on web."
+  },
+  {
+   "domain": "prokerala.com",
+   "category": "Reference",
+   "rank_hint": "India Finance #42 (Semrush Aug 2026)",
+   "note": "Astrology, panchang, calendars."
+  },
+  {
+   "domain": "drikpanchang.com",
+   "category": "Reference",
+   "rank_hint": "India Newspapers #58 (Semrush Aug 2026)",
+   "note": "Hindu calendar/panchang."
+  },
+  {
+   "domain": "zaubacorp.com",
+   "category": "Reference",
+   "rank_hint": "India Reference #1 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "gsmarena.com",
+   "category": "Reference",
+   "rank_hint": "India #81 by organic search traffic (Ahrefs Oct 2026)",
+   "note": "Phone specs database."
+  },
+  {
+   "domain": "calculator.net",
+   "category": "Reference",
+   "rank_hint": "India Wellness #4 (Semrush Aug 2026)"
+  },
+  {
+   "domain": "google.co.in",
+   "category": "Search",
+   "rank_hint": "India #17 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "bing.com",
+   "category": "Search",
+   "rank_hint": "India #22 overall (Semrush Aug 2026)"
+  },
+  {
+   "domain": "duckduckgo.com",
+   "category": "Search",
+   "rank_hint": "India #39 overall (Semrush Aug 2026)"
+  }
+ ],
+ "mixed": [
+  {
+   "domain": "google.com",
+   "rank_hint": "India #1 overall (Semrush Aug 2026)",
+   "default": "Search",
+   "rules": [
+    {
+     "match": "mail.google.com",
+     "category": "Email"
+    },
+    {
+     "match": "docs.google.com/document",
+     "category": "Docs"
+    },
+    {
+     "match": "docs.google.com/spreadsheets",
+     "category": "Sheets"
+    },
+    {
+     "match": "docs.google.com/presentation",
+     "category": "Slides"
+    },
+    {
+     "match": "docs.google.com/forms",
+     "category": "Docs"
+    },
+    {
+     "match": "sheets.google.com",
+     "category": "Sheets"
+    },
+    {
+     "match": "slides.google.com",
+     "category": "Slides"
+    },
+    {
+     "match": "drive.google.com",
+     "category": "Files"
+    },
+    {
+     "match": "meet.google.com",
+     "category": "Meetings"
+    },
+    {
+     "match": "calendar.google.com",
+     "category": "Calendar"
+    },
+    {
+     "match": "chat.google.com",
+     "category": "Chat"
+    },
+    {
+     "match": "maps.google.com",
+     "category": "Maps"
+    },
+    {
+     "match": "google.com/maps",
+     "category": "Maps"
+    },
+    {
+     "match": "gemini.google.com",
+     "category": "AI"
+    },
+    {
+     "match": "aistudio.google.com",
+     "category": "AI"
+    },
+    {
+     "match": "notebooklm.google.com",
+     "category": "AI"
+    },
+    {
+     "match": "news.google.com",
+     "category": "News"
+    },
+    {
+     "match": "translate.google.com",
+     "category": "Reference"
+    },
+    {
+     "match": "photos.google.com",
+     "category": "Files"
+    },
+    {
+     "match": "classroom.google.com",
+     "category": "Learning"
+    },
+    {
+     "match": "keep.google.com",
+     "category": "Docs"
+    },
+    {
+     "match": "pay.google.com",
+     "category": "Money"
+    },
+    {
+     "match": "play.google.com",
+     "category": "Shopping"
+    },
+    {
+     "match": "google.com/finance",
+     "category": "Money"
+    },
+    {
+     "match": "google.com/travel",
+     "category": "Travel"
+    },
+    {
+     "match": "google.com/search",
+     "category": "Search"
+    }
+   ]
+  },
+  {
+   "domain": "youtube.com",
+   "rank_hint": "India #2 overall (Semrush Aug 2026)",
+   "default": "Video",
+   "rules": [
+    {
+     "match": "music.youtube.com",
+     "category": "Music"
+    },
+    {
+     "match": "studio.youtube.com",
+     "category": "Work tools"
+    }
+   ]
+  },
+  {
+   "domain": "amazon.in",
+   "rank_hint": "India #7 overall (Semrush Aug 2026)",
+   "default": "Shopping",
+   "rules": [
+    {
+     "match": "amazon.in/minitv",
+     "category": "Video"
+    },
+    {
+     "match": "amazon.in/music",
+     "category": "Music"
+    },
+    {
+     "match": "amazon.in/amazonpay",
+     "category": "Money"
+    },
+    {
+     "match": "amazon.in/gp/video",
+     "category": "Video"
+    }
+   ],
+   "note": "Prime Video's own domain primevideo.com is listed separately under Video. Amazon MX Player is mxplayer.in."
+  },
+  {
+   "domain": "indiatimes.com",
+   "rank_hint": "India #13 overall (Semrush Aug 2026)",
+   "default": "News",
+   "rules": [
+    {
+     "match": "timesofindia.indiatimes.com",
+     "category": "News"
+    },
+    {
+     "match": "economictimes.indiatimes.com",
+     "category": "News"
+    },
+    {
+     "match": "navbharattimes.indiatimes.com",
+     "category": "News"
+    },
+    {
+     "match": "maharashtratimes.com",
+     "category": "News"
+    },
+    {
+     "match": "m.economictimes.com",
+     "category": "News"
+    },
+    {
+     "match": "economictimes.indiatimes.com/markets",
+     "category": "Money"
+    },
+    {
+     "match": "economictimes.indiatimes.com/wealth",
+     "category": "Money"
+    },
+    {
+     "match": "timesofindia.indiatimes.com/sports",
+     "category": "Sports"
+    },
+    {
+     "match": "timesofindia.indiatimes.com/entertainment",
+     "category": "Entertainment"
+    },
+    {
+     "match": "timesofindia.indiatimes.com/education",
+     "category": "Learning"
+    }
+   ],
+   "note": "Times Internet umbrella. Markets/wealth path rules are optional; default News is safe."
+  },
+  {
+   "domain": "paytm.com",
+   "rank_hint": "India Airlines #3 (Semrush Aug 2026)",
+   "default": "Money",
+   "rules": [
+    {
+     "match": "paytm.com/flights",
+     "category": "Travel"
+    },
+    {
+     "match": "paytm.com/train-tickets",
+     "category": "Travel"
+    },
+    {
+     "match": "tickets.paytm.com",
+     "category": "Travel"
+    },
+    {
+     "match": "paytm.com/bus-tickets",
+     "category": "Travel"
+    },
+    {
+     "match": "paytm.com/movies",
+     "category": "Entertainment"
+    }
+   ],
+   "note": "Semrush files paytm.com under Travel & Tourism (#6) and Airlines (#3), so ticketing is a large share of its web traffic."
+  },
+  {
+   "domain": "zerodha.com",
+   "rank_hint": "India Investment #1 (Semrush Aug 2026)",
+   "default": "Money",
+   "rules": [
+    {
+     "match": "kite.zerodha.com",
+     "category": "Money"
+    },
+    {
+     "match": "console.zerodha.com",
+     "category": "Money"
+    },
+    {
+     "match": "coin.zerodha.com",
+     "category": "Money"
+    },
+    {
+     "match": "zerodha.com/varsity",
+     "category": "Learning"
+    }
+   ]
+  },
+  {
+   "domain": "linkedin.com",
+   "rank_hint": "India #12 overall (Semrush Aug 2026)",
+   "default": "Social",
+   "rules": [
+    {
+     "match": "linkedin.com/jobs",
+     "category": "Jobs"
+    },
+    {
+     "match": "linkedin.com/learning",
+     "category": "Learning"
+    },
+    {
+     "match": "linkedin.com/messaging",
+     "category": "Chat"
+    },
+    {
+     "match": "linkedin.com/talent",
+     "category": "Jobs"
+    }
+   ]
+  },
+  {
+   "domain": "microsoft.com",
+   "rank_hint": "India #32 overall (Semrush Aug 2026)",
+   "default": "Work tools",
+   "rules": [
+    {
+     "match": "teams.microsoft.com",
+     "category": "Meetings"
+    },
+    {
+     "match": "copilot.microsoft.com",
+     "category": "AI"
+    },
+    {
+     "match": "outlook.office.com",
+     "category": "Email"
+    },
+    {
+     "match": "learn.microsoft.com",
+     "category": "Development"
+    },
+    {
+     "match": "azure.microsoft.com",
+     "category": "Development"
+    },
+    {
+     "match": "microsoft.com/store",
+     "category": "Shopping"
+    }
+   ]
+  },
+  {
+   "domain": "live.com",
+   "rank_hint": "India #84 overall (Semrush Aug 2026)",
+   "default": "Email",
+   "rules": [
+    {
+     "match": "outlook.live.com/mail",
+     "category": "Email"
+    },
+    {
+     "match": "outlook.live.com/calendar",
+     "category": "Calendar"
+    },
+    {
+     "match": "onedrive.live.com",
+     "category": "Files"
+    },
+    {
+     "match": "login.live.com",
+     "category": "Other"
+    }
+   ],
+   "note": "login.live.com is an auth page; 'Other' means leave ungrouped."
+  },
+  {
+   "domain": "office.com",
+   "rank_hint": "India Information Technology #7 (Semrush Aug 2026)",
+   "default": "Work tools",
+   "rules": [
+    {
+     "match": "outlook.office.com/mail",
+     "category": "Email"
+    },
+    {
+     "match": "outlook.office.com/calendar",
+     "category": "Calendar"
+    },
+    {
+     "match": "office.com/launch/word",
+     "category": "Docs"
+    },
+    {
+     "match": "office.com/launch/excel",
+     "category": "Sheets"
+    },
+    {
+     "match": "office.com/launch/powerpoint",
+     "category": "Slides"
+    },
+    {
+     "match": "m365.cloud.microsoft",
+     "category": "Work tools"
+    }
+   ],
+   "note": "Word/Excel/PowerPoint web documents mostly open on sharepoint.com / officeapps.live.com; classify those by path (/:w:/ Docs, /:x:/ Sheets, /:p:/ Slides)."
+  },
+  {
+   "domain": "yahoo.com",
+   "rank_hint": "India #26 overall (Semrush Aug 2026)",
+   "default": "News",
+   "rules": [
+    {
+     "match": "mail.yahoo.com",
+     "category": "Email"
+    },
+    {
+     "match": "finance.yahoo.com",
+     "category": "Money"
+    },
+    {
+     "match": "sports.yahoo.com",
+     "category": "Sports"
+    },
+    {
+     "match": "search.yahoo.com",
+     "category": "Search"
+    }
+   ],
+   "note": "Semrush ranks yahoo.com #1 in India Finance, so finance.yahoo.com is a large share."
+  },
+  {
+   "domain": "rediff.com",
+   "rank_hint": "India Finance #11 (Semrush Aug 2026)",
+   "default": "News",
+   "rules": [
+    {
+     "match": "mail.rediff.com",
+     "category": "Email"
+    },
+    {
+     "match": "rediffmail.com",
+     "category": "Email"
+    },
+    {
+     "match": "money.rediff.com",
+     "category": "Money"
+    },
+    {
+     "match": "shopping.rediff.com",
+     "category": "Shopping"
+    }
+   ]
+  },
+  {
+   "domain": "zoho.com",
+   "rank_hint": "India Computer Software & Development #23 (Semrush Aug 2026)",
+   "default": "Work tools",
+   "rules": [
+    {
+     "match": "mail.zoho.com",
+     "category": "Email"
+    },
+    {
+     "match": "mail.zoho.in",
+     "category": "Email"
+    },
+    {
+     "match": "writer.zoho",
+     "category": "Docs"
+    },
+    {
+     "match": "sheet.zoho",
+     "category": "Sheets"
+    },
+    {
+     "match": "show.zoho",
+     "category": "Slides"
+    },
+    {
+     "match": "workdrive.zoho",
+     "category": "Files"
+    },
+    {
+     "match": "cliq.zoho",
+     "category": "Chat"
+    },
+    {
+     "match": "meeting.zoho",
+     "category": "Meetings"
+    },
+    {
+     "match": "calendar.zoho",
+     "category": "Calendar"
+    },
+    {
+     "match": "books.zoho",
+     "category": "Money"
+    }
+   ],
+   "note": "Same rules apply to zoho.in (Semrush IT #13, India data centre)."
+  },
+  {
+   "domain": "zoho.in",
+   "rank_hint": "India Information Technology #13 (Semrush Aug 2026)",
+   "default": "Work tools",
+   "rules": [
+    {
+     "match": "mail.zoho.in",
+     "category": "Email"
+    },
+    {
+     "match": "workdrive.zoho.in",
+     "category": "Files"
+    },
+    {
+     "match": "cliq.zoho.in",
+     "category": "Chat"
+    }
+   ]
+  },
+  {
+   "domain": "atlassian.net",
+   "rank_hint": "India Computer Software & Development #26 (Semrush Aug 2026)",
+   "default": "Work tools",
+   "rules": [
+    {
+     "match": "atlassian.net/jira",
+     "category": "Work tools"
+    },
+    {
+     "match": "atlassian.net/browse",
+     "category": "Work tools"
+    },
+    {
+     "match": "atlassian.net/wiki",
+     "category": "Docs"
+    }
+   ]
+  },
+  {
+   "domain": "adobe.com",
+   "rank_hint": "India #37 overall (Semrush Aug 2026)",
+   "default": "Design",
+   "rules": [
+    {
+     "match": "acrobat.adobe.com",
+     "category": "Docs"
+    },
+    {
+     "match": "express.adobe.com",
+     "category": "Design"
+    },
+    {
+     "match": "stock.adobe.com",
+     "category": "Design"
+    }
+   ]
+  },
+  {
+   "domain": "openai.com",
+   "rank_hint": "India #85 overall (Semrush Aug 2026)",
+   "default": "AI",
+   "rules": [
+    {
+     "match": "platform.openai.com",
+     "category": "Development"
+    },
+    {
+     "match": "sora.chatgpt.com",
+     "category": "AI"
+    }
+   ]
+  },
+  {
+   "domain": "apple.com",
+   "rank_hint": "India #73 overall (Semrush Aug 2026)",
+   "default": "Shopping",
+   "rules": [
+    {
+     "match": "music.apple.com",
+     "category": "Music"
+    },
+    {
+     "match": "tv.apple.com",
+     "category": "Video"
+    },
+    {
+     "match": "developer.apple.com",
+     "category": "Development"
+    },
+    {
+     "match": "support.apple.com",
+     "category": "Reference"
+    }
+   ],
+   "note": "Default is a guess: most India traffic is store/product pages."
+  },
+  {
+   "domain": "economictimes.com",
+   "rank_hint": "India #63 overall (Semrush Aug 2026)",
+   "default": "News",
+   "rules": [
+    {
+     "match": "economictimes.com/markets",
+     "category": "Money"
+    }
+   ],
+   "note": "Also listed under sites as News; the markets rule is optional."
+  },
+  {
+   "domain": "hindustantimes.com",
+   "rank_hint": "India Newspapers #16 (Semrush Aug 2026)",
+   "default": "News",
+   "rules": [
+    {
+     "match": "hindustantimes.com/cricket",
+     "category": "Sports"
+    },
+    {
+     "match": "hindustantimes.com/entertainment",
+     "category": "Entertainment"
+    }
+   ],
+   "note": "Also listed under sites as News; path rules are optional."
+  },
+  {
+   "domain": "gov.in",
+   "rank_hint": "",
+   "default": "Government",
+   "rules": [
+    {
+     "match": "*.gov.in",
+     "category": "Government"
+    },
+    {
+     "match": "*.nic.in",
+     "category": "Government"
+    },
+    {
+     "match": "*.ac.in",
+     "category": "Learning"
+    },
+    {
+     "match": "*.edu.in",
+     "category": "Learning"
+    },
+    {
+     "match": "*.bank.in",
+     "category": "Money"
+    }
+   ],
+   "note": "Suffix fallbacks for the long tail of state/central portals, universities and banks. Apply after exact-domain matches (e.g. ncert.nic.in -> Learning, upsc.gov.in -> Jobs, indianrail.gov.in -> Travel, cbse.gov.in -> Learning)."
+  }
+ ],
+ "meta": {
+  "country": "IN",
+  "generated": "2026-10-11",
+  "site_count": 477,
+  "mixed_count": 21,
+  "notes": "Similarweb (similarweb.com/top-websites/india) was the requested primary source but refused connections from this environment (TLS close on every attempt); Semrush per-category lists were used instead. rank_hint uses Semrush overall rank when present, else best Semrush category rank, else Ahrefs organic-search rank, else empty. Excluded: adult, piracy/movie-leak, betting/satta, CDN, ad and tracking domains."
+ }
+}

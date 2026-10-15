@@ -21,36 +21,47 @@ is sent unless you opt in.
 
 ## Grouping
 
-Tabs are grouped by **what their pages are about**, not by their addresses.
+Tabs are grouped **by what you're using them for first, and by topic for the rest**.
 
-With your permission, Tab Daddy reads a short summary of each open page: its
-title, its own description, its main headings and the start of its main text.
-Each tab becomes a weighted list of significant words (title words count most,
-body text least), and tabs are merged, most similar first, until nothing left
-is similar enough. A group needs at least 2 tabs, so you never end up with a
-group of one; it's named after the words most of its tabs share.
+1. **Use case.** Tab Daddy recognises about 1,150 well-known sites and web apps
+   and the group each belongs in: Myntra, Flipkart and Amazon are **Shopping**,
+   X and Instagram are **Social**, GitHub and Stack Overflow are **Coding**, a
+   Google Sheet or an Excel file is **Sheets**. Sites it doesn't know can still
+   say what they are: a page with a price and an add-to-cart button is Shopping,
+   a recipe is Food, a news story is News. Two or more tabs with the same use
+   case make a group with that name. The list lives in `lib/sites.js`, built
+   from research on the most-visited sites worldwide and in India
+   (`tools/sites/`). Addresses are matched on your computer only.
+2. **Topic.** Tabs with no use case are grouped by what their pages say. With
+   your permission, Tab Daddy reads a short summary of each page (its title,
+   description, main headings and the start of its main text, never menus,
+   headers, sidebars or hidden text) and groups pages that share enough
+   ordinary words.
+
+A lone tab with a use case (one Amazon tab among your research) goes to
+"Everything else" rather than into a topic. Two tabs never group on a shared
+name alone: they need an ordinary word in common, so a person's X profile and
+their book on Amazon stay apart.
 
 Some pages can't be read: tabs Chrome has put to sleep, `chrome://` pages and
 the Web Store. Those fall back to their title and site name, and the popup tags
 them **title only**. Until you allow page reading, every tab is grouped that way.
 
-Two tabs only count as related if they share two significant words, or one word
-longer than five letters, so a coincidence like a broker and a shop both
-mentioning "India" doesn't make a group.
-
 The popup previews every proposed group before anything happens: rename inline,
 uncheck what you don't want, expand to see members. **"Everything else" is
-unchecked by default** — it's a judgement call you opt into.
+unchecked by default**.
 
 ### Group names
 
-Groups are decided on your computer first; only then are they named. By
-default a group is named after the words most of its tabs share, and never
-after a site ("Lo-fi music", not "YouTube").
+Use-case groups are named for their use case. Topic groups are decided on
+your computer first; only then are they named. By default a topic group is
+named after the words most of its tabs share, as the pages write them, and
+never after a site.
 
 The first time there's something to name, the popup asks whether to **name
-groups with AI**. If you say yes, it sends, for each new group, up to eight
-words that appear on at least two of its tabs. An OTP, an account number or a
+groups with AI**. If you say yes, it sends, for each new topic group, up to
+eight ordinary words that appear on at least two of its tabs. Words written with
+a capital on any of those tabs (names of people and places) are never sent. An OTP, an account number or a
 name in an email subject almost never appears on two different pages, so it
 doesn't survive that rule; anything with digits or symbols is dropped as well.
 Page text, titles and addresses are never sent, and pages with a password,
@@ -98,12 +109,22 @@ A scope toggle switches both panels between the current window and all windows.
 | `manifest.json` | MV3 manifest |
 | `background.js` | Service worker; keeps the duplicate badge count current |
 | `popup.html/.css/.js` | The UI and all user actions |
+| `lib/sites.js` | Generated list of known sites and their use cases (`tools/sites/build.py`) |
+| `lib/usecase.js` | A tab's use case, from the site list or the page's own clues |
 | `lib/read.js` | Page-access permission and reading page summaries |
 | `lib/cluster.js` | Grouping tabs by content, and naming the groups |
 | `lib/keywords.js` | Word splitting and the ignored-word list |
 | `lib/tabs.js` | Which tabs take part or can be read, site names, group colours |
 | `lib/naming.js` | Optional AI naming: consent, what's sent, cache, validation |
 | `lib/analyze.js` | The grouping entry point, URL canonicalization, duplicate finding |
+
+## Tests
+
+`npm test` runs the logic suite in `tests/` (Node 24, no dependencies). Real
+pages captured with the extension's own reader live in `tests/real-pages.json`.
+`tools/browser/` drives the real extension in Chrome for Testing: `npm install`,
+`npm run chrome`, then `node drive.mjs --granted`. The naming server has its own
+suite: `cd server && npm test`.
 
 ## Tweaking
 

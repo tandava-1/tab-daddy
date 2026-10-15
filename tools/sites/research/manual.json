@@ -1,0 +1,27 @@
+{
+  "note": "Gaps found 2026-10-15 by checking 118 well-known sites against the merged list. Categories use the research labels (merge happens in build.py).",
+  "sites": [
+    {"domain": "nerdwallet.com", "category": "Money"},
+    {"domain": "bankrate.com", "category": "Money"},
+    {"domain": "investopedia.com", "category": "Money"},
+    {"domain": "react.dev", "category": "Development"},
+    {"domain": "pypi.org", "category": "Development"},
+    {"domain": "docs.python.org", "category": "Development"},
+    {"domain": "nextjs.org", "category": "Development"},
+    {"domain": "tailwindcss.com", "category": "Development"},
+    {"domain": "dev.to", "category": "Development"},
+    {"domain": "wikivoyage.org", "category": "Travel"},
+    {"domain": "skyscanner.com", "category": "Travel"},
+    {"domain": "skyscanner.co.in", "category": "Travel"},
+    {"domain": "olacabs.com", "category": "Travel"},
+    {"domain": "ola.com", "category": "Travel"},
+    {"domain": "substack.com", "category": "News"},
+    {"domain": "producthunt.com", "category": "News"},
+    {"domain": "threads.net", "category": "Social"},
+    {"domain": "threads.com", "category": "Social"},
+    {"domain": "mastodon.social", "category": "Social"},
+    {"domain": "goodreads.com", "category": "Entertainment"},
+    {"domain": "jiocinema.com", "category": "Video"},
+    {"domain": "anthropic.com", "category": "AI"}
+  ]
+}

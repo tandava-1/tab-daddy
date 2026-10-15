@@ -22,7 +22,7 @@
 </head>
 <body>
   <h1>Tab Daddy — Privacy Policy</h1>
-  <p class="updated">Last updated: 9 October 2026</p>
+  <p class="updated">Last updated: 15 October 2026</p>
 
   <p><strong>Tab Daddy groups your tabs on your own computer.</strong> It does not
   sell data, show ads, or use analytics. The only thing that can ever leave your
@@ -32,7 +32,9 @@
   <h2>What the extension reads, on your computer</h2>
   <ul>
     <li><strong>Tab titles and addresses</strong>, through Chrome's <code>tabs</code> API,
-    to find duplicate tabs and to group tabs it can't read.</li>
+    to find duplicate tabs, to recognise well-known sites and web apps (for example,
+    a Google Sheet goes in <em>Sheets</em>, Amazon in <em>Shopping</em>) using a list
+    built into the extension, and to group tabs it can't read.</li>
     <li><strong>A short summary of each open page</strong> (its title, description,
     main headings and the first 1,500 characters of its main text), but only after
     you click <em>Allow</em> to give Tab Daddy access to the pages you have open.
@@ -52,13 +54,18 @@
   <p>The first time there are groups to name, Tab Daddy asks whether to name them
   with AI. If you say yes, then for each new group it sends:</p>
   <ul>
-    <li>up to eight words that appear on <strong>at least two</strong> of the group's
-    tabs, for example <code>mortgage, rates, loan, fixed</code>;</li>
+    <li>up to eight ordinary words that appear on <strong>at least two</strong> of the
+    group's tabs, for example <code>mortgage, rates, loan, fixed</code>. A word written
+    with a capital letter on any of those tabs, such as a person's or a place's name,
+    is never sent;</li>
     <li>a random install ID, so the server can stop any one install from using
     more than its share.</li>
   </ul>
-  <p>Words containing numbers or symbols are removed, site names are removed, and
-  pages with a password, payment-card or one-time-code field contribute nothing.
+  <p>Only groups of related pages are named this way; groups named for what a site
+  is used for (Shopping, Coding, News…) are named on your computer and send
+  nothing. Page menus, headers, sidebars and hidden text are never read. Words
+  containing numbers or symbols are removed, site names are removed, and pages
+  with a password, payment-card or one-time-code field contribute nothing.
   <strong>Page text, page titles and web addresses are never sent.</strong></p>
   <p>The words go to Tab Daddy's naming server, which runs on
   <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>. The server

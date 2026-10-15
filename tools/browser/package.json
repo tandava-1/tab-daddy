@@ -1,0 +1,13 @@
+{
+  "name": "tab-daddy-browser-tools",
+  "private": true,
+  "type": "module",
+  "description": "Drives the real extension in Chrome for Testing. Run `npm install` then `npm run chrome` once.",
+  "scripts": {
+    "chrome": "npx @puppeteer/browsers install chrome@stable --path .chrome"
+  },
+  "dependencies": {
+    "@puppeteer/browsers": "^2",
+    "puppeteer-core": "^24"
+  }
+}
