@@ -18,8 +18,9 @@ requests. Live on the Chrome Web Store.
 - **AI naming was built and then removed (2026-10-15, founder's call).** The
   privacy rules (only ordinary words shared by 2+ tabs) left too little to name
   with, and use-case groups have fixed names anyway. The Cloudflare Worker
-  (`tab-daddy-names`), its KV namespace and the Groq key may still exist — see
-  git history before 2026-10-15 for `server/` and `lib/naming.js`.
+  (`tab-daddy-names`) and its KV namespace were deleted the same day; the
+  founder revokes the Groq key. Code is in git history before 2026-10-15
+  (`server/`, `lib/naming.js`).
 
 ## Grouping — use case first, topic for the rest
 
