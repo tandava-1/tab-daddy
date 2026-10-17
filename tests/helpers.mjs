@@ -98,20 +98,3 @@ export function realPages({ neutral = true } = {}) {
   });
   return { tabs, pages, by: (fragment) => tabs.find((t) => t.realUrl.includes(fragment)) };
 }
-
-/** chrome.storage.local stand-in. */
-export function memStore(init = {}) {
-  const data = { ...init };
-  return { data, get: async (k) => (k in data ? { [k]: data[k] } : {}), set: async (o) => Object.assign(data, o) };
-}
-
-/** fetch stand-in for the naming server; records each request body. */
-export function fakeFetch(reply, log = []) {
-  const f = async (url, opts) => {
-    const body = JSON.parse(opts.body);
-    log.push(body);
-    return { ok: true, json: async () => (typeof reply === 'function' ? reply(body) : reply) };
-  };
-  f.log = log;
-  return f;
-}
