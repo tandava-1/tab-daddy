@@ -17,13 +17,13 @@
   </header>
 
   <nav class="tabs" role="tablist">
-    <button class="tab-btn is-active" data-panel="groups" role="tab">Groups</button>
-    <button class="tab-btn" data-panel="duplicates" role="tab">
+    <button class="tab-btn is-active" data-panel="groups" role="tab" id="tab-groups" aria-selected="true" aria-controls="panel-groups">Groups</button>
+    <button class="tab-btn" data-panel="duplicates" role="tab" id="tab-duplicates" aria-selected="false" aria-controls="panel-duplicates" tabindex="-1">
       Duplicates <span class="pill" id="dupPill" hidden>0</span>
     </button>
   </nav>
 
-  <section class="panel is-active" id="panel-groups">
+  <section class="panel is-active" id="panel-groups" role="tabpanel" aria-labelledby="tab-groups">
     <div class="access-note" id="accessNote" hidden>
       <span>Grouping by tab titles only. Let Tab Daddy read your open pages to group them by what they're about.</span>
       <button class="btn primary small" id="accessBtn">Allow</button>
@@ -32,13 +32,13 @@
     <div class="list" id="groupsList"></div>
   </section>
 
-  <section class="panel" id="panel-duplicates">
+  <section class="panel" id="panel-duplicates" role="tabpanel" aria-labelledby="tab-duplicates">
     <p class="summary" id="dupSummary">Scanning tabs…</p>
     <div class="list" id="dupList"></div>
   </section>
 
   <footer>
-    <div class="footer-msg" id="footerMsg"></div>
+    <div class="footer-msg" id="footerMsg" role="status"></div>
     <div class="footer-actions">
       <button class="btn ghost" id="undoBtn" hidden>Reopen closed</button>
       <button class="btn primary" id="applyBtn" disabled>Group selected</button>

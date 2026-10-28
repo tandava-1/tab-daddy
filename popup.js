@@ -29,10 +29,12 @@ const state = {
   scope: 'window',
   additions: [],       // ungrouped tabs headed for the user's existing groups
   groups: [],          // planned new groups
+  unmatched: [],       // a lone tab that fits nowhere, too few for "Everything else"
   selectedGroups: new Set(),
   dupSets: [],
+  dupsElsewhere: 0,    // duplicates in other windows while scope is "This window"
   selectedDupTabs: new Set(),
-  lastClosed: [],      // urls closed in this session, for "Reopen closed"
+  lastClosed: [],      // { url, windowId, index, pinned, groupId } closed this session, for "Reopen"
   access: false,       // may we read page content?
   readIds: new Set(),  // tabs whose page was actually read this refresh
   pageCache: new Map(),// "tabId|url" -> page summary, kept while the popup is open
@@ -47,10 +49,22 @@ function loadExistingGroups() {
     : chrome.tabGroups.query({});
 }
 
+// A tab that is still loading has no `url` yet, only `pendingUrl`. Without this,
+// tabs just reopened by "Reopen" are invisible to the refresh that follows.
+const withUrl = (tab) => (tab.url || !tab.pendingUrl ? tab : { ...tab, url: tab.pendingUrl });
+
 async function loadTabs() {
-  return state.scope === 'window'
+  const tabs = await (state.scope === 'window'
     ? chrome.tabs.query({ currentWindow: true })
-    : chrome.tabs.query({});
+    : chrome.tabs.query({}));
+  return tabs.map(withUrl);
+}
+
+/** Duplicates in other windows, so "This window" can say why the badge is higher. */
+async function countElsewhere(windowCount) {
+  if (state.scope !== 'window') return 0;
+  const all = (await chrome.tabs.query({})).map(withUrl);
+  return findDuplicates(all).reduce((n, s) => n + s.duplicates.length, 0) - windowCount;
 }
 
 /**
@@ -79,6 +93,8 @@ async function refresh() {
   // Duplicates need no page content, so show them straight away.
   state.dupSets = findDuplicates(tabs);
   state.selectedDupTabs = new Set(state.dupSets.flatMap((s) => s.duplicates.map((t) => t.id)));
+  state.dupsElsewhere = await countElsewhere(state.dupSets.reduce((n, s) => n + s.duplicates.length, 0));
+  if (run !== state.run) return;
   renderDuplicates();
 
   state.access = await hasPageAccess();
@@ -98,7 +114,7 @@ async function refresh() {
   if (run !== state.run) return;
 
   state.readIds = new Set(pages.keys());
-  ({ additions: state.additions, groups: state.groups } = planGroups(tabs, pages, existing));
+  ({ additions: state.additions, groups: state.groups, unmatched: state.unmatched } = planGroups(tabs, pages, existing));
   // Additions and content groups are confident enough to pre-select; the
   // catch-all is a judgement call the user opts into.
   state.selectedGroups = new Set([
@@ -119,7 +135,9 @@ function tabRow(tab, { tag } = {}) {
   icon.addEventListener('error', () => { icon.src = 'icons/icon16.png'; });
   row.append(icon);
 
-  const title = document.createElement('span');
+  // A button, so keyboard users can jump to the tab too.
+  const title = document.createElement('button');
+  title.type = 'button';
   title.className = 't';
   title.textContent = tab.title || tab.url;
   title.title = tab.url;
@@ -176,12 +194,22 @@ function card({ checked, color, title, count, editableTitle, onToggle, onRename,
   badge.textContent = count;
   head.append(badge);
 
-  const chev = document.createElement('span');
+  // A real button, so the keyboard can expand a card; the whole head still
+  // toggles on click for the mouse.
+  const chev = document.createElement('button');
+  chev.type = 'button';
   chev.className = 'chev';
   chev.textContent = '▶';
+  chev.setAttribute('aria-expanded', 'false');
+  chev.setAttribute('aria-label', `Show tabs in ${title}`);
+  chev.addEventListener('click', (e) => { e.stopPropagation(); toggle(); });
   head.append(chev);
 
-  head.addEventListener('click', () => wrap.classList.toggle('is-open'));
+  function toggle() {
+    const open = wrap.classList.toggle('is-open');
+    chev.setAttribute('aria-expanded', String(open));
+  }
+  head.addEventListener('click', toggle);
   wrap.append(head, body);
   return wrap;
 }
@@ -243,6 +271,8 @@ function renderGroups() {
   }
   const leftover = groups.find((g) => g.source === 'other');
   if (leftover) parts.push(`${plural(leftover.tabs.length, 'tab')} matched nothing`);
+  // Too few for "Everything else", but still say so, or the counts don't add up.
+  else if (state.unmatched.length) parts.push(`${plural(state.unmatched.length, 'tab')} matched nothing and stays as it is`);
   el.groupsSummary.textContent = parts.join('; ') + '.';
 
   // Headings only earn their place when there are two kinds of thing to tell apart.
@@ -262,15 +292,23 @@ function renderDuplicates() {
   el.dupPill.hidden = dupCount === 0;
   el.dupPill.textContent = dupCount;
 
+  // The toolbar badge counts every window; say so when this window shows fewer.
+  const elsewhere = state.dupsElsewhere
+    ? `${plural(state.dupsElsewhere, 'more duplicate')} in other windows. Switch to All windows to see ${state.dupsElsewhere === 1 ? 'it' : 'them'}.`
+    : '';
+
   if (!state.dupSets.length) {
     el.dupSummary.textContent = '';
-    el.dupList.append(emptyState('No duplicates', 'Every open tab points somewhere different. Nice.'));
+    el.dupList.append(elsewhere
+      ? emptyState('No duplicates in this window', elsewhere)
+      : emptyState('No duplicates', 'Every open tab points somewhere different. Nice.'));
     updateFooter();
     return;
   }
 
   el.dupSummary.textContent =
-    `${dupCount} redundant tab${dupCount === 1 ? '' : 's'} across ${state.dupSets.length} address${state.dupSets.length === 1 ? '' : 'es'}. One tab per address is kept.`;
+    `${dupCount} redundant tab${dupCount === 1 ? '' : 's'} across ${state.dupSets.length} address${state.dupSets.length === 1 ? '' : 'es'}. One tab per address is kept.` +
+    (elsewhere ? ` ${elsewhere}` : '');
 
   for (const set of state.dupSets) {
     const body = document.createElement('div');
@@ -382,40 +420,90 @@ async function applyGroups() {
   }
 
   await refresh();
-  say(grouped ? `Grouped ${grouped} tabs.` : 'Nothing was grouped.');
+  say(grouped ? `Grouped ${plural(grouped, 'tab')}.` : 'Nothing was grouped.');
 }
 
 async function closeDuplicates() {
   const ids = [...state.selectedDupTabs];
   if (!ids.length) return;
 
-  const urlById = new Map();
-  state.dupSets.forEach((s) => s.duplicates.forEach((t) => urlById.set(t.id, t.url)));
-  state.lastClosed = ids.map((id) => urlById.get(id)).filter(Boolean);
+  // Remember where each tab was, so "Reopen" can put it back in place. Only in
+  // this popup's memory: the privacy policy promises nothing is written to disk.
+  const byId = new Map();
+  state.dupSets.forEach((s) => s.duplicates.forEach((t) => byId.set(t.id, t)));
+  // Chrome deletes a group when its last tab closes, so keep its name and colour too.
+  const groupInfo = new Map((await chrome.tabGroups.query({})).map((g) => [g.id, { title: g.title, color: g.color }]));
+  state.lastClosed = ids.map((id) => byId.get(id)).filter(Boolean)
+    .map(({ url, windowId, index, pinned, groupId }) => ({ url, windowId, index, pinned, groupId, group: groupInfo.get(groupId) }));
 
   await chrome.tabs.remove(ids);
   chrome.runtime.sendMessage({ type: 'refreshBadge' }).catch(() => {});
   await refresh();
-  say(`Closed ${ids.length} duplicate${ids.length === 1 ? '' : 's'}.`);
+  say(`Closed ${plural(ids.length, 'duplicate')}.`);
+}
+
+/** Puts a reopened tab back in its old group, recreating the group if Chrome removed it. */
+async function regroup(created, tab, regrouped) {
+  let groupId = regrouped.get(tab.groupId);
+  if (groupId === undefined) {
+    const alive = await chrome.tabGroups.get(tab.groupId).catch(() => null);
+    groupId = alive?.id;
+  }
+  if (groupId !== undefined) {
+    await chrome.tabs.group({ tabIds: [created.id], groupId });
+  } else {
+    groupId = await chrome.tabs.group({ tabIds: [created.id], createProperties: { windowId: tab.windowId } });
+    await chrome.tabGroups.update(groupId, { title: tab.group.title, color: tab.group.color });
+  }
+  regrouped.set(tab.groupId, groupId);
 }
 
 async function reopenClosed() {
-  const urls = state.lastClosed;
+  const closed = state.lastClosed;
   state.lastClosed = [];
-  for (const url of urls) await chrome.tabs.create({ url, active: false });
+  const windows = new Set((await chrome.windows.getAll()).map((w) => w.id));
+  const regrouped = new Map(); // old groupId -> the group it went back into
+
+  // Lowest index first, so each tab lands where it was before the ones after it.
+  for (const tab of [...closed].sort((a, b) => a.windowId - b.windowId || a.index - b.index)) {
+    const home = windows.has(tab.windowId);
+    const created = await chrome.tabs.create({
+      url: tab.url,
+      active: false,
+      pinned: tab.pinned,
+      // Its window may have closed since; then it opens in this one, at the end.
+      ...(home ? { windowId: tab.windowId, index: tab.index } : {})
+    });
+    if (home && tab.group) await regroup(created, tab, regrouped).catch(() => {});
+  }
+  chrome.runtime.sendMessage({ type: 'refreshBadge' }).catch(() => {});
   await refresh();
-  say(`Reopened ${urls.length} tab${urls.length === 1 ? '' : 's'}.`);
+  say(`Reopened ${plural(closed.length, 'tab')}.`);
 }
 
 /* ---------- wiring ---------- */
 
-el.tabBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    state.panel = btn.dataset.panel;
-    el.tabBtns.forEach((b) => b.classList.toggle('is-active', b === btn));
-    Object.entries(el.panels).forEach(([name, panel]) => panel.classList.toggle('is-active', name === state.panel));
-    el.footerMsg.textContent = '';
-    updateFooter();
+function showPanel(btn) {
+  state.panel = btn.dataset.panel;
+  el.tabBtns.forEach((b) => {
+    const on = b === btn;
+    b.classList.toggle('is-active', on);
+    b.setAttribute('aria-selected', String(on));
+    b.tabIndex = on ? 0 : -1;
+  });
+  Object.entries(el.panels).forEach(([name, panel]) => panel.classList.toggle('is-active', name === state.panel));
+  el.footerMsg.textContent = '';
+  updateFooter();
+}
+
+el.tabBtns.forEach((btn, i) => {
+  btn.addEventListener('click', () => showPanel(btn));
+  // Arrow keys move between tabs, as screen readers expect of a tablist.
+  btn.addEventListener('keydown', (e) => {
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    const next = el.tabBtns[(i + (e.key === 'ArrowRight' ? 1 : -1) + el.tabBtns.length) % el.tabBtns.length];
+    next.focus();
+    showPanel(next);
   });
 });
 

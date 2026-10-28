@@ -61,6 +61,9 @@ test('catch-all comes last and needs two tabs', () => {
   assert.equal(groups.at(-1).source, 'other');
   const lone = F.build(F.mortgage, [F.singles[0]]);
   assert.ok(!groupsOf(lone.tabs, lone.pages).some((g) => g.source === 'other'));
+  // ...but a lone leftover is still reported, so the popup can count it.
+  assert.deepEqual(plan(lone.tabs, lone.pages).unmatched, [lone.tabs.at(-1)]);
+  assert.deepEqual(plan(tabs, pages).unmatched, []);
 });
 
 test('pinned and chrome:// tabs never take part', () => {
@@ -81,7 +84,7 @@ test('group keys are unique and new groups get distinct colours', () => {
 });
 
 test('empty input gives nothing', () => {
-  assert.deepEqual(plan([], new Map()), { additions: [], groups: [] });
+  assert.deepEqual(plan([], new Map()), { additions: [], groups: [], unmatched: [] });
 });
 
 test('word names never pair words the pages do not put together', () => {
