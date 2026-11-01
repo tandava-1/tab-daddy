@@ -4,3 +4,9 @@ node_modules/
 .dev.vars
 .chrome/
 *.png.tmp
+
+# Local only: project context, store build artifacts, old screenshots of a real browser session
+CONTEXT.md
+*.zip
+docs/product/store/screenshots/
+docs/product/store/screenshots-letterbox/
